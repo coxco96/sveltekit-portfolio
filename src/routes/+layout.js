@@ -1,1 +1,2 @@
-export const prerender = false; // I changed this to run deploy script
+export const prerender = true;
+export const trailingSlash = 'always'
