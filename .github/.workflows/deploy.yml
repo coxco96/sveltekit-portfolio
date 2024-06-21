@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repo: https://github.com/coxco96/sveltekit-gh-pages
+          repo: 'https://github.com/coxco96/sveltekit-gh-pages'
           ref: main
 
       # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
