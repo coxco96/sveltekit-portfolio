@@ -1,8 +1,8 @@
-name: Deploy to GitHub Pages Branch
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 'main'
+    branches: gh-pages
 
 jobs:
   build_site:
@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          repo: https://github.com/coxco96/sveltekit-gh-pages
+          ref: gh-pages
 
       # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
       # - name: Install pnpm
@@ -36,7 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # this should match the `pages` option in your adapter-static options
-          path: 'build/'
+          path: 'build'
 
   deploy:
     needs: build_site
