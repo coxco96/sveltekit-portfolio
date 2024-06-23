@@ -1,4 +1,4 @@
-[
+export const items = [
     {
         "title": "Archery Title Woo",
         "description": "Description",
@@ -7,7 +7,10 @@
         "isFeature": 1,
         "publication": "NYT",
         "type": "chart",
-        "link": "www.google.com"
+        "link": "www.google.com",
+        "slug": "archery-woo",
+        "featureLabel": "Data Analysis",
+        "keyword": "featured"
     },
     {
         "title": "idk",
@@ -23,7 +26,10 @@
         "isFeature": 2,
         "publication": "Miami Herald/DC Bureau",
         "type": "map",
-        "link": "www.google.com"
+        "link": "www.google.com",
+        "slug": "featured-2",
+        "featureLabel": "Interactive",
+        "keyword": "charts"
     },
     {
         "title": "Title2",
@@ -33,7 +39,10 @@
         "isFeature": 3,
         "publication": "NYT",
         "type": "chart",
-        "link": "www.google.com"
+        "link": "www.google.com",
+        "slug": "featured-3",
+        "featureLabel": "Development",
+        "keyword": "maps"
     },
     {
         "title": "When Caitlin Clark Comes to Town",
@@ -42,3 +51,5 @@
         "imageAlt": "image alt3"
     }
 ]
+
+export const categories = ["all", "featured", "maps", "charts"]

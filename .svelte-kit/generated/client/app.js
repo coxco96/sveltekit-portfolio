@@ -16,8 +16,8 @@ export const server_loads = [];
 export const dictionary = {
 		"/": [2],
 		"/about": [3],
-		"/featured-one": [4],
-		"/portfolio": [5],
+		"/portfolio": [~4],
+		"/portfolio/[featured]": [5],
 		"/sverdle": [~6],
 		"/sverdle/how-to-play": [7]
 	};

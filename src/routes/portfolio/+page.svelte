@@ -1,10 +1,16 @@
 <script>
 	import Featured from "./Featured.svelte";
 	import Gallery from './Gallery.svelte';
-	import items from './items.json';
 
+	// loads item.js via +page.server.js
+	export let data;
+	let categories = data.categories;
+	console.log(categories);
+	let items = data.items;
 	let features = items.filter(item => item.isFeature);
-	let gallery = items.filter(item=> !item.isFeature);
+	// let gallery = items.filter(item=> !item.isFeature);
+	console.log(features);
+
 	
 </script>
 
@@ -14,8 +20,8 @@
 </svelte:head>
 
 
-<Featured items={features}/>
-<Gallery items={gallery}/>
+<Featured {items} {categories}/>
+<!-- <Gallery items={gallery}/> -->
 
 
 <!-- <div class="text-column">

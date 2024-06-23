@@ -1,65 +1,65 @@
 <script>
     import Card from "./Card.svelte";
+    import ButtonContainer from "./ButtonContainer.svelte";
     export let items;
-    let itemOne, itemTwo, itemThree;
+    export let categories;
 
-    items.forEach((item) => {
-        if (item.isFeature == 1) {
-            itemOne = item;
-        } else if (item.isFeature == 2) {
-            itemTwo = item;
-        } else if (item.isFeature == 3) {
-            itemThree = item;
-        }
-    });
+    let selected = "all";
+
+    const filterSelection = (e) => (selected = e.target.dataset.name);
 </script>
+
+<ButtonContainer>
+    {#each categories as category}
+        <button
+            class:active={selected === category}
+            class="btn"
+            data-name={category}
+            on:click={filterSelection}
+        >
+            {category}
+        </button>
+    {/each}
+</ButtonContainer>
 
 <div class="text-column">
     <h2>Featured</h2>
 </div>
 
+{selected}
+
 <div class="feature-grid">
-    <div class="feature-col">
-        <div class="text-column">
-            <h3>Data Analysis</h3>
-        </div>
-        <a href="../featured-one">
-            <Card
-                title={itemOne.title}
-                publication={itemOne.publication}
-                type={itemOne.type}
-                link={itemOne.link}
-            />
-        </a>
-    </div>
-
-    <div class="feature-col">
-        <div class="text-column">
-            <h3>Development</h3>
-        </div>
-        <a href="../featured-two">
-            <Card
-                title={itemTwo.title}
-                publication={itemTwo.publication}
-                type={itemTwo.type}
-                link={itemTwo.link}
-            />
-        </a>
-    </div>
-
-    <div class="feature-col">
-        <div class="text-column">
-            <h3>Interactives</h3>
-        </div>
-        <a href="../featured-three">
-            <Card
-                title={itemThree.title}
-                publication={itemThree.publication}
-                type={itemThree.type}
-                link={itemThree.link}
-            />
-        </a>
-    </div>
+    {#each items as item}
+        {#if selected === "all"}
+            <div class="feature-col">
+                <div class="text-column">
+                    <h3>{item.featureLabel}</h3>
+                </div>
+                <a href="/portfolio/{item.slug}">
+                    <Card
+                        title={item.title}
+                        publication={item.publication}
+                        type={item.type}
+                        link={item.link}
+                    />
+                </a>
+            </div>
+        {:else}
+            <div class:show={selected === item.keyword} class="feature-col">
+                <div class="text-column">
+                    <h3>{item.featureLabel}</h3>
+                </div>
+                <a href="/portfolio/{item.slug}">
+                    <Card
+                        title={item.title}
+                        publication={item.publication}
+                        type={item.type}
+                        link={item.link}
+                    />
+                </a>
+            </div>
+        {/if}
+    {/each}
 </div>
 
 <style>
@@ -78,4 +78,14 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .btn:active,
+    .active {
+        background-color: #000;
+        color: white;
+    }
+
+    .show {
+  display: flex;
+}
 </style>
