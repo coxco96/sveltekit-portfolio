@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Archery Title Woo",
+        "description": "Description",
+        "image": "archers.png",
+        "imageAlt": "image alt",
+        "isFeature": 1,
+        "publication": "NYT",
+        "type": "chart",
+        "link": "www.google.com"
+    },
+    {
+        "title": "idk",
+        "description": "Description2",
+        "image": "flashback.png",
+        "imageAlt": "image alt3"
+    },
+    {
+        "title": "Title2",
+        "description": "Description2",
+        "image": "breweries.png",
+        "imageAlt": "image alt2",
+        "isFeature": 2,
+        "publication": "Miami Herald/DC Bureau",
+        "type": "map",
+        "link": "www.google.com"
+    },
+    {
+        "title": "Title2",
+        "description": "Description2",
+        "image": "austin.png",
+        "imageAlt": "image alt2",
+        "isFeature": 3,
+        "publication": "NYT",
+        "type": "chart",
+        "link": "www.google.com"
+    },
+    {
+        "title": "When Caitlin Clark Comes to Town",
+        "description": "Description2",
+        "image": "caitlin-clark.webp",
+        "imageAlt": "image alt3"
+    }
+]
