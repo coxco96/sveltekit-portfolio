@@ -4,5 +4,5 @@ import {
 } from './items.js';
 
 export function load() {
-    return { items, categories }
+    return { items }
 }

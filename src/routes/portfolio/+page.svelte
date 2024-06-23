@@ -4,8 +4,8 @@
 
 	// loads item.js via +page.server.js
 	export let data;
-	let categories = data.categories;
-	console.log(categories);
+	// let categories = data.categories;
+	// console.log(categories);
 	let items = data.items;
 	let features = items.filter(item => item.isFeature);
 	// let gallery = items.filter(item=> !item.isFeature);
@@ -20,7 +20,7 @@
 </svelte:head>
 
 
-<Featured {items} {categories}/>
+<Featured {items} />
 <!-- <Gallery items={gallery}/> -->
 
 

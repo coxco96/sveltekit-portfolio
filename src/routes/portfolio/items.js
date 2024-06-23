@@ -10,13 +10,15 @@ export const items = [
         "link": "www.google.com",
         "slug": "archery-woo",
         "featureLabel": "Data Analysis",
-        "keyword": "featured"
+        "keyword": "featured",
+        "tags": ["charts", "data analysis"]
     },
     {
         "title": "idk",
         "description": "Description2",
         "image": "flashback.png",
-        "imageAlt": "image alt3"
+        "imageAlt": "image alt3",
+        "tags": ["development", "data analysis"]
     },
     {
         "title": "Title2",
@@ -29,7 +31,7 @@ export const items = [
         "link": "www.google.com",
         "slug": "featured-2",
         "featureLabel": "Interactive",
-        "keyword": "charts"
+        "tags": ["research", "data analysis"]
     },
     {
         "title": "Title2",
@@ -42,14 +44,15 @@ export const items = [
         "link": "www.google.com",
         "slug": "featured-3",
         "featureLabel": "Development",
-        "keyword": "maps"
+        "tags": ["maps", "data analysis"]
     },
     {
         "title": "When Caitlin Clark Comes to Town",
         "description": "Description2",
         "image": "caitlin-clark.webp",
-        "imageAlt": "image alt3"
+        "imageAlt": "image alt3",
+        "tags": ["charts", "data analysis"]
     }
 ]
 
-export const categories = ["all", "featured", "maps", "charts"]
+// export const categories = ["all", "featured", "maps", "charts"]
