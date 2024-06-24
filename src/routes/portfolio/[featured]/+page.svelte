@@ -1,7 +1,4 @@
 <script>
-    // import {items} from '../portfolio/items.json';
-    // export let item;
-    // console.log(item);
     export let data;
     let title = data.title;
     let alt = data.alt;

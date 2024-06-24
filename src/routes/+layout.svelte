@@ -1,6 +1,7 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
+	import Header from "./Header.svelte";
+	import "./styles.css";
+	import github from '$lib/images/github.svg'
 </script>
 
 <div class="app">
@@ -11,7 +12,10 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<a href="https://github.com/coxco96/">
+			<img class='github' src={github} alt="GitHub" />
+		</a>
+			View the source code for this site.
 	</footer>
 </div>
 
@@ -43,6 +47,11 @@
 
 	footer a {
 		font-weight: bold;
+	}
+
+	.github {
+		width: 3em;
+		height: 3em;
 	}
 
 	@media (min-width: 480px) {
