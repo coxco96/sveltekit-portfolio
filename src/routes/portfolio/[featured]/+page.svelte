@@ -13,8 +13,17 @@
 <span>&#x2190; <a href='/portfolio'>Back</a></span>
 <div class="text-column">
     <h1>{title}</h1>
-    <img {src} {alt}/>
+    <img class='img' {src} {alt}/>
     <p>
         {description}
     </p>
 </div>
+
+<style>
+        .img {
+        height: var(--card-height);
+        position: relative;
+        max-width: 100%;
+        min-width: 100%;
+    }
+</style>

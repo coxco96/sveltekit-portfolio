@@ -2,12 +2,13 @@
     export let type = "type";
     export let publication = "publication";
     export let title = "title";
-    export let imagePath = "../../src/lib/images/archers.png";
+    export let imagePath = "";
     export let alt = "";
     export let link;
+
 </script>
 
-<div class="card hvr-glow">
+<div class="card hvr-glow text-column">
     <img class="card-background" src={imagePath} {alt} />
     <div class="card-group">
         <div class="publication">

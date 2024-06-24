@@ -58,6 +58,7 @@ let buttonClicked = false;
                         publication={item.publication}
                         type={item.type}
                         link={item.link}
+                        imagePath={`../src/lib/images/${item.image}`}
                     />
                 </a>
             </div>
@@ -74,6 +75,7 @@ let buttonClicked = false;
                         publication={item.publication}
                         type={item.type}
                         link={item.link}
+                        imagePath={`../src/lib/images/${item.image}`}
                     />
                 </a>
             </div>
