@@ -18,7 +18,8 @@ export const items = [
         "description": "Description2",
         "image": "flashback.png",
         "imageAlt": "image alt3",
-        "tags": ["development", "data analysis"]
+        "tags": ["development", "data analysis"],
+        "slug": "idk"
     },
     {
         "title": "Title2",
@@ -51,8 +52,7 @@ export const items = [
         "description": "Description2",
         "image": "caitlin-clark.webp",
         "imageAlt": "image alt3",
-        "tags": ["charts", "data analysis"]
+        "tags": ["charts", "data analysis"],
+        "slug": "when-caitlin-clark-comes-to-town"
     }
 ]
-
-// export const categories = ["all", "featured", "maps", "charts"]
