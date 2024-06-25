@@ -1,0 +1,1 @@
+export const prerender = false; // I changed this to run deploy script
