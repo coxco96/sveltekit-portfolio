@@ -6,24 +6,30 @@
     $: filters = [];
     $: filtered = items.filter((item) => {
         if (item.tags.some((x) => filters.includes(x))) {
-            return true;
-        } // returns true if filters list includes any of item's tags
+            return true; // returns true if filters list includes any of item's tags
+        }
     });
-
-    let buttonClicked = false;
 
     function filterClick(tag) {
         // if filters array does not already include clicked tag, add it
         if (!filters.includes(tag)) {
             filters = [...filters, tag];
-            // and set buttonClicked to true
-            buttonClicked = true;
         } else {
             // if it is already included, remove it
             filters = filters.filter((x) => x != tag);
-            // and set buttonClicked to false
-            buttonClicked = false;
         }
+    }
+
+    // IF I decide to use background color shades over the gallery graphics, add this to the Card elements:
+    // --card-bg-color={getBgColor(i)} (also add i back into the each blocks)
+    function getBgColor(i) {
+        let colors = [
+            "rgba(230, 230, 250, 0.1)", // lavender
+            "rgba(175, 238, 238, 0.1)", // pale aqua
+            "rgba(176, 224, 230, 0.1)", // poweder blue
+            "rgba(32, 178, 170, 0.1)", // green
+        ];
+        return colors[i % colors.length];
     }
 </script>
 
@@ -61,9 +67,6 @@
         {:else}
             {#each filtered as item}
                 <div class="item">
-                    <div class="text-column">
-                        <h3>{item.featureLabel}</h3>
-                    </div>
                     <a href="portfolio/{item.slug}">
                         <Card
                             title={item.title}
@@ -84,7 +87,7 @@
         --card-width: 300px;
         --card-height: 300px;
         --object-position: "left top";
-        --card-bg-color: rgb(226, 226, 255);
+        --card-bg-color: none;
     }
 
     .filter-buttons {
@@ -134,5 +137,4 @@
         border-color: white;
         color: white;
     }
-
 </style>

@@ -18,21 +18,21 @@
 					? "page"
 					: undefined}
 			>
-				<a href="/">Home</a>
+				<a href="{base}/">Home</a>
 			</li>
 			<li
 				aria-current={$page.url.pathname === "/about"
 					? "page"
 					: undefined}
 			>
-				<a href="about">About</a>
+				<a href="{base}/about">About</a>
 			</li>
 			<li
 				aria-current={$page.url.pathname === "/portfolio"
 					? "page"
 					: undefined}
 			>
-				<a href="portfolio">Portfolio</a>
+				<a href="{base}/portfolio">Portfolio</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">

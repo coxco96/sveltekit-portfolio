@@ -1,6 +1,6 @@
 <script>
     export let type = "type";
-    export let publication = "publication";
+    export let publication = "";
     export let title = "title";
     export let src;
     export let alt = "";
@@ -41,10 +41,11 @@
         height: fit-content;
         width: fit-content;
         max-width: 85%;
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(88, 86, 86, 0.85);
         padding: 5px 2px;
         margin-bottom: 2.5px;
         border-radius: 10px;
+        color: rgb(249, 251, 254);
     }
 
     .publication {
@@ -64,14 +65,14 @@
         left: 5px;
         text-transform: uppercase;
         font-weight: 600;
-        background-color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0.85);
         padding: 5px 2px;
     }
 
     .card-background {
         width: 100%;
         height: 100%;
-        opacity: 0.3;
+        opacity: 0.8;
         object-fit: cover;
         text-align: center;
         object-position: var(--object-position);

@@ -1,58 +1,63 @@
 export const items = [
     {
-        "title": "Archery Title Woo",
+        "title": "Studying the Limits of Human Perfection, Through Darts",
         "description": "Description",
         "image": "archers.png",
-        "imageAlt": "image alt",
-        "isFeature": 1,
-        "publication": "NYT",
-        "type": "chart",
-        "link": "https://www.google.com",
-        "slug": "archery-woo",
-        "featureLabel": "Data Analysis",
+        "imageAlt": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
+        "publication": "New York Times",
+        "type": "Data Design",
+        "link": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
+        "slug": "precision-of-a-champion",
         "keyword": "featured",
-        "tags": ["charts", "data analysis"]
+        "tags": ["Data Design"],
+        "aboveImageText": ""
     },
     {
-        "title": "idk",
-        "description": "Description2",
+        "title": "Flashback",
+        "description": "",
         "image": "flashback.png",
-        "imageAlt": "image alt3",
-        "tags": ["development", "data analysis"],
-        "slug": "idk"
+        "imageAlt": "A 3x3 grid of historic images, with the New York Times Flashback logo as the center tile",
+        "tags": ["Fact Checking"],
+        "slug": "flashback",
+        "publication": "New York Times",
+        "type": "Fact Checking",
+        "aboveImageText": ""
     },
     {
-        "title": "Title2",
+        "title": "North American Breweries",
         "description": "Description2",
         "image": "breweries.png",
-        "imageAlt": "image alt2",
+        "imageAlt": "A map of breweries in North America and Hawaii, showing darker colors where there are lots of breweries within 50 square kilometers, and lighter colors with fewer. The darkest color shows areas where there are 50 or more breweries. Darker areas are noticeable in California, the northeast and the Chicago area.",
         "isFeature": 2,
-        "publication": "Miami Herald/DC Bureau",
-        "type": "map",
-        "link": "https://www.google.com",
-        "slug": "featured-2",
-        "featureLabel": "Interactive",
-        "tags": ["research", "data analysis"]
+        "type": "Map",
+        "link": "https://coxco96.github.io/images/na_breweries_8000.png",
+        "slug": "na-breweries",
+        "tags": ["Maps"],
+        "aboveImageText": ""
     },
     {
-        "title": "Title2",
-        "description": "Description2",
+        "title": "Traffic Lights by District in Austin, TX",
+        "description": "",
         "image": "austin.png",
-        "imageAlt": "image alt2",
+        "imageAlt": "A map of the number of traffic signals in Austin City districts, with numbers in circles representing clusters of data",
         "isFeature": 3,
         "publication": "NYT",
-        "type": "chart",
-        "link": "https://www.google.com",
+        "type": "Interactive Map",
+        "link": "https://coxco96.github.io/cluster-group-demo/",
         "slug": "featured-3",
         "featureLabel": "Development",
-        "tags": ["maps", "data analysis"]
+        "tags": ["Maps", "Interactive"],
+        "aboveImageText": ""
     },
     {
         "title": "When Caitlin Clark Comes to Town",
-        "description": "Description2",
+        "aboveImageText": "<p>woopwoop</p>",
+        "description": "Description2 <strong>html check!</strong>",
         "image": "caitlin-clark.webp",
         "imageAlt": "image alt3",
-        "tags": ["charts", "data analysis"],
-        "slug": "when-caitlin-clark-comes-to-town"
+        "tags": ["Data Design", "Data Analysis"],
+        "slug": "when-caitlin-clark-comes-to-town",
+        "linK": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
+        "type": "Data Design"
     }
 ]
