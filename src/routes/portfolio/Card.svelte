@@ -2,20 +2,20 @@
     export let type = "type";
     export let publication = "publication";
     export let title = "title";
-    export let imagePath = "";
+    export let src;
     export let alt = "";
     export let link;
-
 </script>
 
 <div class="card hvr-glow text-column">
-    <img class="card-background" src={imagePath} {alt} />
+    <img class="card-background" {src} {alt} />
+
     <div class="card-group">
         <div class="publication">
             {#if link}
                 <a href={link} target="_blank">{publication}</a>
             {:else}
-                {publication}
+            {publication}
             {/if}
         </div>
         <div class="title">{@html title}</div>

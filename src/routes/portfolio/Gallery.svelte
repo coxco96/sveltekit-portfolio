@@ -10,16 +10,15 @@
         } // returns true if filters list includes any of item's tags
     });
 
-
-let buttonClicked = false;
+    let buttonClicked = false;
 
     function filterClick(e) {
         let tag = e.target.textContent;
         // if filters array does not already include clicked tag, add it
         if (!filters.includes(tag)) {
             filters = [...filters, tag];
-        // and set buttonClicked to true
-        buttonClicked = true;
+            // and set buttonClicked to true
+            buttonClicked = true;
         } else {
             // if it is already included, remove it
             filters = filters.filter((x) => x != tag);
@@ -27,15 +26,15 @@ let buttonClicked = false;
             buttonClicked = false;
         }
     }
-
 </script>
 
 {#each allTags as tag}
-    <button class="tag {filters.includes(tag) ? 'active-filter' : ''}" 
-    on:click={filterClick}
+    <button
+        class="tag {filters.includes(tag) ? 'active-filter' : ''}"
+        on:click={filterClick}
     >
-    {tag}
-</button>
+        {tag}
+    </button>
 {/each}
 
 <div class="text-column">
@@ -45,45 +44,46 @@ let buttonClicked = false;
 <div class="feature-grid">
     {#if filtered.length == 0}
         {#each items as item}
-            <div class="item">
-                <div class="text-column">
-                    {#if item.featureLabel}
-                    <h3>Featured: {item.featureLabel}</h3>
-                    {/if}
-                    
+            {#await import(`../../lib/images/${item.image}`) then { default: src }}
+                <div class="item">
+                    <div class="text-column">
+                        {#if item.featureLabel}
+                            <h3>Featured: {item.featureLabel}</h3>
+                        {/if}
+                    </div>
+                    <a href="portfolio/{item.slug}">
+                        <Card
+                            title={item.title}
+                            publication={item.publication}
+                            type={item.type}
+                            link={item.link}
+                            {src}
+                        />
+                    </a>
                 </div>
-                <a href="/portfolio/{item.slug}">
-                    <Card
-                        title={item.title}
-                        publication={item.publication}
-                        type={item.type}
-                        link={item.link}
-                        imagePath={`../src/lib/images/${item.image}`}
-                    />
-                </a>
-            </div>
+            {/await}
         {/each}
     {:else}
         {#each filtered as item}
-            <div class="item">
-                <div class="text-column">
-                    <h3>{item.featureLabel}</h3>
+            {#await import(`../../lib/images/${item.image}`) then { default: src }}
+                <div class="item">
+                    <div class="text-column">
+                        <h3>{item.featureLabel}</h3>
+                    </div>
+                    <a href="portfolio/{item.slug}">
+                        <Card
+                            title={item.title}
+                            publication={item.publication}
+                            type={item.type}
+                            link={item.link}
+                            {src}
+                        />
+                    </a>
                 </div>
-                <a href="/portfolio/{item.slug}">
-                    <Card
-                        title={item.title}
-                        publication={item.publication}
-                        type={item.type}
-                        link={item.link}
-                        imagePath={`../src/lib/images/${item.image}`}
-                    />
-                </a>
-            </div>
+            {/await}
         {/each}
     {/if}
 </div>
-
-
 
 <style>
     :root {
@@ -109,6 +109,4 @@ let buttonClicked = false;
     .active-filter {
         background-color: rgb(164, 103, 112);
     }
-
-
 </style>
