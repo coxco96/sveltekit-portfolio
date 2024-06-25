@@ -13,7 +13,7 @@
     <h1>{title}</h1>
     <img class='card-background' src='../../../images/{src}' {alt}/>
     <p>
-        {description}
+        {@html description}
     </p>
 </div>
 </main>

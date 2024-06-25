@@ -41,7 +41,7 @@
         height: fit-content;
         width: fit-content;
         max-width: 85%;
-        background-color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0.85);
         padding: 5px 2px;
         margin-bottom: 2.5px;
         border-radius: 10px;

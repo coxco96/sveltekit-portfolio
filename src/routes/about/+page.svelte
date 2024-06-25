@@ -4,23 +4,8 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<h1>About me</h1>
 
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="#">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
-	</p>
+<p>Coming soon</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla dui ultricies quam auctor, at dignissim turpis molestie. Nulla gravida est vitae mi sodales, ut sagittis tortor fermentum. Phasellus fermentum nisl a porta aliquet. Maecenas dapibus nisl vitae ante accumsan vestibulum. Donec vitae neque nec ligula elementum tempor. Integer at finibus ex, sed pulvinar sem. Nam at vulputate ipsum. Duis sit amet turpis nec purus suscipit efficitur vel vitae ligula. Proin accumsan erat sit amet mi mollis, aliquet maximus ipsum porta. Aliquam consectetur dui nec vehicula scelerisque. Ut vel tellus erat. Aliquam libero velit, maximus interdum efficitur vitae, gravida at sem. Integer luctus ante odio, sed efficitur orci vehicula sed. Aenean quam odio, suscipit in malesuada quis, ultricies quis justo. Aliquam neque lacus, tempor id suscipit a, mollis nec dui. Donec vitae volutpat augue, ut tincidunt urna. </p>
 </div>
