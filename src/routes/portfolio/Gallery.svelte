@@ -13,7 +13,6 @@
     let buttonClicked = false;
 
     function filterClick(tag) {
-        // let tag = e.target.textContent;
         // if filters array does not already include clicked tag, add it
         if (!filters.includes(tag)) {
             filters = [...filters, tag];
@@ -28,7 +27,9 @@
     }
 </script>
 
-<div role='group' aria-label='Filter items in portfolio'>
+<h1>Portfolio</h1>
+
+<div role="group" aria-label="Filter items in portfolio" class="filter-buttons">
     {#each allTags as tag}
         <button
             class="tag {filters.includes(tag) ? 'active-filter' : ''}"
@@ -41,49 +42,42 @@
     {/each}
 </div>
 
-<div class="text-column">
-    <h2>Featured</h2>
-</div>
-
-<div class="feature-grid">
-    {#if filtered.length == 0}
-        {#each items as item}
-            <div class="item">
-                <div class="text-column">
-                    {#if item.featureLabel}
-                        <h3>Featured: {item.featureLabel}</h3>
-                    {/if}
+<main>
+    <div class="gallery">
+        {#if filtered.length == 0}
+            {#each items as item}
+                <div class="item">
+                    <a href="portfolio/{item.slug}">
+                        <Card
+                            title={item.title}
+                            publication={item.publication}
+                            type={item.type}
+                            link={item.link}
+                            src={item.image}
+                        />
+                    </a>
                 </div>
-                <a href="portfolio/{item.slug}">
-                    <Card
-                        title={item.title}
-                        publication={item.publication}
-                        type={item.type}
-                        link={item.link}
-                        src={item.image}
-                    />
-                </a>
-            </div>
-        {/each}
-    {:else}
-        {#each filtered as item}
-            <div class="item">
-                <div class="text-column">
-                    <h3>{item.featureLabel}</h3>
+            {/each}
+        {:else}
+            {#each filtered as item}
+                <div class="item">
+                    <div class="text-column">
+                        <h3>{item.featureLabel}</h3>
+                    </div>
+                    <a href="portfolio/{item.slug}">
+                        <Card
+                            title={item.title}
+                            publication={item.publication}
+                            type={item.type}
+                            link={item.link}
+                            src={item.image}
+                        />
+                    </a>
                 </div>
-                <a href="portfolio/{item.slug}">
-                    <Card
-                        title={item.title}
-                        publication={item.publication}
-                        type={item.type}
-                        link={item.link}
-                        src={item.image}
-                    />
-                </a>
-            </div>
-        {/each}
-    {/if}
-</div>
+            {/each}
+        {/if}
+    </div>
+</main>
 
 <style>
     :root {
@@ -91,6 +85,20 @@
         --card-height: 300px;
         --object-position: "left top";
         --card-bg-color: rgb(226, 226, 255);
+    }
+
+    .filter-buttons {
+        display: flex;
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        gap: 5px 2px;
+    }
+
+    .gallery {
+        margin-top: 2rem;
     }
 
     .item h3 {
@@ -102,7 +110,29 @@
         margin-bottom: 25px;
     }
 
-    .active-filter {
-        background-color: rgb(164, 103, 112);
+    .tag {
+        font-size: 16px;
+        padding: 5px;
+        background-color: lightgray;
+        font-size: 18px;
     }
+
+    .tag:hover {
+        background-color: rgb(108, 108, 108);
+        color: white;
+    }
+
+    .tag:active,
+    .active-filter:active {
+        background-color: rgb(79, 79, 79);
+        color: white;
+        transform: translateY(4px);
+    }
+
+    .active-filter {
+        background-color: rgb(79, 79, 79);
+        border-color: white;
+        color: white;
+    }
+
 </style>
