@@ -6,6 +6,7 @@
     let title = data.title;
     let alt = data.alt;
     let description = data.description;
+    let src = data.image;
 
     // let src = `images/${data.image}`
 
@@ -15,9 +16,7 @@
 <span>&#x2190; <a href='{base}/portfolio'>Back</a></span>
 <div class="text-column">
     <h1>{title}</h1>
-    {#await import(`../../../lib/images/${data.image}`) then {default: src}}
-    <img class='img' {src} {alt}/>
-    {/await}
+    <img class='card-background' src='../../../images/{src}' {alt}/>
     <p>
         {description}
     </p>
