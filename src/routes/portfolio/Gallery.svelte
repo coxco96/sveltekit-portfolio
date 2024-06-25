@@ -44,7 +44,7 @@
 <div class="feature-grid">
     {#if filtered.length == 0}
         {#each items as item}
-            {#await import(`../../lib/images/${item.image}`) then { default: src }}
+            {#await import(`../lib/images/${item.image}`) then { default: src }}
                 <div class="item">
                     <div class="text-column">
                         {#if item.featureLabel}
@@ -65,7 +65,7 @@
         {/each}
     {:else}
         {#each filtered as item}
-            {#await import(`../../lib/images/${item.image}`) then { default: src }}
+            {#await import(`../lib/images/${item.image}`) then { default: src }}
                 <div class="item">
                     <div class="text-column">
                         <h3>{item.featureLabel}</h3>
