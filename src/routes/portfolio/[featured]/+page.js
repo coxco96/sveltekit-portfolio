@@ -9,3 +9,5 @@ export async function load({ params }) {
     featuredItem = items.find(item => item.slug === featuredUrl); // find which item matches this item's slug
     return featuredItem; // return that item data
   }
+
+  export const prerender = false;
