@@ -4,20 +4,21 @@
     export let title = "title";
     export let src;
     export let alt = "";
-    export let link;
+    // import { base } from "$app/paths";
+    // export let link;
 </script>
 
 <div class="card hvr-glow text-column">
     <!-- <img class="card-background" {src} {alt} /> -->
-    <img class='card-background' src='../../lib/images/{src}' {alt}/>
+    <img class='card-background' src='../../images/{src}' {alt}/>
 
     <div class="card-group">
         <div class="publication">
-            {#if link}
+            <!-- {#if link}
                 <a href={link} target="_blank">{publication}</a>
-            {:else}
+            {:else} -->
             {publication}
-            {/if}
+            <!-- {/if} -->
         </div>
         <div class="title">{@html title}</div>
     </div>
