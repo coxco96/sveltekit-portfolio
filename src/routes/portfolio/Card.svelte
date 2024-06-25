@@ -8,7 +8,6 @@
 </script>
 
 <div class="card hvr-glow text-column">
-    <!-- <img class="card-background" {src} {alt} /> -->
     <img class='card-background' src='../../images/{src}' {alt}/>
 
     <div class="card-group">

@@ -23,7 +23,6 @@
 		I design and develop <strong>data experiences</strong>.
     </p>
 
-	<!-- <Counter /> -->
 </section>
 
 <style>

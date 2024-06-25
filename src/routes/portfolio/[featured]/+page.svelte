@@ -8,6 +8,7 @@
 </script>
 
 <span>&#x2190; <a href='{base}/portfolio'>Back</a></span>
+<main>
 <div class="text-column">
     <h1>{title}</h1>
     <img class='card-background' src='../../../images/{src}' {alt}/>
@@ -15,4 +16,5 @@
         {description}
     </p>
 </div>
+</main>
 

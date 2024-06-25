@@ -1,15 +1,11 @@
 <script>
 	import { page } from "$app/stores";
 	import { base } from "$app/paths";
-	console.log("base: ");
-	console.log(base);
+
 </script>
 
 <header>
 	<div class="corner">
-		<!-- <a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a> -->
 	</div>
 
 	<nav>
@@ -18,21 +14,21 @@
 		</svg>
 		<ul>
 			<li
-				aria-current={$page.url.pathname === "{base}"
+				aria-current={$page.url.pathname === "/"
 					? "page"
 					: undefined}
 			>
 				<a href="/">Home</a>
 			</li>
 			<li
-				aria-current={$page.url.pathname === "{base}/about"
+				aria-current={$page.url.pathname === "/about"
 					? "page"
 					: undefined}
 			>
 				<a href="about">About</a>
 			</li>
 			<li
-				aria-current={$page.url.pathname === "{base}/portfolio"
+				aria-current={$page.url.pathname === "/portfolio"
 					? "page"
 					: undefined}
 			>
@@ -45,9 +41,6 @@
 	</nav>
 
 	<div class="corner">
-		<!-- <a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a> -->
 	</div>
 </header>
 
@@ -60,20 +53,6 @@
 	.corner {
 		width: 3em;
 		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
 	}
 
 	nav {
