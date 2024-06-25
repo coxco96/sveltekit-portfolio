@@ -7,7 +7,7 @@ export const items = [
         "isFeature": 1,
         "publication": "NYT",
         "type": "chart",
-        "link": "www.google.com",
+        "link": "https://www.google.com",
         "slug": "archery-woo",
         "featureLabel": "Data Analysis",
         "keyword": "featured",
@@ -29,7 +29,7 @@ export const items = [
         "isFeature": 2,
         "publication": "Miami Herald/DC Bureau",
         "type": "map",
-        "link": "www.google.com",
+        "link": "https://www.google.com",
         "slug": "featured-2",
         "featureLabel": "Interactive",
         "tags": ["research", "data analysis"]
@@ -42,7 +42,7 @@ export const items = [
         "isFeature": 3,
         "publication": "NYT",
         "type": "chart",
-        "link": "www.google.com",
+        "link": "https://www.google.com",
         "slug": "featured-3",
         "featureLabel": "Development",
         "tags": ["maps", "data analysis"]

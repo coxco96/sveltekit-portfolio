@@ -4,8 +4,7 @@
     export let title = "title";
     export let src;
     export let alt = "";
-    // import { base } from "$app/paths";
-    // export let link;
+    export let link;
 </script>
 
 <div class="card hvr-glow text-column">
@@ -14,11 +13,11 @@
 
     <div class="card-group">
         <div class="publication">
-            <!-- {#if link}
+            {#if link}
                 <a href={link} target="_blank">{publication}</a>
-            {:else} -->
+            {:else}
             {publication}
-            <!-- {/if} -->
+            {/if}
         </div>
         <div class="title">{@html title}</div>
     </div>

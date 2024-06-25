@@ -1,16 +1,10 @@
 <script>
     export let data;
-    import {page} from '$app/stores';
     import {base} from '$app/paths';
-    console.log($page.params)
     let title = data.title;
     let alt = data.alt;
     let description = data.description;
     let src = data.image;
-
-    // let src = `images/${data.image}`
-
-
 </script>
 
 <span>&#x2190; <a href='{base}/portfolio'>Back</a></span>
@@ -22,11 +16,3 @@
     </p>
 </div>
 
-<style>
-        .img {
-        height: var(--card-height);
-        position: relative;
-        max-width: 100%;
-        min-width: 100%;
-    }
-</style>
