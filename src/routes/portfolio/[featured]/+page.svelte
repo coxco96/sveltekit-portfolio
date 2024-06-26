@@ -6,23 +6,26 @@
     let description = data.description;
     let src = data.image;
     let aboveImageText = data.aboveImageText;
-
+    let aboveImageText2 = data.aboveImageText2;
 </script>
 
-<span class="back">&#x2190; <a href="{base}/portfolio">Back</a></span>
+<span class="back">&#x2190; <a href="{base}/portfolio" aria-label='Go back to main portfolio page'>Back</a></span>
 <main>
     <div class="text-column">
         <h1>{title}</h1>
-        <div class="above-image-text">
-            {#if aboveImageText}
+        {#if aboveImageText}
+            <div class="above-image-text">
                 {@html aboveImageText}
-            {/if}
-        </div>
-
-            <img
-                src="../../../images/{src}"
-                {alt}
-            />
+            </div>
+        {/if}
+    </div>
+    <div class="above-image-text">
+        {#if aboveImageText2}
+            {@html aboveImageText2}
+        {/if}
+    </div>
+    <div class="text-column">
+        <img src="../../../images/{src}" {alt} />
 
         <p>
             {@html description}
