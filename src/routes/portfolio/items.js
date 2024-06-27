@@ -5,7 +5,8 @@
 /*  
 EXAMPLE STRUCTURE WITH ALL POSSIBLE KEYS:
     {
-        "title": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)",
+        "title": "What the Sackler Family Owes Me (And My Fellow Kentuckians)",
+        "pageTitle": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)", // use this if page title should be different than gallery title
         "tags": ["Data Design", "Maps", "Interactive"],
         "type": "Data Design",
         "slug": "slug-for-url",
@@ -35,10 +36,14 @@ export const items = [
         "tags": ["Data Analysis", "Data Design"],
         "slug": "how-big-is-taylor-swift",
         "image": "tswift.jpg",
+        "subtitle": "I crunched the numbers.",
+        "publication": "New York Times"
         // "cardHeight": '500px'
     },
     {
-        "title": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)",
+        "title": "What the Sackler Family Owes Me",
+        "subtitle": "(And my fellow Kentuckians)",
+        "pageTitle":"What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)",
         "type": "Data Design",
         "tags": ["Data Design", "Interactive", "Maps", "Data Analysis"],
         "slug": "what-the-sackler-family-owes-me",
@@ -109,7 +114,7 @@ export const items = [
         "slug": "when-caitlin-clark-comes-to-town",
         "linK": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
         "type": "Data Design",
-        "cardHeight": '900px',
+        "cardHeight": '800px',
         "caitlinClark": true
     },
     {

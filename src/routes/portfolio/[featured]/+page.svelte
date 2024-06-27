@@ -2,7 +2,7 @@
     export let data;
     import { base } from "$app/paths";
 
-    let title = data.title;
+    let title = data.pageTitle ? data.pageTitle : data.title;
 
     let alt = data.alt;
     let src = data.image;

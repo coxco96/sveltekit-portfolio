@@ -53,32 +53,30 @@
         {#if filtered.length == 0}
             {#each items as item}
                 <div class="item">
-                    <a href="portfolio/{item.slug}">
                         <Card
                             title={item.title}
                             publication={item.publication}
                             type={item.type}
                             link={item.link}
                             src={item.image}
-                            caitlinClark={item.caitlinClark}
-                            --card-height={item.cardHeight ? item.cardHeight : '300px'}
+                            slug={item.slug}
+                            subtitle={item.subtitle}
                             
                         />
-                    </a>
                 </div>
             {/each}
         {:else}
             {#each filtered as item}
                 <div class="item">
-                    <a href="portfolio/{item.slug}">
                         <Card
                             title={item.title}
                             publication={item.publication}
                             type={item.type}
                             link={item.link}
                             src={item.image}
+                            slug={item.slug}
+                            subtitle={item.subtitle}
                         />
-                    </a>
                 </div>
             {/each}
         {/if}
@@ -86,11 +84,19 @@
 </main>
 
 <style>
-    :root {
-        --card-width: auto;
-        --card-height: auto;
+    /* :root {
         --object-position: "left top";
         --card-bg-color: none;
+    } */
+
+    .gallery {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
     }
 
     .filter-buttons {
@@ -101,25 +107,6 @@
         margin: 0 auto;
         flex-wrap: wrap;
         gap: 5px 2px;
-    }
-
-    .gallery {
-        margin-top: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        position: absolute;
-        left: 0;
-    }
-
-    .item h3 {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .item {
-        margin-bottom: 25px;
     }
 
     .tag {

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<link rel="icon" href="http://localhost:5173/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	<title>Portfolio</title>
+	<style type="text/css" data-vite-dev-id="/Users/courtcox/Documents/Everything else/2024/sveltekit-portfolio/src/routes/Header.svelte?svelte&amp;type=style&amp;lang.css">header.s-Cmt25qOMERl7.s-Cmt25qOMERl7{display:flex;justify-content:space-between}.corner.s-Cmt25qOMERl7.s-Cmt25qOMERl7{width:3em;height:3em}nav.s-Cmt25qOMERl7.s-Cmt25qOMERl7{display:flex;justify-content:center;--background:rgba(255, 255, 255, 0.7)}svg.s-Cmt25qOMERl7.s-Cmt25qOMERl7{width:2em;height:3em;display:block}path.s-Cmt25qOMERl7.s-Cmt25qOMERl7{fill:var(--background)}ul.s-Cmt25qOMERl7.s-Cmt25qOMERl7{position:relative;padding:0;margin:0;height:3em;display:flex;justify-content:center;align-items:center;list-style:none;background:var(--background);background-size:contain}li.s-Cmt25qOMERl7.s-Cmt25qOMERl7{position:relative;height:100%}li[aria-current="page"].s-Cmt25qOMERl7.s-Cmt25qOMERl7::before{--size:6px;content:"";width:0;height:0;position:absolute;top:0;left:calc(50% - var(--size));border:var(--size) solid transparent;border-top:var(--size) solid var(--color-theme-1)}nav.s-Cmt25qOMERl7 a.s-Cmt25qOMERl7{display:flex;height:100%;align-items:center;padding:0 0.5rem;color:var(--color-text);font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;transition:color 0.2s linear}a.s-Cmt25qOMERl7.s-Cmt25qOMERl7:hover{color:var(--color-theme-1)}.s-Cmt25qOMERl7.s-Cmt25qOMERl7{}</style><style type="text/css" data-vite-dev-id="/Users/courtcox/Documents/Everything else/2024/sveltekit-portfolio/src/routes/styles.css">/* fira-mono-cyrillic-ext-400-normal */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff2) format('woff2'), url(/node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff) format('woff');
+  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+/* fira-mono-cyrillic-400-normal */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff2) format('woff2'), url(/node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff) format('woff');
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+/* fira-mono-greek-ext-400-normal */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff2) format('woff2'), url(/node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff) format('woff');
+  unicode-range: U+1F00-1FFF;
+}
+/* fira-mono-greek-400-normal */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff2) format('woff2'), url(/node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff) format('woff');
+  unicode-range: U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;
+}
+/* fira-mono-latin-ext-400-normal */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff2) format('woff2'), url(/node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff) format('woff');
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+/* fira-mono-latin-400-normal */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff2) format('woff2'), url(/node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+:root {
+	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--color-bg-0: rgb(226, 242, 242);
+	--color-bg-1: hsl(199, 39%, 89%);
+	--color-bg-2: hsl(185, 30%, 92%);
+	/* --color-theme-1: #ff3e00; */
+	--color-theme-1: #1c2a71;
+	--color-theme-2: #4075a6;
+	--color-text: rgba(0, 0, 0, 0.7);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-attachment: fixed;
+	background-color: var(--color-bg-1);
+	background-size: 100vw 100vh;
+	background-image: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(255, 255, 255, 0.75) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+}
+h1,
+h2,
+p {
+	font-weight: 400;
+}
+p {
+	line-height: 1.5;
+}
+a {
+	color: var(--color-theme-1);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+h2 {
+	font-size: 1rem;
+}
+pre {
+	font-size: 16px;
+	font-family: var(--font-mono);
+	background-color: rgba(255, 255, 255, 0.45);
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+	padding: 0.5em;
+	overflow-x: auto;
+	color: var(--color-text);
+}
+.text-column {
+	display: flex;
+	max-width: 48rem;
+	flex: 0.6;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+}
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+}
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+</style><style type="text/css" data-vite-dev-id="/Users/courtcox/Documents/Everything else/2024/sveltekit-portfolio/src/routes/+layout.svelte?svelte&amp;type=style&amp;lang.css">.app.s-7IPF32Wcq3s8{display:flex;flex-direction:column;min-height:100vh}main.s-7IPF32Wcq3s8{flex:1;display:flex;flex-direction:column;padding:1rem;width:100%;max-width:100%;margin:0 auto;box-sizing:border-box}@media(min-width: 480px){}.s-7IPF32Wcq3s8{}</style><style type="text/css" data-vite-dev-id="/Users/courtcox/Documents/Everything else/2024/sveltekit-portfolio/src/routes/portfolio/Card.svelte?svelte&amp;type=style&amp;lang.css">.item-container.s-i7-UDemsl4nM.s-i7-UDemsl4nM{border:1px blue solid;display:flex;flex-direction:column;height:350px;max-width:100%;width:350px}.item-title.s-i7-UDemsl4nM a.s-i7-UDemsl4nM{font-size:1.7rem;font-family:Arial, Helvetica, sans-serif;color:#121212;line-height:1.15em;font-weight:600}.subtitle.s-i7-UDemsl4nM.s-i7-UDemsl4nM{font-size:1rem;line-height:1.375rem}.img-container.s-i7-UDemsl4nM.s-i7-UDemsl4nM{border:purple 1px solid;width:100%;height:300px}.s-i7-UDemsl4nM.s-i7-UDemsl4nM{}</style><style type="text/css" data-vite-dev-id="/Users/courtcox/Documents/Everything else/2024/sveltekit-portfolio/src/routes/portfolio/Gallery.svelte?svelte&amp;type=style&amp;lang.css">:root{--object-position:"left top";--card-bg-color:none}.gallery.s-j9Q7vURfDVSM{margin-top:2rem;display:flex;flex-direction:row;justify-content:center;align-items:center;flex-wrap:wrap;gap:1.5rem;border:green 3px solid}.filter-buttons.s-j9Q7vURfDVSM{display:flex;max-width:100%;flex-direction:row;justify-content:center;margin:0 auto;flex-wrap:wrap;gap:5px 2px}.tag.s-j9Q7vURfDVSM{font-size:16px;padding:5px;background-color:lightgray;font-size:18px}.tag.s-j9Q7vURfDVSM:hover{background-color:rgb(108, 108, 108);color:white}.tag.s-j9Q7vURfDVSM:active,.active-filter.s-j9Q7vURfDVSM:active{background-color:rgb(79, 79, 79);color:white;transform:translateY(4px)}.active-filter.s-j9Q7vURfDVSM{background-color:rgb(79, 79, 79);border-color:white;color:white}.s-j9Q7vURfDVSM{}</style><style type="text/css" data-vite-dev-id="/Users/courtcox/Documents/Everything else/2024/sveltekit-portfolio/src/routes/portfolio/[featured]/+page.svelte?svelte&amp;type=style&amp;lang.css">.title.s-sT8aAexXrvP5{font-size:2.5rem;line-height:2.875rem}.back.s-sT8aAexXrvP5{text-transform:uppercase}.content-block-one.s-sT8aAexXrvP5{font-size:1.4375rem;line-height:1.875rem;border-bottom:1px solid #cecece;margin-bottom:20px;padding-bottom:20px}.content-block-two.s-sT8aAexXrvP5,.content-block-three.s-sT8aAexXrvP5,.content-block-four.s-sT8aAexXrvP5{margin-bottom:10px;font-size:1.25rem;line-height:1.875rem}.figure.s-sT8aAexXrvP5{margin-bottom:20px;padding-bottom:20px;font-size:16px;border-bottom:1px solid #cecece;max-width:100%}figcaption.s-sT8aAexXrvP5{margin-top:4px;font-size:0.9375rem;line-height:1.25rem;color:#727272;margin-right:7px}.s-sT8aAexXrvP5{}</style><meta name="description" content="Portfolio"></head>
+	<body data-sveltekit-preload-data="hover" cz-shortcut-listen="true">
+		<div style="display: contents"><div class="app s-7IPF32Wcq3s8"><header class="s-Cmt25qOMERl7"><div class="corner s-Cmt25qOMERl7"></div> <nav class="s-Cmt25qOMERl7"><svg viewBox="0 0 2 3" aria-hidden="true" class="s-Cmt25qOMERl7"><path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" class="s-Cmt25qOMERl7"></path></svg> <ul class="s-Cmt25qOMERl7"><li class="s-Cmt25qOMERl7"><a href="http://localhost:5173/" class="s-Cmt25qOMERl7">Home</a></li> <li class="s-Cmt25qOMERl7"><a href="http://localhost:5173/about" class="s-Cmt25qOMERl7">About</a></li> <li aria-current="page" class="s-Cmt25qOMERl7"><a href="http://localhost:5173/portfolio" class="s-Cmt25qOMERl7">Portfolio</a></li></ul> <svg viewBox="0 0 2 3" aria-hidden="true" class="s-Cmt25qOMERl7"><path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" class="s-Cmt25qOMERl7"></path></svg></nav> <div class="corner s-Cmt25qOMERl7"></div></header><!--<Header>--> <main class="s-7IPF32Wcq3s8"> <h1 class="s-j9Q7vURfDVSM">Portfolio</h1> <div role="group" aria-label="Filter items in portfolio" class="filter-buttons s-j9Q7vURfDVSM"><button class="tag  s-j9Q7vURfDVSM" aria-label="Filter by Data Analysis" aria-pressed="false">Data Analysis </button><button class="tag  s-j9Q7vURfDVSM" aria-label="Filter by Data Design" aria-pressed="false">Data Design </button><button class="tag  s-j9Q7vURfDVSM" aria-label="Filter by Interactive" aria-pressed="false">Interactive </button><button class="tag  s-j9Q7vURfDVSM" aria-label="Filter by Maps" aria-pressed="false">Maps </button><button class="tag  s-j9Q7vURfDVSM" aria-label="Filter by Other" aria-pressed="false">Other </button></div> <main class="s-j9Q7vURfDVSM"><div class="gallery s-j9Q7vURfDVSM"><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/how-big-is-taylor-swift" class="s-i7-UDemsl4nM">How Big Is Taylor Swift?</a></div> <div class="subtitle s-i7-UDemsl4nM"><p class="s-i7-UDemsl4nM">I crunched the numbers.</p></div> <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/what-the-sackler-family-owes-me" class="s-i7-UDemsl4nM">What the Sackler Family Owes Me (And My Fellow Kentuckians)</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/precision-of-a-champion" class="s-i7-UDemsl4nM">Studying the Limits of Human Perfection, Through Darts</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/flashback" class="s-i7-UDemsl4nM">Flashback</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/na-breweries" class="s-i7-UDemsl4nM">North American Breweries</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/austin-traffic-lights" class="s-i7-UDemsl4nM">Traffic Lights by District in Austin, TX</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/when-caitlin-clark-comes-to-town" class="s-i7-UDemsl4nM">When Caitlin Clark Comes to Town</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/darts1" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/darts2" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/how-to-read-a-hearing-test" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/jersey-island" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/metro1" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/metro2" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/miami-election" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/miami-hottest" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/pollshift" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/miami-redlines" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/undefined" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div><div class="item s-j9Q7vURfDVSM"><div class="item-container s-i7-UDemsl4nM"><div class="item-title s-i7-UDemsl4nM"><a href="http://localhost:5173/portfolio/undefined" class="s-i7-UDemsl4nM">title</a></div>  <div class="img-container s-i7-UDemsl4nM"></div></div><!--<Card>--> </div></div></main><!--<Gallery>--><!--<+page>--></main></div><!--<+layout>--> <div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;"></div><!--<Root>--></div>
+	
+
+</body></html>

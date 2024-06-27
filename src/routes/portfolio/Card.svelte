@@ -1,92 +1,106 @@
 <script>
-    export let type = "type";
-    export let publication = "";
+    export let type;
+    export let publication;
     export let title = "title";
     export let src;
     export let alt = "";
-    export let link;
-    export let caitlinClark;
+    export let slug;
+    export let subtitle;
+    import { base } from "$app/paths";
+    // import '@fontsource/hind'
+
+    console.log(slug);
+    console.log(title);
+    // export let link;
 </script>
 
-<div class="card hvr-glow text-column {caitlinClark ? 'caitlin-clark' : ''}">
-    <img class="card-background" src="../../images/{src}" {alt} />
-
-    <div class="card-group">
-        <div class="publication">
-            {#if link}
-                <a href={link} target="_blank">{publication}</a>
-            {:else}
-                {publication}
-            {/if}
+<div class="item-container">
+    <div class="item-title">
+        <a href="{base}/portfolio/{slug}">{@html title}</a>
+    </div>
+    {#if subtitle}
+        <div class="subtitle">
+            {@html subtitle}
         </div>
-        <div class="title">{@html title}</div>
+    {/if}
+    {#if type}
+        <div class="type">{type}</div>
+    {/if}
+
+    <div class="img-container">
+       <a href='{base}/portfolio/{slug}'><img class='img' src='../../images/{src}' {alt}/></a>
     </div>
 
-    <!-- <div class="type">{type}</div> -->
+    <div class="publication">
+        {#if publication}
+            {@html publication}
+        {/if}
+    </div>
 </div>
 
 <style>
-    .card {
-        border: #cdcdcd 2px solid;
-        height: var(--card-height);
-        position: relative;
-        background-color: var(--card-bg-color);
+    .item-container {
+        border: 1px blue solid;
+        display: flex;
+        flex-direction: column;
+        height: 350px;
         max-width: 100%;
-        flex: 1 1 300px;
-        /* min-width: 100%; */
+        width: 350px;
     }
 
-    .caitlin-clark {
-        border: red 2px solid;
+    .item-title a {
+        font-size: 1.7rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #121212;
+        line-height: 1.75rem;
+        font-weight: 600;
     }
 
-    .card-group {
-        position: absolute;
-        bottom: 2px;
-        left: 5px;
-        height: fit-content;
-        width: fit-content;
-        max-width: 85%;
-        background-color: rgba(88, 86, 86, 0.85);
-        padding: 5px 2px;
-        margin-bottom: 2.5px;
-        border-radius: 10px;
-        color: rgb(249, 251, 254);
+    .subtitle {
+        font-size: 1.15rem;
+        line-height: 1.375rem;
+        font-family: "Hind", Helvetica, Arial, sans-serif;
+    }
+
+    .publication,
+    .type {
+        font-size: 0.825rem;
+        line-height: 1.25rem;
+        color: #727272;
+        text-transform: uppercase;
     }
 
     .publication {
-        font-style: italic;
-        padding-bottom: 2.5px;
-    }
-
-    .title {
-        font-size: 1.8rem;
-        font-weight: 600;
-        padding-right: 15%;
+        bottom: 0;
+        align-self: end;
+        min-height: 1.25rem;
+        height: 1.25rem;
+        min-width: 1px;
     }
 
     .type {
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        text-transform: uppercase;
-        font-weight: 600;
-        background-color: rgba(255, 255, 255, 0.85);
-        padding: 5px 2px;
+        color: #121212;
     }
 
-    .card-background {
+    .img-container {
+        border: purple 1px solid;
         width: 100%;
-        height: 100%;
-        opacity: 0.8;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .img {
+        max-width: 100%;
+        max-height: 100%;
         object-fit: contain;
-        text-align: center;
-        object-position: var(--object-position);
     }
 
     /* hvr-glow adapted from @IanLunn on Github: https://github.com/IanLunn/Hover/blob/master/css/hover.css */
 
-    .hvr-glow {
+    /* .hvr-glow {
         display: inline-block;
         vertical-align: middle;
         -webkit-transform: perspective(1px) translateZ(0);
@@ -96,11 +110,11 @@
         transition-duration: 0.3s;
         -webkit-transition-property: box-shadow;
         transition-property: box-shadow;
-    }
-
+    } */
+    /* 
     .hvr-glow:hover,
     .hvr-glow:focus,
     .hvr-glow:active {
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    }
+    } */
 </style>
