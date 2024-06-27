@@ -5,22 +5,22 @@
     export let src;
     export let alt = "";
     export let link;
+    export let caitlinClark;
 </script>
 
-<div class="card hvr-glow text-column">
-    <img class='card-background' src='../../images/{src}' {alt}/>
+<div class="card hvr-glow text-column {caitlinClark ? 'caitlin-clark' : ''}">
+    <img class="card-background" src="../../images/{src}" {alt} />
 
     <div class="card-group">
         <div class="publication">
             {#if link}
                 <a href={link} target="_blank">{publication}</a>
             {:else}
-            {publication}
+                {publication}
             {/if}
         </div>
         <div class="title">{@html title}</div>
     </div>
-    
 
     <!-- <div class="type">{type}</div> -->
 </div>
@@ -32,7 +32,12 @@
         position: relative;
         background-color: var(--card-bg-color);
         max-width: 100%;
+        flex: 1 1 300px;
         /* min-width: 100%; */
+    }
+
+    .caitlin-clark {
+        border: red 2px solid;
     }
 
     .card-group {

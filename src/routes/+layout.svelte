@@ -11,12 +11,12 @@
 		<slot />
 	</main>
 
-	<footer>
+	<!-- <footer>
 		<a href="https://github.com/coxco96/">
 			<img class='github' src={github} alt="GitHub" />
 		</a>
 			View the source code for this site.
-	</footer>
+	</footer> -->
 </div>
 
 <style>

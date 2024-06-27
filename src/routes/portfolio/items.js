@@ -35,7 +35,7 @@ export const items = [
         "tags": ["Data Analysis", "Data Design"],
         "slug": "how-big-is-taylor-swift",
         "image": "tswift.jpg",
-        "cardHeight": '500px'
+        // "cardHeight": '500px'
     },
     {
         "title": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)",
@@ -108,7 +108,9 @@ export const items = [
         "tags": ["Data Design", "Data Analysis"],
         "slug": "when-caitlin-clark-comes-to-town",
         "linK": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
-        "type": "Data Design"
+        "type": "Data Design",
+        "cardHeight": '900px',
+        "caitlinClark": true
     },
     {
         "image": "darts.png",

@@ -60,6 +60,7 @@
                             type={item.type}
                             link={item.link}
                             src={item.image}
+                            caitlinClark={item.caitlinClark}
                             --card-height={item.cardHeight ? item.cardHeight : '300px'}
                             
                         />
@@ -86,7 +87,7 @@
 
 <style>
     :root {
-        --card-width: 300px;
+        --card-width: auto;
         --card-height: auto;
         --object-position: "left top";
         --card-bg-color: none;
