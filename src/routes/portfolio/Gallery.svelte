@@ -22,19 +22,20 @@
 
     // IF I decide to use background color shades over the gallery graphics, add this to the Card elements:
     // --card-bg-color={getBgColor(i)} (also add i back into the each blocks)
-    function getBgColor(i) {
-        let colors = [
-            "rgba(230, 230, 250, 0.1)", // lavender
-            "rgba(175, 238, 238, 0.1)", // pale aqua
-            "rgba(176, 224, 230, 0.1)", // poweder blue
-            "rgba(32, 178, 170, 0.1)", // green
-        ];
-        return colors[i % colors.length];
-    }
+    // function getBgColor(i) {
+    //     let colors = [
+    //         // "#D8BCAB",
+    //         "#EBE6E0",
+    //         // "#B7825F",
+    //         // "#D4A36A",
+    //         // "#C3B499"
+    //     ];
+    //     return colors[i % colors.length];
+    // }
 </script>
 
 <h1>Portfolio</h1>
-
+<p class="filter-label">Filter by:</p>
 <div role="group" aria-label="Filter items in portfolio" class="filter-buttons">
     {#each allTags as tag}
         <button
@@ -51,32 +52,31 @@
 <main>
     <div class="gallery">
         {#if filtered.length == 0}
-            {#each items as item}
+            {#each items as item, i}
                 <div class="item">
-                        <Card
-                            title={item.title}
-                            publication={item.publication}
-                            type={item.type}
-                            link={item.link}
-                            src={item.image}
-                            slug={item.slug}
-                            subtitle={item.subtitle}
-                            
-                        />
+                    <Card
+                        title={item.title}
+                        publication={item.publication}
+                        type={item.type}
+                        link={item.link}
+                        src={item.image}
+                        slug={item.slug}
+                        subtitle={item.subtitle}
+                    />
                 </div>
             {/each}
         {:else}
             {#each filtered as item}
                 <div class="item">
-                        <Card
-                            title={item.title}
-                            publication={item.publication}
-                            type={item.type}
-                            link={item.link}
-                            src={item.image}
-                            slug={item.slug}
-                            subtitle={item.subtitle}
-                        />
+                    <Card
+                        title={item.title}
+                        publication={item.publication}
+                        type={item.type}
+                        link={item.link}
+                        src={item.image}
+                        slug={item.slug}
+                        subtitle={item.subtitle}
+                    />
                 </div>
             {/each}
         {/if}
@@ -92,11 +92,23 @@
     .gallery {
         margin-top: 2rem;
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap: 1.5rem;
+    }
+
+    .item {
+        box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.7);
+    }
+
+    .filter-label {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: bold;
     }
 
     .filter-buttons {
@@ -114,6 +126,10 @@
         padding: 5px;
         background-color: lightgray;
         font-size: 18px;
+        border-radius: 0.5rem;
+        border: 1px solid transparent;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
     }
 
     .tag:hover {

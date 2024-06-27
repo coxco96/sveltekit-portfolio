@@ -37,7 +37,9 @@ export const items = [
         "slug": "how-big-is-taylor-swift",
         "image": "tswift.jpg",
         "subtitle": "I crunched the numbers.",
-        "publication": "New York Times"
+        "publication": "New York Times",
+        "contentBlockOne": "blahblahblah",
+        "contentBlockTwo": "blahblahblah"
         // "cardHeight": '500px'
     },
     {
