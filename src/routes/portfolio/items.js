@@ -1,4 +1,55 @@
+// contentBlockThree is specifically for iframes!
+// if contentBlockThree is used for text, it needs to be wrapped in <div class='text-column></div'
+
+
+/*  
+EXAMPLE STRUCTURE WITH ALL POSSIBLE KEYS:
+    {
+        "title": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)",
+        "tags": ["Data Design", "Maps", "Interactive"],
+        "type": "Data Design",
+        "slug": "slug-for-url",
+        "contentBlockOne": "text one!",
+        "contentBlockTwo": "This project, from December 2021, was my first piece of \"data journalism.\" Since then, my skills in reporting, data storytelling, responsive design and accessibility engineering have skyrocketed. Nonetheless, you can view the full project here. Note that it is not mobile friendly.",
+        "contentBlockThree": "<iframe class='iframe' width='100%' height='800px' src='https://coxco96.github.io/kentucky-sackler-story/' title='What the Sackler Family Owes Me (And My Fellow Kentuckians)'></iframe>",
+        "contentBlockFour": "content block four!",
+        "image": "sackler.png",
+        "alt": "alt text",
+        "imageCaption": "<span style='text-transform: uppercase; letter-spacing: 0.01em; font-size: 0.8125rem;'>Static image from interactive map.</span><br>Each circle represents a Kentucky pharmacy in 2006. They are sized by number of oxycontin or hydrocodone pills dispensed in 2006 relative to the pharmacy's county population. • Data: Washington Post's NARCOS database.",
+        "includeImageOnFeaturePage": true, // set to false if want photo on portfolio gallery but not on feature page
+        "imageTwo": "photo2.png",
+        "imageCaptionTwo": "<span style='text-transform: uppercase; letter-spacing: 0.01em; font-size: 0.8125rem;'>Static image from interactive map.</span><br>Each circle represents a Kentucky pharmacy in 2006. They are sized by number of oxycontin or hydrocodone pills dispensed in 2006 relative to the pharmacy's county population. • Data: Washington Post's NARCOS database.",
+        "imageAltTwo": "image 2 alt",
+        "imageThree": "photo3.png",
+        "imageCaptionThree": "image caption three",
+        "imageAltThree": "image 3 alt",
+    },
+
+
+
+*/
+
 export const items = [
+    {
+        "title": "How Big Is Taylor Swift?",
+        "tags": ["Data Analysis", "Data Design"],
+        "slug": "how-big-is-taylor-swift",
+        "image": "tswift.jpg",
+        "cardHeight": '500px'
+    },
+    {
+        "title": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)",
+        "type": "Data Design",
+        "tags": ["Data Design", "Interactive", "Maps", "Data Analysis"],
+        "slug": "what-the-sackler-family-owes-me",
+        "contentBlockOne": "This project, from December 2021, was my first piece of \"data journalism.\" Since then, my skills in reporting, data storytelling, responsive design and accessibility engineering have skyrocketed. Nonetheless, you can view the full project here. Note that it is not mobile friendly.",
+        "contentBlockTwo": "View the full project in the frame below or on its original site, full-screen <a href='https://coxco96.github.io/kentucky-sackler-story/' target='_blank'>here</a>.",
+        "contentBlockThree": "<iframe class='iframe' width='100%' height='800px' src='https://coxco96.github.io/kentucky-sackler-story/' title='What the Sackler Family Owes Me (And My Fellow Kentuckians)'></iframe>",
+        "image": "sackler.png",
+        "alt": "A map of Kentucky made up of red circle outlines of various sizes",
+        "imageCaption": "<span style='text-transform: uppercase; letter-spacing: 0.01em; font-size: 0.8125rem;'>Static image from interactive map.</span><br>Each circle represents a Kentucky pharmacy in 2006. They are sized by number of oxycontin or hydrocodone pills dispensed in 2006 relative to the pharmacy's county population. • Data: Washington Post's NARCOS database.",
+        "includeImageOnFeaturePage": true,
+    },
     {
         "title": "Studying the Limits of Human Perfection, Through Darts",
         "description": "Description",
@@ -17,7 +68,7 @@ export const items = [
         "description": "",
         "image": "flashback.png",
         "imageAlt": "A 3x3 grid of historic images, with the New York Times Flashback logo as the center tile",
-        "tags": ["Fact Checking"],
+        "tags": ["Other"],
         "slug": "flashback",
         "publication": "New York Times",
         "type": "Fact Checking",
@@ -65,12 +116,6 @@ export const items = [
         "slug": 'darts1'
     },
     {
-        "title": "How Big Is Taylor Swift?",
-        "tags": ["Data Design", "Data Analysis"],
-        "slug": "how-big-is-taylor-swift",
-        "image": "placeholder.jpg"
-    },
-    {
         "image": "darts2.png",
         "tags": [],
         "slug": "darts2"
@@ -115,14 +160,7 @@ export const items = [
         "tags": [],
         "slug": "miami-redlines"
     },
-    {
-        "image": "sackler.png",
-        "tags": [],
-        "slug": "sacklers",
-        "title": "What the Sackler Family Owes Me (And My Fellow Kentuckians)",
-        "aboveImageText": "asdf",
-        "aboveImageText2": "<iframe class='iframe' width='100%' height='800px' src='https://coxco96.github.io/kentucky-sackler-story/' title='What the Sackler Family Owes Me (And My Fellow Kentuckians)'></iframe>"
-    },
+
     {
         "image": "tilt.png",
         "tags": []

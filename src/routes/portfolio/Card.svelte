@@ -20,8 +20,9 @@
         </div>
         <div class="title">{@html title}</div>
     </div>
+    
 
-    <div class="type">{type}</div>
+    <!-- <div class="type">{type}</div> -->
 </div>
 
 <style>
@@ -31,7 +32,7 @@
         position: relative;
         background-color: var(--card-bg-color);
         max-width: 100%;
-        min-width: 100%;
+        /* min-width: 100%; */
     }
 
     .card-group {
@@ -73,7 +74,7 @@
         width: 100%;
         height: 100%;
         opacity: 0.8;
-        object-fit: cover;
+        object-fit: contain;
         text-align: center;
         object-position: var(--object-position);
     }

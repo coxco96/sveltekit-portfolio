@@ -60,6 +60,8 @@
                             type={item.type}
                             link={item.link}
                             src={item.image}
+                            --card-height={item.cardHeight ? item.cardHeight : '300px'}
+                            
                         />
                     </a>
                 </div>
@@ -85,7 +87,7 @@
 <style>
     :root {
         --card-width: 300px;
-        --card-height: 300px;
+        --card-height: auto;
         --object-position: "left top";
         --card-bg-color: none;
     }
@@ -102,6 +104,12 @@
 
     .gallery {
         margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        position: absolute;
+        left: 0;
     }
 
     .item h3 {
