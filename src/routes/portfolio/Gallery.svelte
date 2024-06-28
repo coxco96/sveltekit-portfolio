@@ -19,19 +19,6 @@
             filters = filters.filter((x) => x != tag);
         }
     }
-
-    // IF I decide to use background color shades over the gallery graphics, add this to the Card elements:
-    // --card-bg-color={getBgColor(i)} (also add i back into the each blocks)
-    // function getBgColor(i) {
-    //     let colors = [
-    //         // "#D8BCAB",
-    //         "#EBE6E0",
-    //         // "#B7825F",
-    //         // "#D4A36A",
-    //         // "#C3B499"
-    //     ];
-    //     return colors[i % colors.length];
-    // }
 </script>
 
 <h1>Portfolio</h1>

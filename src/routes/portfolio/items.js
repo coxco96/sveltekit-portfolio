@@ -43,6 +43,15 @@ export const items = [{
         "imageInstead": "tswift2.jpg"
     },
     {
+        "title": "Svelte + Mapbox GL JS Component Library",
+        "subtitle": "Presented via Storybook",
+        "publication": "Thesis Project",
+        "image": "masters.png",
+        "slug": "svelte-mapbox-library",
+        "tags": ["Interactive"],
+        "type": "Sveltekit Library Development"
+    },
+    {
         "title": "Interactive Cluster Markers",
         "subtitle": "Traffic signals in Austin, TX",
         "contentBlockOne": "Interact with the map below, or view it full screen <a href='https://coxco96.github.io/cluster-group-demo/' target='_blank'>here</a>.",
@@ -137,7 +146,7 @@ export const items = [{
         "title": "Kentucky's Opioid Crisis",
         "subtitle": "Featuring an interactive map of pills dispensed by pharmacy per county resident",
         "pageTitle": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)",
-        "type": "Data Analysis, Data Design, Interactive, Maps",
+        "type": "Interactive map in scrollytelling story",
         "tags": ["Data Design", "Interactive", "Maps", "Data Analysis"],
         "slug": "what-the-sackler-family-owes-me",
         "contentBlockOne": "This project, from December 2021, was my first piece of \"data journalism.\" Since then, my skills in reporting, data storytelling, responsive design and accessibility engineering have skyrocketed. Nonetheless, you can view the full project here. Note that it is not mobile friendly.",
@@ -164,8 +173,14 @@ export const items = [{
         "imageTwo": "caitlin-clark.webp",
         "publication": "New York Times"
     },
-
-
+    {
+        "image": "metro.png",
+        "title": "The Places Most Affected by Remote Workers' Moves Around the Country",
+        "subtitle": "Graphic created together with Aatish Bhatia",
+        "contentBlockOne": "Made with Svelte (and lots and lots of CSS!)<br>Read the story<a href='https://www.nytimes.com/interactive/2023/06/17/upshot/17migration-patterns-movers.html'>here</a>.",
+        "tags": ["Data Design"],
+        "slug": "metro1"
+    },
     {
         "title": "Flashback",
         "subtitle": "A weekly history game",
@@ -205,11 +220,7 @@ export const items = [{
         "tags": [],
         "slug": "jersey-island"
     },
-    {
-        "image": "metro.png",
-        "tags": [],
-        "slug": "metro1"
-    },
+
     {
         "image": "metro2.png",
         "tags": [],
