@@ -25,6 +25,9 @@
     let contentBlockFour = data.contentBlockFour;
 
     // in case of additional images
+    let imageInstead = data.imageInstead;
+    let imageInsteadAlt = data.imageInsteadAlt;
+    let imageInsteadCaption = data.imageInsteadCaption;
     let imageTwo = data.imageTwo;
     let imageAltTwo = data.imageAltTwo;
     let imageCaptionTwo = data.imageCaptionTwo;
@@ -54,6 +57,14 @@
                     <figcaption>{@html imageCaption}</figcaption>
                 {/if}
             </figure>
+       
+        {:else if imageInstead}
+        <figure class="text-column figure">
+            <img src="../../../images/{imageInstead}" alt={imageInsteadAlt} />
+            {#if imageInsteadCaption}
+                <figcaption>{@html imageInsteadCaption}</figcaption>
+            {/if}
+        </figure>
         {/if}
 
         {#if contentBlockTwo}
@@ -127,7 +138,7 @@
         margin-bottom: 20px;
         padding-bottom: 20px;
         font-size: 16px;
-        border-bottom: 1px solid #cecece;
+
         max-width: 100%;
     }
 

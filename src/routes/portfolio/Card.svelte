@@ -9,22 +9,24 @@
     import { base } from "$app/paths";
 </script>
 
-<a href="{base}/portfolio/{slug}" class='a'>
+<a href="{base}/portfolio/{slug}" class="a">
     <div class="item-container hvr-glow">
-        <div class="item-title">
-            {@html title}
-        </div>
-        {#if subtitle}
-            <div class="subtitle">
-                {@html subtitle}
-            </div>
-        {/if}
         {#if type}
             <div class="type">{type}</div>
         {/if}
+        <div class="item-title">
+            {@html title}
+        </div>
+
+            <div class="subtitle">
+                {#if subtitle}
+                {@html subtitle}
+                {/if}
+            </div>
+
 
         <div class="img-container">
-                <img class="img" src="../../images/{src}" {alt} />
+            <img class="img" src="../../images/{src}" {alt} />
         </div>
 
         <div class="publication">
@@ -36,7 +38,6 @@
 </a>
 
 <style>
-
     .a:hover {
         text-decoration: none;
     }
@@ -44,9 +45,9 @@
         background-color: #ebe6e0;
         display: flex;
         flex-direction: column;
-        height: 350px;
-        max-width: 350px;
-        padding: 10px 5px 0 8px;
+        height: 400px;
+        max-width: 400px;
+        padding: 5px 5px 0 8px;
     }
 
     @media only screen and (max-width: 795px) {
@@ -73,7 +74,7 @@
 
     .publication,
     .type {
-        font-size: 0.825rem;
+        font-size: 0.8rem;
         line-height: 1.25rem;
         color: #727272;
         text-transform: uppercase;
@@ -87,7 +88,8 @@
     }
 
     .type {
-        color: #121212;
+        color: #363333;
+        margin-bottom: 2px;
     }
 
     .img-container {

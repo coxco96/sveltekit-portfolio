@@ -84,10 +84,6 @@
 </main>
 
 <style>
-    /* :root {
-        --object-position: "left top";
-        --card-bg-color: none;
-    } */
 
     .gallery {
         margin-top: 2rem;
