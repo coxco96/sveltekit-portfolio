@@ -76,11 +76,282 @@ export const items = [{
         "tags": ["Interactive"]
     },
     {
+        "title": "A Journalist's Guide to Styling geoTIFFs for the Web",
+        "slug": "geotiffs-for-journalists",
+        "image": "rasterconversion.png",
+        "subtitle": "How I made the Miami flood map from raster data",
+        "tags": ["Maps", "Data Design", "Other"],
+        "type": "Documentation, Tutorial Guide",
+        "publication": "Miami Herald",
+        "contentBlockOne": `<h2 id="table-of-contents" class='h2-guide'>Table of Contents</h2>
+        <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#data-sources">Data sources</a></li>
+        <li><a href="#working-with-geotiff-files-in-qgis">Working with geoTIFF Files in QGIS</a></li>
+        <li><a href="#uploading-geotiffs-to-mapbox-as-tilesets">Uploading geoTIFFs to Mapbox as Tilesets</a></li>
+        <li><a href="#using-mapbox-studio-to-create-a-style-layer">Using Mapbox Studio to Create a Style Layer</a></li>
+        <li><a href="#creating-a-custom-map-with-mapbox-gl-js">Creating a Custom Web Map with Mapbox GL JS</a></li>
+        <li><a href="#addendum-help-me-make-this-map-accessible">Addendum: Help Me Make This Map More Accessible</a></li>
+        </ul>
+        <hr>
+        <h2 id="overview" class='h2-guide'>Overview</h2>
+        <p>I created the interactive Miami-Dade County flood map seen below for <a href="https://www.miamiherald.com/news/local/environment/article262390547.html">this</a> story by <a target='_blank' href="https://www.miamiherald.com/profile/218643730">Alex Harris</a> in the <a target='_blank' href="https://www.miamiherald.com/">Miami Herald</a>. It depicts the water depth that each three-meter pixel has the chance of getting within a 5% probability. The map is designed to compare different areas of Miami-Dade County, along with the current projection with the future projection. For that reason, the raw values (originally in centimeters) have been exluded from the map, and the visualization is based on a color gradient scheme.  </p>
+        <p><img class='guide-img' src="../../../images/miamifloodmapfinal.gif" alt="Miami Flood Map GIF"></p>
+        <p>Click <a href="https://coxco96.github.io/miami-floods/">here</a> for the github.io demonstration of this map.</p>
+        <p>This walkthrough assumes beginner-level HTML/CSS/JavaScript knowledge.</p>
+        <hr>
+        <h2 id="data-sources" class='h2-guide'>Data Sources</h2>
+        <ul>
+        <li><p>I received the flood data for this map in the form of geoTIFF files via email from <a href="https://firststreet.org/">First Street Foundation</a>. You can find First Street Foundation&#39;s full flood-related datasets <a href="https://livingatlas.arcgis.com/en/browse/?q=%22First%20Street%22#d=2&amp;q=%22First%20Street%22&amp;type=layers&amp;srt=name">here</a>. Explore all public data from the foundation <a href="https://firststreet.org/data-access/public-access/">here</a>.</p>
+        </li>
+        <li><p><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">Shapefile: TIGER/LINE format on the U.S. county level</a></p>
+        </li>
+        </ul>
+        <hr>
+        <h2 id="working-with-geotiff-files-in-qgis" class='h2-guide'>Working with geoTIFF Files in QGIS</h2>
+        <ol>
+        <li><a href="#upload-geotiffs-to-qgis">Upload geoTIFFs to QGIS</a>  </li>
+        <li><a href="#add-a-shapefile">Add a shapefile</a></li>
+        <li><a href="#convert-bands-to-8-bit">Convert bands to 8-bit</a></li>
+        <li><a href="#style-raster-bands">Style raster bands</a></li>
+        <li><a href="#export-geotiffs">Export geoTIFFs</a></li>
+        </ol>
+        <h3 id="-upload-geotiffs-to-qgis-"><strong>Upload geoTIFFs to QGIS</strong></h3>
+        <ul>
+        <li>If you don&#39;t already have it installed, download and install the long-term release (LTR) version of <a href="https://qgis.org/en/site/forusers/download.html">QGIS</a>.</li>
+        <li>Within QGIS, we&#39;re going to upload your geoTIFF file as a raster layer. If your data file ends in .tif or .tiff, you&#39;re looking at the right thing, so long as it contains geo information.</li>
+        <li>From the top navigation bar in QGIS, click <em>Layer &gt; Add layer &gt; Add Raster Layer</em>. </li>
+        </ul>
+        <p><img src="../../../images/addrasterlayer.png" class='guide-img' alt="Add Raster Layer Screenshot. From QGIS toolbar, click 'Layer', then 'Add Layer', then 'Add Raster Layer'."></p>
+        <ul>
+        <li>Find the file source within your computer and upload. The layer should now appear in your layers panel.</li>
+        </ul>
+        <h3 id="-add-a-shapefile-"><strong>Add a shapefile</strong></h3>
+        <ul>
+        <li><p>Your shapefile should be in a <em>zip</em> file. From your device&#39;s file navigation, you can drag the <em>zip</em> file into the QGIS layers panel. Alternatively, use <em>Layer &gt; Add Layer &gt; Add Vector Layer</em>.</p>
+        </li>
+        <li><p>Filter your shapefile to your area of interest. You may need to inspect the attribute table to figure out the best way to filter. View the attribute table by right-clicking the layer from the layers panel and select <em>Open Attribute Table</em>.</p>
+        </li>
+        <li><p>Once you know how you want to filter your file, right-click the layer again, and click <em>Filter</em>, and write your expression. For example, if I wanted to see only Florida within my U.S. file, I would type <em>&quot;STATE_FP&quot; = &#39;12&#39;</em>. Be sure to use double quotation marks on the attribute name and single quotation marks on the attribute value.</p>
+        </li>
+        <li><p>A new, temporary layer should be generated of your file. Hide your old file from the map by unchecking it. Save your new file by right-clicking and selecting <em>Export &gt; Save Feature As</em>.</p>
+        </li>
+        <li><p>When saving your new file, keep the format as Shapefile, and set your CRS. Select <em>EPSG:4326 - WGS 84</em> since we&#39;ll be moving the file to Mapbox.</p>
+        </li>
+        </ul>
+        <h3 id="-convert-bands-to-8-bit-"><strong>Convert bands to 8-bit</strong></h3>
+        <ul>
+        <li>We&#39;re going to upload our raster file to Mapbox. But in order to meet Mapbox&#39;s requirements, we must convert our geoTIFF to an 8-bit file.</li>
+        <li>From the top navigation bar, click <em>Raster &gt; Conversion &gt; Translate (Convert Format)</em>.</li>
+        </ul>
+        <p><img class='guide-img' src="../../../images/rasterconversion.png" alt="Screenshot from QGIS. From toolbar menu: Click 'Raster', then 'Conversion', then 'Translate(Convert Format)'"></p>
+        <ul>
+        <li><p>Select your raster file as the <em>Input layer</em>.</p>
+        </li>
+        <li><p>Change <em>Output data type</em> to <em>Byte</em>.</p>
+        </li>
+        <li><p>Leave other settings unchanged. Click <em>Run</em>. The new layer should now appear as a temporary layer on your layer panel. You may wish to rename your layers in a way that will assure you remember which one is which.</p>
+        </li>
+        <li><p>Save your new file by right-clicking it in the layers panel and selecting <em>Export &gt; Save Feature As</em>.</p>
+        </li>
+        <li><p>When saving your new file, keep the file format as <em>geoTIFF</em> and select <em>EPSG:4326 - WGS 84</em> for the CRS since we&#39;ll be moving the file to Mapbox.</p>
+        </li>
+        </ul>
+        <h3 id="-style-raster-bands-"><strong>Style raster bands</strong></h3>
+        <ul>
+        <li><p>Note that these instructions are specific to the data I worked with. They are a good starting point, but you may have to play around with settings and options for your data styling.</p>
+        </li>
+        <li><p>Right-click your 8-bit raster layer. Select <em>Properties</em>. Click into the <em>Symbology</em> tab.</p>
+        </li>
+        <li><p>Set <em>Rendering type</em> to <em>Singleband pseudocolor</em>.</p>
+        </li>
+        <li><p>Set your color ramps, number of color stops, min/max values, etc. as you want your data to appear. Finding a good color gradient for your map can be one of the lengthiest parts of this process. Be sure to keep color accessibility in mind. <a href="https://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3">Colorbrewer</a> is a great resource for finding accessible color schemes for maps.</p>
+        </li>
+        </ul>
+        <h3 id="-export-geotiffs-"><strong>Export geoTIFFs</strong></h3>
+        <ul>
+        <li><p>Right-click your 8-bit, colorized raster file from the layers panel. Select <em>Export &gt; Save Feature As</em>.</p>
+        </li>
+        <li><p>Select <em>Rendered Image</em> as your output mode. This is important. Further steps will not work if you do not save a rendered image of your data to your computer. </p>
+        </li>
+        <li><p>Save the file.</p>
+        </li>
+        </ul>
+        <hr>
+        <h2 id="uploading-geotiffs-to-mapbox-as-tilesets" class='h2-guide'>Uploading geoTIFFs to Mapbox as Tilesets</h2>
+        <ol>
+        <li><a href="#what-is-mapbox-anyway">What is Mapbox, anyway?</a></li>
+        <li><a href="#use-mapboxs-api-to-upload-large-files">Use Mapbox&#39;s API to upload large files</a></li>
+        </ol>
+        <h3 id="-what-is-mapbox-anyway-"><strong>What is Mapbox, anyway?</strong></h3>
+        <ul>
+        <li><p>We&#39;re going to be using Mapbox Studio and Mapbox GL JS, which are two separate tools that work well together. Mapbox Studio is a no-code web mapping service. Some people think of it as the Photoshop of web mapping. It powers much of the maps you see on the web, and allows anyone to create custom, stylish maps that are easy to embed in applications or websites. It has some limitations, though, and that&#39;s where Mapbox GL JS comes in. GL JS requires some JavaScript knowledge, but it allows us to add some built-in UI features and, really, just about any kind of interactivity that you can code. We&#39;re going to keep things fairly simple. We&#39;ll add our raster layer with GL JS. Though you can add the layer within Mapbox Studio, doing it in GL JS allows for interactivity, such as the toggle button on the Miami map between the two different years. Explore the GL JS documentation to see what else you can do.</p>
+        </li>
+        <li><p>Now, <a href="https://www.mapbox.com/mapbox-studio">create a Mapbox account</a> if you don&#39;t already have one.</p>
+        </li>
+        </ul>
+        <h3 id="-use-mapbox-s-api-to-upload-large-files-"><strong>Use Mapbox&#39;s API to upload large files</strong></h3>
+        <ul>
+        <li><p>If our file size were under 300 MB, we could upload our raster file directly within Mapbox Studio. Unfortunately, our rendered images probably are bigger. Check your file size to see. For context, my Miami-Dade files were over 2 GB each. If it&#39;s larger than 300 MB, you&#39;ll need to use Mapbox&#39;s API to upload the file through your system&#39;s terminal.</p>
+        </li>
+        <li><p>If you&#39;re not much of a command-line user, this process can feel daunting. Mapbox has a clear tutorial for this, which I followed exactly. <a href="https://docs.mapbox.com/help/tutorials/upload-curl/">Follow this tutorial, and come back once you have your raster file uploaded as tilesets onto Mapbox&#39;s server.</a></p>
+        </li>
+        </ul>
+        <hr>
+        <h2 id="using-mapbox-studio-to-create-a-style-layer" class='h2-guide'>Using Mapbox Studio to Create a Style Layer</h2>
+        <ol>
+        <li><a href="#create-a-base-layer-for-your-map">Create a base layer for your map</a></li>
+        <li><a href="#publish-base-map">Publish base map</a></li>
+        </ol>
+        <h3 id="-create-a-base-layer-for-your-map-"><strong>Create a base layer for your map</strong></h3>
+        <ul>
+        <li><p>Open Mapbox Studio, and click <em>Get started</em>.</p>
+        </li>
+        <li><p>Click <em>Create a map in Studio</em>.
+        <img class='guide-img' src="../../../images/mapboxcreate.png" alt="Screenshot form Mapbox website. Text says 'design and custom map style' over a button that reads 'Create a map in Studio'></p>
+        </li>
+        <li><p>In the top right corner, click <em>tilesets</em>. You should see the raster image you just uploaded with the API. Click the three dots beside the tileset to see your tileset ID. Go ahead and copy the tileset ID and save it somewhere for later. We&#39;ll come back to it.</p>
+        </li>
+        <li><p>Now, in the top right corner, click <em>Styles</em>, and then <em>New style</em>.</p>
+        </li>
+        <li><p>Choose a style template (or build your own). For journalists, I recommend keeping it simple with <em>monochrome: light</em> or <em>monochrome: dark</em>.</p>
+        </li>
+        <li><p>Once you&#39;re in the the studio, feel free to play around with layers, components and colors. Mapbox has lots of good tutorials on styling maps in the studio. This map is going to be your base map, meaning, the raster image you created in QGIS is going to sit on top of this map at its respective geolocation.</p>
+        </li>
+        <li><p>Now let&#39;s add our shapefile from earlier. This is optional, but if your data has any holes within it, I recommend doing this. In the Miami-Dade map, I added a black shapefile of the county, which sits underneath my colored data.</p>
+        </li>
+        <li><p>Advanced tip: to make a box-shadow blur effect on your county layer, copy the layer, but this change its data type from <em>polygon</em> to <em>line</em>. Leave both layer copies on the map. Change the color of the line. Increase the width and blur.</p>
+        </li>
+        <li><p>We want to ultimately add our raster layer later with Mapbox GL JS. However, you can easily preview how it will look by adding it now. In the layers panel, click the plus sign, and select the file you just uploaded as your data source.</p>
+        </li>
+        <li><p>You can adjust the arrangement of the layers by dragging and dropping layers in the layers panel.</p>
+        </li>
+        <li><p>If you added your raster file, go ahead and hide it now, so we don&#39;t see it in our published map. Do this by  clicking it in the layers panel and then clicking the eyeball icon at the top of the panel.</p>
+        </li>
+        </ul>
+        <h3 id="-publish-base-map-"><strong>Publish base map</strong></h3>
+        <ul>
+        <li><p>Once you&#39;re satisfied with the look of your base map, we&#39;re going to publish it so we can work with it outside of Mapbox Studio.</p>
+        </li>
+        <li><p>In the top right corner, click <em>Publish</em> &gt; <em>Publish</em>.</p>
+        </li>
+        <li><p>Now click <em>Share</em> (also in the top right corner). Scroll until you see <em>Developer resources</em>. Copy down the style URL and the access token. Paste them somewhere you can come back to.</p>
+        </li>
+        <li><p><strong>Important note:</strong> Use the <em>public</em> access token you get following the steps above. Do <strong>not</strong> use the secret access token you generated for the Uploads API earlier.</p>
+        </li>
+        <li><p>In Mapbox Studio, move your map to the view you want it to load on in your story/webpage/application. In the top navigation bar, you&#39;ll see three numbers. The first is your <em>zoom level</em>, and the other two are your <em>center coordinates</em>. Copy these numbers down and save them for later.</p>
+        </li>
+        </ul>
+        <p><img class='guide-img' src="../../../images/zoomcoords.png" alt="zoom and coordinates screenshot from Mapbox Studio toolbar"></p>
+        <hr>
+        <h2 id="creating-a-custom-map-with-mapbox-gl-js" class='h2-guide'>Creating a Custom Map with Mapbox GL JS</h2>
+        <ol>
+        <li><a href="#initialize-map">Initalize map</a></li>
+        <li><a href="#add-flood-layer">Add flood layer</a></li>
+        <li><a href="#go-forth-and-customize-your-map">Go forth, and customize your map</a></li>
+        </ol>
+        <h3 id="-initialize-map-"><strong>Initialize map</strong></h3>
+        <ul>
+        <li><p>Set up an HTML file. We&#39;ll use HTML, CSS, and JavaScript. Keep it all in one HTML file, or link your CSS and JS files. </p>
+        </li>
+        <li><p>In the HTML body, add a div for your map, like so:  </p>
+        </li>
+        </ul>
+        <p><code>&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;</code></p>
+        <ul>
+        <li>In your CSS styling, add a box for your map to live in, like so:</li>
+        </ul>
+        <pre><code class="lang-css"><span class="hljs-selector-id">#map</span> {
+            <span class="hljs-attribute">border-style</span>: solid;
+            <span class="hljs-attribute">border-width</span>: .<span class="hljs-number">1em</span>;
+            <span class="hljs-attribute">align-self</span>: center;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">80%</span>;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">2%</span> auto <span class="hljs-number">1%</span>;
+            <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">8px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.471), <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-number">20px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.509);
+            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>;
+        }
+        </code></pre>
+        <ul>
+        <li>From your JS file or script section, we&#39;re going to inject the Mapbox Studio base map into our map div:</li>
+        </ul>
+        <pre><code class="lang-js">// get access
+        mapboxgl.accessToken = 'PASTE_YOUR_ACCESS_TOKEN_INSIDE_THESE_QUOTES';
+        // <span class="hljs-keyword">create</span> a <span class="hljs-keyword">map</span> <span class="hljs-keyword">variable</span> <span class="hljs-keyword">with</span> our base <span class="hljs-keyword">map</span>
+        const <span class="hljs-keyword">map</span> = <span class="hljs-keyword">new</span> mapboxgl.Map({
+            // put the <span class="hljs-string">'map'</span> inside the <span class="hljs-keyword">map</span> <span class="hljs-keyword">div</span> we made <span class="hljs-keyword">in</span> HTML:
+            <span class="hljs-keyword">container</span>: <span class="hljs-string">'map'</span>,
+            <span class="hljs-keyword">style</span>: <span class="hljs-string">'PASTE_YOUR_STYLE_URL_INSIDE_THESE_QUOTES'</span>,
+            // <span class="hljs-keyword">replace</span> <span class="hljs-keyword">with</span> your zoom <span class="hljs-keyword">level</span>:
+            zoom: <span class="hljs-number">7.8</span>,
+            // <span class="hljs-keyword">replace</span> <span class="hljs-keyword">with</span> your coordinates. <span class="hljs-keyword">switch</span> the x <span class="hljs-keyword">and</span> y:
+            center: [<span class="hljs-number">-80.563368</span>, <span class="hljs-number">25.553404</span>], 
+        })
+        </code></pre>
+        <ul>
+        <li><p>Replace each value with your own values as noted. You may need to switch the order of your center coordinates.</p>
+        </li>
+        <li><p>Inspect the page in your browser. You should have a map!</p>
+        </li>
+        </ul>
+        <h3 id="-add-flood-layer-"><strong>Add flood layer</strong></h3>
+        <ul>
+        <li>Now we&#39;re going to add our raster layer. Use the following code and the tileset ID you copied <a href="#create-a-base-layer-for-your-map">in this section</a> for later use:</li>
+        </ul>
+        <pre><code class="lang-js"><span class="hljs-comment">// wait until base map has finished loading</span>
+        
+        <span class="hljs-built_in">map</span>.<span class="hljs-keyword">on</span>(<span class="hljs-string">'load'</span>, () =&gt; {
+            <span class="hljs-comment">// add tileset source</span>
+            <span class="hljs-built_in">map</span>.addSource(<span class="hljs-string">'NAME_YOUR_SOURCE'</span>, {
+                <span class="hljs-keyword">type</span>: <span class="hljs-string">'raster'</span>,
+                url: <span class="hljs-string">'mapbox://YOUR_TILESET_ID'</span>
+            });
+            <span class="hljs-built_in">map</span>.addLayer({
+                <span class="hljs-string">'id'</span>: <span class="hljs-string">'NAME_THE_LAYER'</span>,
+                <span class="hljs-string">'type'</span>: <span class="hljs-string">'raster'</span>,
+                <span class="hljs-comment">// SOURCE_NAME should match the NAME_YOUR_SOURCE name you used above</span>
+                <span class="hljs-string">'source'</span>: <span class="hljs-string">'SOURCE_NAME'</span>,
+                <span class="hljs-string">'layout'</span>: {
+                    <span class="hljs-string">'visibility'</span>: <span class="hljs-string">'visible'</span>
+                }
+                <span class="hljs-comment">// keep 'poi-label' to put place label layers on top of raster layer</span>
+            }, <span class="hljs-string">'poi-label'</span>);
+        });
+        </code></pre>
+        <ul>
+        <li>Inspect the page in your browser. If all went well, you should see your raster layer on your web map now.</li>
+        </ul>
+        <h3 id="-go-forth-and-customize-your-map-"><strong>Go forth, and customize your map</strong></h3>
+        <ul>
+        <li><p>You might be thinking, what was the point in adding the raster layer like that, when it was so easy to do in Mapbox Studio? The answer is customization.</p>
+        </li>
+        <li><p>When making the Miami-Dade County map, I worked with two separate raster files--one for 2022 data and one for 2052 projected data. I added both layers as shown above, but I wrote additional code that changed the visibility of the layer based on user interaction. Feel free to check out that code <a href="app.js">here</a>.</p>
+        </li>
+        <li><p>Check out Mapbox GL JS&#39;s documentation to discover all that your can do with your dynamically-added layers. </p>
+        </li>
+        <li><p>One popular feature you can easily include is adding a zoom control UI button. After you&#39;ve initiated your base map, just add this code:</p>
+        </li>
+        </ul>
+        <pre><code class="lang-js"><span class="hljs-built_in">map</span>.addControl(<span class="hljs-keyword">new</span> mapboxgl.NavigationControl());
+        </code></pre>
+        <ul>
+        <li>Once you have a basic understanding of Mapbox GL JS, try exploring <a href="https://demos.mapbox.com/scrollytelling/">Mapbox GL JS Scrollytelling</a> for your stories. </li>
+        </ul>
+        <hr>
+        <h2 id="addendum-help-me-make-this-map-accessible" class='h2-guide'>Addendum: Help Me Make This Map Accessible</h2>
+        <ul>
+        <li>Web accessibility is a priority, and I&#39;m not always sure how to best implement it for web mapping. Though I am conscious of color and design choices, I am not sure how to add alt text to the map div or what else I should be doing to ensure accessibility. I do not believe the toggle slider I created for this map is accessible. Please feel free to review the code in the repo and leave pull requests with any suggestions--especially as related to accessibility. </li>
+        </ul>
+        `,
+        "includeImageOnFeaturePage": false,
+    },
+    {
         "image": "miamihottest.png",
         "tags": ["Data Design", "Maps"],
         "type": "Geospatial Analysis + Raster Data for the Web",
+        "contentBlockThree": "<iframe scrolling='no' frameborder='1' height='900px' width='100%' title='Map showing average land surface temperature across Miami-Dade County in summer 2021' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation' src='https://flo.uri.sh/visualisation/10682312/embed?auto=1'></iframe>",
         "publication": "Personal Project",
         "slug": "miami-hottest",
+        "includeImageOnFeaturePage": false,
         "title": "Where is Miami-Dade County Hottest?"
     },
     {
@@ -125,15 +396,6 @@ export const items = [{
         "slug": "precision-of-a-champion",
         "tags": ["Data Design"],
     },
-    // {
-    //     "title": "Mental Health Provider Shortage Areas",
-    //     "subtitle": "",
-    //     "slug": "hpsa-prisons",
-    //     "type": "Geospatial analysis",
-    //     "image": "",
-    //     "tags": ["Maps", "Data Analysis"],
-    //     "publication": "Made for Class"
-    // },
     {
         "title": "The Tilt",
         "subtitle": "Graphic for politics newsletter by Nate Cohn",
