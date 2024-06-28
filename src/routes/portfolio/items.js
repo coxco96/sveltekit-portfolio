@@ -2,35 +2,170 @@
 // if contentBlockThree is used for text, it needs to be wrapped in <div class='text-column></div'
 
 
-/*  
-EXAMPLE STRUCTURE WITH ALL POSSIBLE KEYS:
+export const items = [{
+        "title": "Data Design Manifesto",
+        "subtitle": "The principles that guide my approach to designing data experiences",
+        "slug": "data-design-manifesto",
+        "image": "",
+        "tags": ["About Me"],
+        "contentBlockOne": `<div id="philosophy">
+        <p>The following statements represent the principles that guide my work. <br>Because I am (and will
+            always be) learning, growing, experimenting and collaborating, not all of my work reflects each
+            statement. My goal is that each of my projects will be better than its predecessors in its
+            alignment
+            with the following statements:</p>
+        <ul>
+            <li>
+                <p>Accessibility is non-negotiable and must be priotized at every step of the process.
+                    It is
+                    ineffective as an afterthought.</p>
+            </li>
+            <li>
+                <p>Structured data is cunning; it is never without bias. Data interrogation is the first
+                    step of
+                    analysis.
+                </p>
+            </li>
+            <li>
+                <p>A chart's colors, typography, layout and text are as convincing as its numbers.</p>
+            </li>
+            <li>
+                <p>Data visualization is a rhetorical device. Its methodology should be transparent its
+                    processes reproducible.</p>
+            </li>
+            <li>
+                <p>A good cartographer is an honest liar. (No two-dimensional map has ever told the
+                    whole
+                    truth. A mapmaker should choose <a class="link" href="https://open.lib.umn.edu/mapping/chapter/7-lying-with-maps/" target="_blank">which
+                        lie(s) to tell</a> with careful consideration.)</p>
+            </li>
+            <li>
+                <p>
+                    Sometimes you need a map. Most of the time, you don't. </p>
+                <p>The ever-exploited digital map deserves, at least, a thought experiment: What other
+                    forms
+                    <em>could</em> the map take? A bar chart? A searchable table?</p>
+
+                <p>Maps, as related to data visualization, work well for:</p>
+
+                <ul>
+                    <li>
+                        <p>assessing geospatial patterns and identifying outlier locations</p>
+                    </li>
+                    <li>
+                        <p>locating an unknown place being described or reported from (e.g. where
+                            <em>is</em>
+                            the tiny island the reporter identified as hotspot for offshore fraud?)</p>
+                    </li>
+                    <li>
+                        <p>assessing movement across space (e.g. diasporas, the paths of hurricanes, the
+                            migration of a species over time)</p>
+                    </li>
+                    <li>
+                        <p>retracing steps, either as a means of:</p>
+                        <ul>
+                            <li>
+                                <p>offering detail and perspective on a series of chronological events
+                                    over
+                                    the
+                                    course of a short period of time, or</p>
+                            </li>
+                            <li>
+                                <p>corroborating timelines with distance and assessing feasibility to
+                                    corroborate an alleged series of events.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <p>In other words, how did it <em>really</em> go down?</p>
+                </ul>
+
+            </li>
+            <li>
+                <p>Assume your reader is has had a long day and is so very tired. Why make them work for
+                    information? Clarify, in text, what is visually interesting, and spell out the
+                    takeaways.</p>
+            </li>
+            <li>
+                <p>Imagine your most adversial reader — one who it may feel <em>wants</em> to
+                    misunderstand
+                    the topic. Anticipate their misconceptions, edit the design to address them and
+                    repeat.</p>
+            </li>
+
+            <li>
+                <p>Clarity and accessibility win out over aesthetics.</p>
+            </li>
+            <li>
+                <p>Visual information is not one-size-fits-all. Be mindful of neurodiversity and
+                    cognitive processing differences and varied levels of data literacy. When possible,
+                    offer multiple options for data exploration (e.g. a scatter plot <em>and</em> a
+                    table <em>and</em> a search box).</p>
+            </li>
+        </ul>
+    </div>`,
+        "includeImageOnFeaturePage": false,
+        "image": "manifesto.jpg",
+        "publication": "Personal",
+        "type": "About me"
+    },
+
     {
-        "title": "What the Sackler Family Owes Me (And My Fellow Kentuckians)",
-        "pageTitle": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)", // use this if page title should be different than gallery title
-        "tags": ["Data Design", "Maps", "Interactive"],
-        "type": "Data Design",
-        "slug": "slug-for-url",
-        "contentBlockOne": "text one!",
-        "contentBlockTwo": "This project, from December 2021, was my first piece of \"data journalism.\" Since then, my skills in reporting, data storytelling, responsive design and accessibility engineering have skyrocketed. Nonetheless, you can view the full project here. Note that it is not mobile friendly.",
-        "contentBlockThree": "<iframe class='iframe' width='100%' height='800px' src='https://coxco96.github.io/kentucky-sackler-story/' title='What the Sackler Family Owes Me (And My Fellow Kentuckians)'></iframe>",
-        "contentBlockFour": "content block four!",
-        "image": "sackler.png",
-        "alt": "alt text",
-        "imageCaption": "<span style='text-transform: uppercase; letter-spacing: 0.01em; font-size: 0.8125rem;'>Static image from interactive map.</span><br>Each circle represents a Kentucky pharmacy in 2006. They are sized by number of oxycontin or hydrocodone pills dispensed in 2006 relative to the pharmacy's county population. • Data: Washington Post's NARCOS database.",
-        "includeImageOnFeaturePage": true, // set to false if want photo on portfolio gallery but not on feature page
-        "imageTwo": "photo2.png",
-        "imageCaptionTwo": "<span style='text-transform: uppercase; letter-spacing: 0.01em; font-size: 0.8125rem;'>Static image from interactive map.</span><br>Each circle represents a Kentucky pharmacy in 2006. They are sized by number of oxycontin or hydrocodone pills dispensed in 2006 relative to the pharmacy's county population. • Data: Washington Post's NARCOS database.",
-        "imageAltTwo": "image 2 alt",
-        "imageThree": "photo3.png",
-        "imageCaptionThree": "image caption three",
-        "imageAltThree": "image 3 alt",
+        "title": "Skills & Coursework",
+        "subtitle": "I keep a tool-agnostic mindset, but this is what I'm already handy with.",
+        "publication": "Personal",
+        "type": "About Me",
+        "tags": ["About Me"],
+        "image": "skills.jpg",
+        "slug": "skills-and-coursework",
+        "includeImageOnFeaturePage": false,
+        "contentBlockOne": `
+
+            
+            <h2 class='h2-guide'>Relevant Coursework &amp; Certificates</h2>
+            <ul>
+                <li>Collaborative Geovisualization</li>
+                <li>Creative Non-Fiction</li>
+                <li>Design for Interactive Web Mapping</li>
+                <li>History of Critical Cartography</li>
+                <li>Introduction to Genomic Technologies (Johns Hopkins via Coursera)</li>
+                <li>Introduction to New Mapping</li>
+                <li>Programming for Web Mapping</li>
+                <li>Python for Genomic Data Science (Johns Hopkins via Coursera)</li>
+                <li>Social Impacts of New Mapping</li>
+                <li>Spatial Data Analysis and Visualization</li>
+                <li>Writing for Media</li>
+            </ul>
+            <h2 class='h2-guide'>Technical Skills</h2>
+            <ul>
+                <li>Adobe Illustrator</li>
+                <li>Datawrapper (including API)</li>
+                <li>d3.js</li>
+                <li>HTML/CSS</li>
+                <li>Git and Github</li>
+                <li>Google App Scripts</li>
+                <li>Google Sheets</li>
+                <li>JavaScript</li>
+                <li>Leaflet.js</li>
+                <li>Mapbox GL JS</li>
+                <li>Mapshaper</li>
+                <li>Microsoft Excel</li>
+                <li>PostGIS/SQL</li>
+                <li>Python</li>
+                <ul>
+                    <li>geopandas</li>
+                    <li>Jupyter notebook</li>
+                    <li>matplotlib</li>
+                    <li>pandas</li>
+                </ul>
+                <li>QGIS</li>
+                <li>Svelte</li>
+                <li>Turf.js</li>
+            </ul>
+`
     },
 
 
-
-*/
-
-export const items = [{
+    {
         "title": "How Big Is Taylor Swift?",
         "type": "Data Design & Analysis",
         "tags": ["Data Analysis", "Data Design"],
@@ -45,8 +180,11 @@ export const items = [{
     {
         "title": "Svelte + Mapbox GL JS Component Library",
         "subtitle": "Presented via Storybook",
+        "contentBlockOne": "<p>This project was created in fulfillment of my Master of Science degree in Digital Mapping. You can check it out in the frame below or view full screen in a new tab by <a href='https://bit.ly/mapcourt' target='_blank'>clicking here</a>.</p><p>Looking for the code repository behind it? <a href='https://github.com/coxco96/mapbox-svelte-components'>Click here.</a></p><p><strong>Note:</strong> if you're on a mobile device, you can navigate page by clicking 'Sidebar' in the bottom left of the screen.</p>",
         "publication": "Thesis Project",
         "image": "masters.png",
+        "includeImageOnFeaturePage": false,
+        "contentBlockThree": `<iframe height='800px' width=100% src='https://cd84c2e--645a1203c3c842e24c203770.chromatic.com/?path=/docs/start-here-introduction--docs' title='Svelte + Mapbox GL JS Component Library via Storybook'></iframe>`,
         "slug": "svelte-mapbox-library",
         "tags": ["Interactive"],
         "type": "Sveltekit Library Development"
@@ -352,7 +490,8 @@ export const items = [{
         "publication": "Personal Project",
         "slug": "miami-hottest",
         "includeImageOnFeaturePage": false,
-        "title": "Where is Miami-Dade County Hottest?"
+        "title": "Where is Miami-Dade County Hottest?",
+        "subtitle": "Visualizing NASA Earth Data"
     },
     {
         "title": "Historically Redlined Districts Bear the Brunt of the Heat",
@@ -377,6 +516,7 @@ export const items = [{
     },
     {
         "title": "In Reversal Because of A.I., Office Jobs Are Now More at Risk",
+        "subtitle": "As seen on the front page of the New York Times print edition",
         "slug": "ai-office-jobs",
         "tags": ["Data Analysis", "Data Design"],
         "publication": "New York Times",
@@ -395,6 +535,18 @@ export const items = [{
         "link": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
         "slug": "precision-of-a-champion",
         "tags": ["Data Design"],
+    },
+    {
+        "title": "Interactive Tour of Oxford University",
+        "subtitle": "Using IIIF (International Image Interoperability, Framework) technology to explore a historic map",
+        "contentBlockOne": "<p>Please note that this project, as of 2024, no longer reflects my editorial and design sensibilities. The IIIF (International Image Interoperability Framework) technology, however, remains relevant to include in this portfolio. This project is not mobile responsive.</p><p>Check it out below or full screen in a different tab <a href='https://coxco96.github.io/oxford-tour' target='_blank'>here</a>.</p>",
+        "includeImageOnFeaturePage": false,
+        "contentBlockThree": "<iframe src='https://coxco96.github.io/oxford-tour/' width=100% height='800px'></iframe>",
+        "image": "oxford.png",
+        "tags": ["Maps", "Interactive"],
+        "type": "Interactive",
+        "publication": "Made for class",
+        "slug": "oxford-tour"
     },
     {
         "title": "The Tilt",
@@ -446,6 +598,7 @@ export const items = [{
     {
         "title": "Flashback",
         "subtitle": "A weekly history game",
+        "contentBlockOne": "From summer 2023 through May 2024, I was the primary fact checker for most editions of Flashback. Check out the quizzes <a href='https://www.nytimes.com/spotlight/flashback' target='_blank'>here</a>.",
         "image": "flashback.png",
         "imageAlt": "A 3x3 grid of historic images, with the New York Times Flashback logo as the center tile",
         "tags": ["Other"],
@@ -466,33 +619,33 @@ export const items = [{
         "aboveImageText": ""
     },
 
-    {
-        "image": "darts.png",
-        "tags": [],
-        "slug": 'darts1'
-    },
-    {
-        "image": "darts2.png",
-        "tags": [],
-        "slug": "darts2"
-    },
+    // {
+    //     "image": "darts.png",
+    //     "tags": [],
+    //     "slug": 'darts1'
+    // },
+    // {
+    //     "image": "darts2.png",
+    //     "tags": [],
+    //     "slug": "darts2"
+    // },
 
-    {
-        "image": "jersey-island.png",
-        "tags": [],
-        "slug": "jersey-island"
-    },
+    // {
+    //     "image": "jersey-island.png",
+    //     "tags": [],
+    //     "slug": "jersey-island"
+    // },
 
-    {
-        "image": "metro2.png",
-        "tags": [],
-        "slug": "metro2"
-    },
-    {
-        "image": "miami-election.png",
-        "tags": [],
-        "slug": "miami-election"
-    },
+    // {
+    //     "image": "metro2.png",
+    //     "tags": [],
+    //     "slug": "metro2"
+    // },
+    // {
+    //     "image": "miami-election.png",
+    //     "tags": [],
+    //     "slug": "miami-election"
+    // },
 
     {
         "image": "pollshift.png",
@@ -506,6 +659,20 @@ export const items = [{
         "contentBlockOne": "<a href='https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html' target='_blank'>Click here to view the original newsletter.</a>",
         "imageTwo": "pollshift1.png"
     },
+
+    {
+        "title": "Visualizing Campaign Finance",
+        "tags": ["Data Design", "Interactive"],
+        "contentBlockTwo": "<p>Hover over the bubbles.</p>",
+        "subtitle": "Interactive visualization showing funds received by Crist and Desantis each day from Jan. 2021 through Oct. 2022",
+        "contentBlockOne": "<p><a href='https://www.miamiherald.com/news/politics-government/article266417946.html' target='_blank'>As seen in the Miami Herald</a></p><p>A chart showing campaign finance received by Crist and Desantis each day from Jan. 1, 2021 through Oct. 1, 2022</p><p>Made with Flourish.</p>",
+        "publication": "Miami Herald",
+        "type": "Data Wrangling and Design",
+        "contentBlockThree": "<div class='text-column'><script src='https://public.flourish.studio/resources/embed.js'></script><iframe scrolling='no' frameborder=0 title='Interactive of visual content' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation' style='width: 100%; height: 600px;' src='https://flo.uri.sh/visualisation/11227857/embed?auto=1'></iframe></div>",
+        "image": "campaign-finance.png",
+        "slug": "campaign-finance-desantis-crist",
+        "includeImageOnFeaturePage": false
+    }
 
 
 ]
