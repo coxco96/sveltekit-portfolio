@@ -36,7 +36,7 @@ export const items = [{
         "tags": ["Data Analysis", "Data Design"],
         "slug": "how-big-is-taylor-swift",
         "image": "tswift.webp",
-        "subtitle": "I crunched the numbers.",
+        "subtitle": "An in-depth analysis of a hard-to-quantify metric",
         "publication": "New York Times",
         "contentBlockOne": "View the full analysis <a target='_blank' href='https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html'>here</a>.",
         "includeImageOnFeaturePage": false,
@@ -45,10 +45,11 @@ export const items = [{
     {
         "title": "Interactive Cluster Markers",
         "subtitle": "Traffic signals in Austin, TX",
-        "description": "",
+        "contentBlockOne": "Interact with the map below, or view it full screen <a href='https://coxco96.github.io/cluster-group-demo/' target='_blank'>here</a>.",
         "image": "austin.png",
         "imageAlt": "A map of the number of traffic signals in Austin City districts, with numbers in circles representing clusters of data",
-        "isFeature": 3,
+        "contentBlockThree": "<iframe src='https://coxco96.github.io/cluster-group-demo/' title='Austin City Districts: Number of Traffic Signals' height='800px' width=100%></iframe>",
+        "includeImageOnFeaturePage": false,
         "publication": "Made for class",
         "type": "Interactive Map",
         "link": "https://coxco96.github.io/cluster-group-demo/",
@@ -58,11 +59,20 @@ export const items = [{
     },
     {
         "title": "Women's World Cup 2023",
+        "slug": "womens-world-cup",
         "subtitle": "How Teams Can Advance to the Round of 16",
         "type": "Interactive data design",
         "publication": "New York Times",
         "image": "worldcup.png",
-        "tags": []
+        "tags": ["Interactive"]
+    },
+    {
+        "image": "miamihottest.png",
+        "tags": ["Data Design", "Maps"],
+        "type": "Geospatial Analysis + Raster Data for the Web",
+        "publication": "Personal Project",
+        "slug": "miami-hottest",
+        "title": "Where is Miami-Dade County Hottest?"
     },
     {
         "title": "Historically Redlined Districts Bear the Brunt of the Heat",
@@ -73,9 +83,10 @@ export const items = [{
         "tags": ["Data Design", "Interactive"],
         "publication": "Personal project",
         "slug": "miami-redlines",
-        "type": "Interactive Map Design & Geospatial Analysis",
+        "type": "Interactive Map & Geospatial Analysis",
         "includeImageOnFeaturePage": false
     },
+
     {
         "title": "How to Read a Hearing Test",
         "image": "hearing2.png",
@@ -84,31 +95,36 @@ export const items = [{
         "publication": "social media",
         "slug": "how-to-read-a-hearing-test"
     },
+    {
+        "title": "In Reversal Because of A.I., Office Jobs Are Now More at Risk",
+        "slug": "ai-office-jobs",
+        "tags": ["Data Analysis", "Data Design"],
+        "publication": "New York Times",
+        "image": "ai.png",
+        "imageAlt": "alt here"
+    },
 
 
 
     {
         "title": "Studying the Limits of Human Perfection, Through Darts",
-        "description": "Description",
         "image": "darts2.png",
         "imageAlt": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
         "publication": "New York Times",
         "type": "Data Design",
         "link": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
         "slug": "precision-of-a-champion",
-        "keyword": "featured",
         "tags": ["Data Design"],
-        "aboveImageText": ""
     },
-    {
-        "title": "Mental Health Provider Shortage Areas",
-        "subtitle": "",
-        "slug": "hpsa-prisons",
-        "type": "Geospatial analysis",
-        "image": "",
-        "tags": ["Maps", "Data Analysis"],
-        "publication": "Made for Class"
-    },
+    // {
+    //     "title": "Mental Health Provider Shortage Areas",
+    //     "subtitle": "",
+    //     "slug": "hpsa-prisons",
+    //     "type": "Geospatial analysis",
+    //     "image": "",
+    //     "tags": ["Maps", "Data Analysis"],
+    //     "publication": "Made for Class"
+    // },
     {
         "title": "The Tilt",
         "subtitle": "Graphic for politics newsletter by Nate Cohn",
@@ -131,32 +147,34 @@ export const items = [{
         "alt": "A map of Kentucky made up of red circle outlines of various sizes",
         "imageCaption": "<span style='text-transform: uppercase; letter-spacing: 0.01em; font-size: 0.8125rem;'>Static image from interactive map.</span><br>Each circle represents a Kentucky pharmacy in 2006. They are sized by number of oxycontin or hydrocodone pills dispensed in 2006 relative to the pharmacy's county population. • Data: Washington Post's NARCOS database.",
         "includeImageOnFeaturePage": true,
+        "publication": "Made for class"
     },
     {
         "title": "When Caitlin Clark Comes to Town",
-        "aboveImageText": "<p>woopwoop</p>",
-        "description": "Description2 <strong>html check!</strong>",
-        "image": "caitlin-clark.webp",
+        "subtitle": "Home Attendance of Iowa's Opponents in 2023-24",
+        "image": "caitlin-clark.png",
         "imageAlt": "image alt3",
         "tags": ["Data Design", "Data Analysis"],
         "slug": "when-caitlin-clark-comes-to-town",
         "linK": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
         "type": "Data Design",
         "cardHeight": '800px',
-        "caitlinClark": true
+        "caitlinClark": true,
+        "includeImageOnFeaturePage": false,
+        "imageTwo": "caitlin-clark.webp",
+        "publication": "New York Times"
     },
 
 
     {
         "title": "Flashback",
-        "description": "",
+        "subtitle": "A weekly history game",
         "image": "flashback.png",
         "imageAlt": "A 3x3 grid of historic images, with the New York Times Flashback logo as the center tile",
         "tags": ["Other"],
         "slug": "flashback",
         "publication": "New York Times",
         "type": "Fact Checking",
-        "aboveImageText": "",
     },
     {
         "title": "North American Breweries",
@@ -202,15 +220,18 @@ export const items = [{
         "tags": [],
         "slug": "miami-election"
     },
-    {
-        "image": "miamihottest.png",
-        "tags": [],
-        "slug": "miami-hottest"
-    },
+
     {
         "image": "pollshift.png",
-        "tags": [],
-        "slug": "pollshift"
+        "title": "How Polls Have Changed Since the State of the Union Address",
+        "subtitle": "Table made for The Tilt, Nate Cohn's newsletter",
+        "tags": ["Data Design"],
+        "publication": "New York Times",
+        "slug": "pollshift",
+        "type": "Data Design",
+        "includeImageOnFeaturePage": false,
+        "contentBlockOne": "<a href='https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html' target='_blank'>Click here to view the original newsletter.</a>",
+        "imageTwo": "pollshift1.png"
     },
 
 

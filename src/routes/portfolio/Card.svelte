@@ -18,12 +18,11 @@
             {@html title}
         </div>
 
-            <div class="subtitle">
-                {#if subtitle}
+        <div class="subtitle">
+            {#if subtitle}
                 {@html subtitle}
-                {/if}
-            </div>
-
+            {/if}
+        </div>
 
         <div class="img-container">
             <img class="img" src="../../images/{src}" {alt} />
@@ -48,6 +47,7 @@
         height: 400px;
         max-width: 400px;
         padding: 5px 5px 0 8px;
+        position: relative;
     }
 
     @media only screen and (max-width: 795px) {
@@ -81,10 +81,12 @@
     }
 
     .publication {
-        align-self: end;
+        align-self: flex-end;
         min-height: 1.25rem;
         height: 1.25rem;
         min-width: 1px;
+        margin-top: 5px;
+        padding-right: 2.5px;
     }
 
     .type {
@@ -99,6 +101,7 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        flex-grow: 1;
     }
 
     .img {
