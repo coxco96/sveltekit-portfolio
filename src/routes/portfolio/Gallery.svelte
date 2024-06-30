@@ -19,6 +19,11 @@
             filters = filters.filter((x) => x != tag);
         }
     }
+
+    // make cards 400px unless otherwise specified
+    function cardHeight(h) {
+        typeof h != 'undefined' ? h : '400px'
+    }
 </script>
 
 <h1>Portfolio</h1>
@@ -49,6 +54,7 @@
                         src={item.image}
                         slug={item.slug}
                         subtitle={item.subtitle}
+                        --card-height='{() => cardHeight(item.cardHeight)}'
                     />
                 </div>
             {/each}
@@ -131,5 +137,9 @@
         background-color: rgb(79, 79, 79);
         border-color: white;
         color: white;
+    }
+
+    :root {
+        --card-height: 400px
     }
 </style>

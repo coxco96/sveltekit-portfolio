@@ -149,4 +149,6 @@
         color: #727272;
         margin-right: 7px;
     }
+
+
 </style>

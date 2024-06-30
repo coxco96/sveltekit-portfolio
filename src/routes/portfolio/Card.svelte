@@ -24,9 +24,11 @@
             {/if}
         </div>
 
+        {#if typeof src != 'undefined'}
         <div class="img-container">
             <img class="img" src="../../images/{src}" {alt} />
         </div>
+        {/if}
 
         <div class="publication">
             {#if publication}
@@ -44,7 +46,7 @@
         background-color: #ebe6e0;
         display: flex;
         flex-direction: column;
-        height: 400px;
+        height: var(--card-height);
         max-width: 400px;
         padding: 5px 5px 0 8px;
         position: relative;
@@ -52,7 +54,7 @@
 
     @media only screen and (max-width: 795px) {
         .item-container {
-            height: auto;
+            height: var(--card-height);
         }
     }
 

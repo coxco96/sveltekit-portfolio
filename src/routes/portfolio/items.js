@@ -6,7 +6,6 @@ export const items = [{
         "title": "Data Design Manifesto",
         "subtitle": "The principles that guide my approach to designing data experiences",
         "slug": "data-design-manifesto",
-        "image": "",
         "tags": ["About Me"],
         "contentBlockOne": `<div id="philosophy">
         <p>The following statements represent the principles that guide my work. <br>Because I am (and will
@@ -104,9 +103,10 @@ export const items = [{
         </ul>
     </div>`,
         "includeImageOnFeaturePage": false,
-        "image": "manifesto.jpg",
+        // "image": "manifesto.jpg",
         "publication": "Personal",
-        "type": "About me"
+        "type": "About me",
+        'cardHeight': '200px'
     },
 
     {
@@ -115,12 +115,10 @@ export const items = [{
         "publication": "Personal",
         "type": "About Me",
         "tags": ["About Me"],
-        "image": "skills.jpg",
         "slug": "skills-and-coursework",
         "includeImageOnFeaturePage": false,
+        'cardHeight': '200px',
         "contentBlockOne": `
-
-            
             <h2 class='h2-guide'>Relevant Coursework &amp; Certificates</h2>
             <ul>
                 <li>Collaborative Geovisualization</li>
@@ -581,7 +579,6 @@ export const items = [{
         "slug": "when-caitlin-clark-comes-to-town",
         "linK": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
         "type": "Data Design",
-        "cardHeight": '800px',
         "caitlinClark": true,
         "includeImageOnFeaturePage": false,
         "imageTwo": "caitlin-clark.webp",
