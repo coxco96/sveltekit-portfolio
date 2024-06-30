@@ -69,6 +69,7 @@
                         src={item.image}
                         slug={item.slug}
                         subtitle={item.subtitle}
+                        --card-height='{() => cardHeight(item.cardHeight)}'
                     />
                 </div>
             {/each}
