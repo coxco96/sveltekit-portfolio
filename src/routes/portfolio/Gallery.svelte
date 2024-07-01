@@ -86,10 +86,6 @@
 </section>
 
 <style>
-   h2 {
-    font-size: 28px;
-
-   }
    
    .gallery {
         margin-top: 2rem;

@@ -105,7 +105,7 @@ export const items = [{
         "includeImageOnFeaturePage": false,
         "publication": "Personal",
         "type": "About me",
-        'cardHeight': '200px'
+        'cardHeight': 'auto'
     },
 
     {
@@ -116,7 +116,7 @@ export const items = [{
         "tags": ["About Me"],
         "slug": "skills-and-coursework",
         "includeImageOnFeaturePage": false,
-        'cardHeight': '200px',
+        'cardHeight': 'auto',
         "contentBlockOne": `
             <h2 class='h2-guide'>Relevant Coursework &amp; Certificates</h2>
             <ul>
@@ -159,6 +159,38 @@ export const items = [{
                 <li>Turf.js</li>
             </ul>
 `
+    },
+
+    {
+        'title': 'Education',
+        'subtitle': `I have a master's degree in Digital Mapping. <br>Click for more info on my education background.`,
+        'slug': 'education',
+        'type': 'About Me',
+        'tags': ['About Me'],
+        'includeImageOnFeaturePage': false,
+        'cardHeight': 'auto',
+        'publication': 'Personal',
+        'type': 'About Me',
+        'contentBlockOne': `<p>I have a:</p>
+        <ul>
+        <li>Master of Science in Digital Mapping</li>
+        <li>Bachelor Arts in Creative Writing</li>
+        </ul>
+        <p>I also:</p><ul>
+        <li>spent a semester abroad at Oxford University (Wycliffe Hall, via 
+            <a href='https://www.scio-uk.org/' target='_blank'>SCIO</a>), during which I won a de Jager Award for a set of undergraduate research essays related to British musicology</li>
+            </ul><h2>Digital Mapping Degree</h2>
+            <p>My M.S. in Digital Mapping was awarded through the renowned geography department at University of Kentucky under the intensive <a href='https://newmapsplus.as.uky.edu/programs' target=_blank'>New Maps Plus program</a>. The coursework emphasized the acquisition of technical skills—web development, GIS, geospatial data processing and analysis—and design for clear communication. Through both independent and collaborative mapping projects, I was trained to rigorously assess and interrogate data, catching data biases and collection errors. I learned to anticipate misconceptions a data visualization user may have and to address them during the development and design phase.</p>
+            <p>I learned to use HTML and CSS to design front-end layouts to responsively display maps. I developed web maps using Javascript and several modern mapping libraries, and I became well-practiced at writing both Node and Python scripts for geoprocessing.</p>
+            <p>For my capstone project, I developed a <a href='./svelte-mapbox-library'>Sveltekit framework for Mapbox GL JS</a> in order to make the mapping process easier for developers without cartographic specialization.</p>
+            <h2>Creative Writing Degree</h2>
+            <p>Through earning my B.A. in Creative Writing, I became well-practiced at working with precision, coherence and creativity under deadline pressure. My coursework trained me in the art of storytelling and narrative construction, human emotion and response, critical analysis of text and creative collaboration. By both participating in and leading writing workshops, I learned how to gracefully receive and offer critical feedback. The rhetorical sensibilities I developed as a writer have served me just as well in visual design. (<a href='./data-design-manifesto'>Maps are rhetoric</a>, after all.)</p>
+            <p>As editor-in-chief of my university's literary publication, I brought a creative concept to life as I led a team of editors and oversaw all aspects of the curation and publication process.
+            My work through this degree ultimately taught me how to intersect the equally analytical and creative parts within me, which primed me for the unique perspective required to be strong at both data design AND development work.
+            </p>
+            <h2>University of Oxford Study Abroad Experience</h2>
+            <p>In my semester abroad at the University of Oxford, I completed a research seminar in British history and culture. My undergraduate research in British musicology, which won a "de Jager" award, required rigorous analysis of primary texts and the ability to synthesize information to draw a new, insightful conclusion. This experience underscores my intellectual curiosity, adaptability to new fields and a strong propensity for communication, particularly for translating complex, sophisticated ideas into clear, effective writing suitable for diverse audiences.</p>
+            `
     },
 
 

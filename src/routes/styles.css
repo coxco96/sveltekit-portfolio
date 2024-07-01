@@ -19,6 +19,7 @@
 }
 
 body {
+	font-family: 'Hind', Arial, Helvetica, sans-serif;
 	min-height: 100vh;
 	margin: 0;
 	background-attachment: fixed;
@@ -38,7 +39,6 @@ p {
 
 p {
 	line-height: 1.5;
-	font-family: 'Hind', Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -51,12 +51,14 @@ a:hover {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	text-align: center;
 }
 
+
 h2 {
-	font-size: 1rem;
+	font-size: 1.9rem;
+	width: 100%;
 }
 
 pre {
@@ -123,9 +125,6 @@ section {
 	flex: 0.6;
 }
 
-h2 {
-	width: 100%;
-}
 
 .welcome {
 	display: block;

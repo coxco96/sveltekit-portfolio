@@ -119,7 +119,6 @@
 
 <style>
     .title {
-        font-size: 2.5rem;
         line-height: 2.875rem;
     }
 
