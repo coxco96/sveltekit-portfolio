@@ -29,7 +29,7 @@
 
 
 <section>
-    <div class='text-column'><h2 class='h2'>Portfolio</h2></div>
+    <!-- <div class='text-column'><h2 class='h2'>Portfolio of Courtney Cox</h2></div> -->
     <p class="filter-label">Filter by:</p>
     <div
         role="group"

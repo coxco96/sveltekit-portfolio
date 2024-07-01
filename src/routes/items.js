@@ -3,6 +3,25 @@
 
 
 export const items = [{
+        'title': `Welcome!`,
+        'subtitle': `
+        I'm Court, and I design data experiences. Click here to learn more about me.`,
+        'type': 'About Me',
+        'publication': 'Professional',
+        'tags': ['About Me'],
+        'slug': 'slug',
+        'cardHeight': 'auto',
+        'includeImageOnFeaturePage': false,
+        'contentBlockOne': `
+        <p>My full-name is <strong>Courtney Cox</strong> (but nope, not <a href="https://en.wikipedia.org/wiki/Courteney_Cox">that one</a>).</p>
+        <p>I was a 2023-24 <a href="https://www.nytco.com/person/courtney-cox/">New York Times fellow</a> in the Upshot section.</p>
+        <p>I was a 2022 McClatchy data fellow.</p>
+        <p>My work has appeared in the <a href="https://www.nytimes.com/by/courtney-cox">New York Times</a>, Miami Herald, McClatchy D.C. Bureau, Tacoma News Tribune, the <a href='https://hdi.uky.edu/author/courtcox' target='_blank'>Human Development Institute</a> and <a href="https://uknow.uky.edu/authors/court-cox">UKNow</a> (University of Kentucky News).</p>
+        <p><strong><em>This website is currently under construction, so check back later for more!</em></strong></p>
+
+        `
+    },
+    {
         "title": "My Data Design Manifesto",
         "subtitle": "The principles that guide my approach to designing data experiences",
         "slug": "data-design-manifesto",
@@ -103,7 +122,7 @@ export const items = [{
         </ul>
     </div>`,
         "includeImageOnFeaturePage": false,
-        "publication": "Personal",
+        "publication": "Professional",
         "type": "About me",
         'cardHeight': 'auto'
     },
@@ -111,7 +130,7 @@ export const items = [{
     {
         "title": "Skills & Coursework",
         "subtitle": "I keep a tool-agnostic mindset, but this is what I'm already handy with.",
-        "publication": "Personal",
+        "publication": "Professional",
         "type": "About Me",
         "tags": ["About Me"],
         "slug": "skills-and-coursework",
@@ -169,7 +188,7 @@ export const items = [{
         'tags': ['About Me'],
         'includeImageOnFeaturePage': false,
         'cardHeight': 'auto',
-        'publication': 'Personal',
+        'publication': 'Professional',
         'type': 'About Me',
         'contentBlockOne': `<p>I have a:</p>
         <ul>
@@ -207,6 +226,20 @@ export const items = [{
         "imageInstead": "tswift2.jpg"
     },
     {
+        "title": "When Caitlin Clark Comes to Town",
+        "subtitle": "Home Attendance of Iowa's Opponents in 2023-24",
+        "image": "caitlin-clark.png",
+        "imageAlt": "image alt3",
+        "tags": ["Data Design", "Data Analysis"],
+        "slug": "when-caitlin-clark-comes-to-town",
+        "type": "Data Design",
+        "caitlinClark": true,
+        "includeImageOnFeaturePage": false,
+        "imageTwo": "caitlin-clark.webp",
+        "publication": "New York Times",
+        'contentBlockOne': `Check it out in the original story <a href='https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html' target='_blank'>here</a>.`
+    },
+    {
         "title": "Svelte + Mapbox GL JS Component Library",
         "subtitle": "Presented via Storybook",
         "contentBlockOne": "<p>This project was created in fulfillment of my Master of Science degree in Digital Mapping. You can check it out in the frame below or view full screen in a new tab by <a href='https://bit.ly/mapcourt' target='_blank'>clicking here</a>.</p><p>Looking for the code repository behind it? <a href='https://github.com/coxco96/mapbox-svelte-components'>Click here.</a></p><p><strong>Note:</strong> if you're on a mobile device, you can navigate page by clicking 'Sidebar' in the bottom left of the screen.</p>",
@@ -228,7 +261,6 @@ export const items = [{
         "includeImageOnFeaturePage": false,
         "publication": "Made for class",
         "type": "Interactive Map",
-        "link": "https://coxco96.github.io/cluster-group-demo/",
         "slug": "austin-traffic-lights",
         "featureLabel": "Development",
         "tags": ["Maps", "Interactive"]
@@ -419,7 +451,7 @@ export const items = [{
         </ol>
         <h3 id="-initialize-map-"><strong>Initialize map</strong></h3>
         <ul>
-        <li><p>Set up an HTML file. We&#39;ll use HTML, CSS, and JavaScript. Keep it all in one HTML file, or link your CSS and JS files. </p>
+        <li><p>Set up an HTML file. We'll use HTML, CSS, and JavaScript. Keep it all in one HTML file, or link your CSS and JS files. </p>
         </li>
         <li><p>In the HTML body, add a div for your map, like so:  </p>
         </li>
@@ -557,11 +589,11 @@ export const items = [{
 
     {
         "title": "Studying the Limits of Human Perfection, Through Darts",
+        'contentBlockOne': `<a href='https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html' target='_blank'>Link to original story.</a>`,
         "image": "darts2.png",
-        "imageAlt": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
+        "imageAlt": "",
         "publication": "New York Times",
         "type": "Data Design",
-        "link": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
         "slug": "precision-of-a-champion",
         "tags": ["Data Design"],
     },
@@ -601,20 +633,6 @@ export const items = [{
         "imageCaption": "<span style='text-transform: uppercase; letter-spacing: 0.01em; font-size: 0.8125rem;'>Static image from interactive map.</span><br>Each circle represents a Kentucky pharmacy in 2006. They are sized by number of oxycontin or hydrocodone pills dispensed in 2006 relative to the pharmacy's county population. • Data: Washington Post's NARCOS database.",
         "includeImageOnFeaturePage": true,
         "publication": "Made for class"
-    },
-    {
-        "title": "When Caitlin Clark Comes to Town",
-        "subtitle": "Home Attendance of Iowa's Opponents in 2023-24",
-        "image": "caitlin-clark.png",
-        "imageAlt": "image alt3",
-        "tags": ["Data Design", "Data Analysis"],
-        "slug": "when-caitlin-clark-comes-to-town",
-        "linK": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
-        "type": "Data Design",
-        "caitlinClark": true,
-        "includeImageOnFeaturePage": false,
-        "imageTwo": "caitlin-clark.webp",
-        "publication": "New York Times"
     },
     {
         "image": "metro.png",
