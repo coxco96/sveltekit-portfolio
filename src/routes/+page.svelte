@@ -1,5 +1,5 @@
 <script>
-	import Gallery from "./portfolio/Gallery.svelte";
+	import Gallery from "./Gallery.svelte";
 	export let data;
 	let items = data.items;
 

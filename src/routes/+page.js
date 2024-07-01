@@ -1,4 +1,4 @@
-import { items } from './portfolio/items.js';
+import { items } from './items.js';
 
 export function load() {
     return {

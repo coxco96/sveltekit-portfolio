@@ -10,7 +10,7 @@
     import { base } from "$app/paths";
 </script>
 
-<a href="{base}/portfolio/{slug}" class="a">
+<a href="{base}/{slug}" class="a">
     <div class="item-container hvr-glow" style='--card-height: {cardHeight}'>
         {#if type}
             <div class="type">{type}</div>

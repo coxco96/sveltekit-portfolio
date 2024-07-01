@@ -44,14 +44,16 @@
 
 </script>
 
+<div class='text-column'>
 <span class="back"
     >&#x2190; <a
-        href="{base}/portfolio"
-        aria-label="Go back to main portfolio page"
+        href="{base}"
+        aria-label="Go back"
         on:click={handleBackClick}
         >Back</a
     ></span
 >
+</div>
 <main>
     <div class="text-column">
         <h1 class="title">{@html title}</h1>
@@ -147,7 +149,6 @@
         margin-bottom: 20px;
         padding-bottom: 20px;
         font-size: 16px;
-
         max-width: 100%;
     }
 

@@ -1,6 +1,6 @@
 import {
     items
-} from '.././items.js';
+} from '../items.js';
 
 
 export async function load({ params }) {
