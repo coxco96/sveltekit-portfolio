@@ -32,26 +32,12 @@
 		box-sizing: border-box;
 	}
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
 
-	footer a {
-		font-weight: bold;
-	}
 
 	.github {
 		width: 3em;
 		height: 3em;
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
+
 </style>

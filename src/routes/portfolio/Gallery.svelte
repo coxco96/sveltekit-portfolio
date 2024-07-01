@@ -23,13 +23,13 @@
 
     // make cards 400px unless otherwise specified
     function cardHeight(h) {
-        typeof h != "undefined" ? h : "400px";
+       return h !== "undefined" ? h : "400px";
     }
 </script>
 
 
 <section>
-    <h2>Portfolio</h2>
+    <div class='text-column'><h2 class='h2'>Portfolio</h2></div>
     <p class="filter-label">Filter by:</p>
     <div
         role="group"
@@ -61,7 +61,7 @@
                             src={item.image}
                             slug={item.slug}
                             subtitle={item.subtitle}
-                            --card-height={() => cardHeight(item.cardHeight)}
+                            cardHeight={cardHeight(item.cardHeight)}
                         />
                     </div>
                 {/each}
@@ -76,7 +76,7 @@
                             src={item.image}
                             slug={item.slug}
                             subtitle={item.subtitle}
-                            --card-height={() => cardHeight(item.cardHeight)}
+                            cardHeight={cardHeight(item.cardHeight)}
                         />
                     </div>
                 {/each}
@@ -86,7 +86,12 @@
 </section>
 
 <style>
-    .gallery {
+   h2 {
+    font-size: 28px;
+
+   }
+   
+   .gallery {
         margin-top: 2rem;
         display: flex;
         flex-direction: row;

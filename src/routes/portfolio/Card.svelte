@@ -6,11 +6,12 @@
     export let alt = "";
     export let slug;
     export let subtitle;
+    export let cardHeight;
     import { base } from "$app/paths";
 </script>
 
 <a href="{base}/portfolio/{slug}" class="a">
-    <div class="item-container hvr-glow">
+    <div class="item-container hvr-glow" style='--card-height: {cardHeight}'>
         {#if type}
             <div class="type">{type}</div>
         {/if}
@@ -52,11 +53,11 @@
         position: relative;
     }
 
-    @media only screen and (max-width: 795px) {
+    /* @media only screen and (max-width: 795px) {
         .item-container {
             height: var(--card-height);
         }
-    }
+    } */
 
     .item-title {
         font-size: 1.7rem;

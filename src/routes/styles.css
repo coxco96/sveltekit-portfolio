@@ -133,6 +133,13 @@ h2 {
 	width: 100%;
 	height: 0;
 	padding: 0 0 calc(100% * 150 / 2048) 0;
+	margin-top: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+	.welcome {
+		padding: 0 0 calc(100% * 350 / 2048) 0;
+	}
 }
 
 .welcome img {

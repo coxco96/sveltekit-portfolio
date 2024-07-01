@@ -1,20 +1,9 @@
 <script>
-	import {onMount} from 'svelte';
 	import { base } from "$app/paths";
 	import Gallery from './Gallery.svelte';
 	import mapPin from '$lib/images/map-pin.svg';
 	export let data;
 	let items = data.items;
-
-	// onMount(() => {
-	// 	const scrollPosition = localStorage.getItem('scrollPosition');
-	// 	if (scrollPosition) {
-	// 		window.scrollTo(0, parseInt(scrollPosition, 10));
-	// 		localStorage.removeItem('scrollPosition');
-	// 	}
-	// });
-
-
 </script>
 
 <svelte:head>
