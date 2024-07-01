@@ -1,15 +1,23 @@
 <script>
-	import { page } from "$app/stores";
 	import { base } from "$app/paths";
+	import mapPin from '$lib/images/map-pin.svg';
 
 </script>
-
+<!-- 
 <header>
 	<div class="corner">
-	</div>
+	</div> -->
+	<nav class='welcome'>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
+
+			<a href='{base}/'>
+					<picture>
+						<img src={mapPin} alt="map pin" />
+					</picture>
+				</a>
+				</nav>
+
+		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
@@ -19,33 +27,33 @@
 					: undefined}
 			>
 				<a href="{base}/">Home</a>
-			</li>
-			<li
+			</li> -->
+			<!-- <li
 				aria-current={$page.url.pathname === "/about"
 					? "page"
 					: undefined}
 			>
 				<a href="{base}/about">About</a>
-			</li>
-			<li
+			</li> -->
+			<!-- <li
 				aria-current={$page.url.pathname === "/portfolio"
 					? "page"
 					: undefined}
 			>
 				<a href="{base}/portfolio">Portfolio</a>
 			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
+		</ul> -->
+		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 		</svg>
-	</nav>
-
+	</nav> -->
+<!-- 
 	<div class="corner">
-	</div>
-</header>
+	</div> -->
+<!-- </header> -->
 
 <style>
-	header {
+	/* header {
 		display: flex;
 		justify-content: space-between;
 	}
@@ -117,5 +125,5 @@
 
 	a:hover {
 		color: var(--color-theme-1);
-	}
+	} */
 </style>

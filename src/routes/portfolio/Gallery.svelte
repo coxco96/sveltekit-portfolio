@@ -1,6 +1,7 @@
 <script>
     import Card from "./Card.svelte";
     export let items;
+
     // create list of unique tags
     $: allTags = [...new Set(items.map((item) => item.tags).flat())];
     $: filters = [];
@@ -22,63 +23,69 @@
 
     // make cards 400px unless otherwise specified
     function cardHeight(h) {
-        typeof h != 'undefined' ? h : '400px'
+        typeof h != "undefined" ? h : "400px";
     }
 </script>
 
-<h1>Portfolio</h1>
-<p class="filter-label">Filter by:</p>
-<div role="group" aria-label="Filter items in portfolio" class="filter-buttons">
-    {#each allTags as tag}
-        <button
-            class="tag {filters.includes(tag) ? 'active-filter' : ''}"
-            on:click={() => filterClick(tag)}
-            aria-label="Filter by {tag}"
-            aria-pressed={filters.includes(tag)}
-        >
-            {tag}
-        </button>
-    {/each}
-</div>
 
-<main>
-    <div class="gallery">
-        {#if filtered.length == 0}
-            {#each items as item, i}
-                <div class="item">
-                    <Card
-                        title={item.title}
-                        publication={item.publication}
-                        type={item.type}
-                        link={item.link}
-                        src={item.image}
-                        slug={item.slug}
-                        subtitle={item.subtitle}
-                        --card-height='{() => cardHeight(item.cardHeight)}'
-                    />
-                </div>
-            {/each}
-        {:else}
-            {#each filtered as item}
-                <div class="item">
-                    <Card
-                        title={item.title}
-                        publication={item.publication}
-                        type={item.type}
-                        link={item.link}
-                        src={item.image}
-                        slug={item.slug}
-                        subtitle={item.subtitle}
-                        --card-height='{() => cardHeight(item.cardHeight)}'
-                    />
-                </div>
-            {/each}
-        {/if}
+<section>
+    <h2>Portfolio</h2>
+    <p class="filter-label">Filter by:</p>
+    <div
+        role="group"
+        aria-label="Filter items in portfolio"
+        class="filter-buttons"
+    >
+        {#each allTags as tag}
+            <button
+                class="tag {filters.includes(tag) ? 'active-filter' : ''}"
+                on:click={() => filterClick(tag)}
+                aria-label="Filter by {tag}"
+                aria-pressed={filters.includes(tag)}
+            >
+                {tag}
+            </button>
+        {/each}
     </div>
-</main>
+
+    <main>
+        <div class="gallery">
+            {#if filtered.length == 0}
+                {#each items as item, i}
+                    <div class="item">
+                        <Card
+                            title={item.title}
+                            publication={item.publication}
+                            type={item.type}
+                            link={item.link}
+                            src={item.image}
+                            slug={item.slug}
+                            subtitle={item.subtitle}
+                            --card-height={() => cardHeight(item.cardHeight)}
+                        />
+                    </div>
+                {/each}
+            {:else}
+                {#each filtered as item}
+                    <div class="item">
+                        <Card
+                            title={item.title}
+                            publication={item.publication}
+                            type={item.type}
+                            link={item.link}
+                            src={item.image}
+                            slug={item.slug}
+                            subtitle={item.subtitle}
+                            --card-height={() => cardHeight(item.cardHeight)}
+                        />
+                    </div>
+                {/each}
+            {/if}
+        </div>
+    </main>
+</section>
 
 <style>
-
     .gallery {
         margin-top: 2rem;
         display: flex;
@@ -88,6 +95,7 @@
         flex-wrap: wrap;
         gap: 1.5rem;
     }
+
 
     .item {
         box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.7);
@@ -140,7 +148,7 @@
         color: white;
     }
 
-    :root {
-        --card-height: 400px
-    }
+    /* :root {
+        --card-height: 400px;
+    } */
 </style>

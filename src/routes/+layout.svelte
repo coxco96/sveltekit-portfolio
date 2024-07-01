@@ -1,22 +1,16 @@
 <script>
-	import Header from "./Header.svelte";
+	import PinNav from "./PinNav.svelte";
 	import "./styles.css";
 	// import github from '$lib/images/github.svg'
 </script>
 
 <div class="app">
-	<Header />
+	<PinNav />
 
 	<main>
 		<slot />
 	</main>
 
-	<!-- <footer>
-		<a href="https://github.com/coxco96/">
-			<img class='github' src={github} alt="GitHub" />
-		</a>
-			View the source code for this site.
-	</footer> -->
 </div>
 
 <style>

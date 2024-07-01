@@ -34,12 +34,22 @@
     let imageThree = data.imageThree;
     let imageAltThree = data.imageAltThree;
     let imageCaptionThree = data.imageCaptionThree;
+
+    // makes back link restore scroll position of gallery page
+    function handleBackClick(e) {
+        e.preventDefault();
+        history.back();
+    }
+
+
 </script>
 
 <span class="back"
     >&#x2190; <a
         href="{base}/portfolio"
-        aria-label="Go back to main portfolio page">Back</a
+        aria-label="Go back to main portfolio page"
+        on:click={handleBackClick}
+        >Back</a
     ></span
 >
 <main>

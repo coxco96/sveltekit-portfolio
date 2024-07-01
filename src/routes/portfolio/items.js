@@ -3,7 +3,7 @@
 
 
 export const items = [{
-        "title": "Data Design Manifesto",
+        "title": "My Data Design Manifesto",
         "subtitle": "The principles that guide my approach to designing data experiences",
         "slug": "data-design-manifesto",
         "tags": ["About Me"],
@@ -103,7 +103,6 @@ export const items = [{
         </ul>
     </div>`,
         "includeImageOnFeaturePage": false,
-        // "image": "manifesto.jpg",
         "publication": "Personal",
         "type": "About me",
         'cardHeight': '200px'
@@ -552,7 +551,8 @@ export const items = [{
         "image": "tilt.png",
         "type": "Data Design",
         "publication": "New York Times",
-        "tags": ["Data Design"]
+        "tags": ["Data Design"],
+        "slug": "tilt-delegates-graphic"
     },
     {
         "title": "Kentucky's Opioid Crisis",
