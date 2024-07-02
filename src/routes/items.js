@@ -219,7 +219,7 @@ export const items = [{
         "tags": ["Data Analysis", "Data Design"],
         "slug": "how-big-is-taylor-swift",
         "image": "tswift.webp",
-        "subtitle": "An in-depth analysis of a hard-to-quantify metric",
+        "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
         "publication": "New York Times",
         "contentBlockOne": "View the full analysis <a target='_blank' href='https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html'>here</a>.",
         "includeImageOnFeaturePage": false,
