@@ -48,7 +48,7 @@ export const items = [{
                 <p>A chart's colors, typography, layout and text are as convincing as its numbers.</p>
             </li>
             <li>
-                <p>Data visualization is a rhetorical device. Its methodology should be transparent its
+                <p>Data visualization is a rhetorical device. Its methodology should be transparent and its
                     processes reproducible.</p>
             </li>
             <li>
