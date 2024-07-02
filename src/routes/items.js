@@ -197,7 +197,7 @@ export const items = [{
         </ul>
         <p>I also:</p><ul>
         <li>spent a semester abroad at Oxford University (Wycliffe Hall, via 
-            <a href='https://www.scio-uk.org/' target='_blank'>SCIO</a>), during which I won a de Jager Award for a set of undergraduate research essays related to British musicology</li>
+            <a href='https://www.scio-uk.org/' target='_blank'>SCIO</a>)</li>
             </ul><h2>Digital Mapping Degree</h2>
             <p>My M.S. in Digital Mapping was awarded through the renowned geography department at University of Kentucky under the intensive <a href='https://newmapsplus.as.uky.edu/programs' target=_blank'>New Maps Plus program</a>. The coursework emphasized the acquisition of technical skills—web development, GIS, geospatial data processing and analysis—and design for clear communication. Through both independent and collaborative mapping projects, I was trained to rigorously assess and interrogate data, catching data biases and collection errors. I learned to anticipate misconceptions a data visualization user may have and to address them during the development and design phase.</p>
             <p>I learned to use HTML and CSS to design front-end layouts to responsively display maps. I developed web maps using Javascript and several modern mapping libraries, and I became well-practiced at writing both Node and Python scripts for geoprocessing.</p>
