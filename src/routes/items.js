@@ -241,13 +241,14 @@ export const items = [{
     },
     {
         "title": "Power Plants Map",
-        "subtitle": "Made with d3",
-        "image": '',
-        "tags": ['Data Design', 'Maps'],
-        "type": "Data Design with d3",
+        "subtitle": "Interactive map with multiple layers of data, made with d3",
+        "image": 'power-plants.png',
+        "tags": ['Data Design', 'Interactive', 'Maps'],
+        "type": "Interactive Data Design",
         "publication": "Made for Class",
         "contentBlockThree": `<iframe height='800px' width=100% src='https://coxco96.github.io/power-plants-d3/' title='Svelte + Mapbox GL JS Component Library via Storybook'></iframe>`,
-        "slug": "power-plants-map"
+        "slug": "power-plants-map",
+        "includeImageOnFeaturePage": false
     },
 
     {
