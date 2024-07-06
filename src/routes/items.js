@@ -284,7 +284,8 @@ export const items = [{
         "type": "Interactive data design",
         "publication": "New York Times",
         "image": "worldcup.png",
-        "tags": ["Interactive"]
+        "tags": ["Interactive"],
+        "contentBlockOne": "I led the design and development team that worked on the interactive, live-updating pages showing how Women's World Cup teams could advance to the round of 16. View the main page <a href='https://www.nytimes.com/interactive/2023/upshot/united-states-womens-world-cup-scores-standings.html' target='_blank'>here</a>."
     },
     {
         "title": "A Journalist's Guide to Styling geoTIFFs for the Web",
