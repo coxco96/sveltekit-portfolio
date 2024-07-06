@@ -240,6 +240,17 @@ export const items = [{
         'contentBlockOne': `Check it out in the original story <a href='https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html' target='_blank'>here</a>.`
     },
     {
+        "title": "Power Plants Map",
+        "subtitle": "Made with d3",
+        "image": '',
+        "tags": ['Data Design', 'Maps'],
+        "type": "Data Design with d3",
+        "publication": "Made for Class",
+        "contentBlockThree": `<iframe height='800px' width=100% src='https://coxco96.github.io/power-plants-d3/' title='Svelte + Mapbox GL JS Component Library via Storybook'></iframe>`,
+        "slug": "power-plants-map"
+    },
+
+    {
         "title": "Svelte + Mapbox GL JS Component Library",
         "subtitle": "Presented via Storybook",
         "contentBlockOne": "<p>This project was created in fulfillment of my Master of Science degree in Digital Mapping. You can check it out in the frame below or view full screen in a new tab by <a href='https://bit.ly/mapcourt' target='_blank'>clicking here</a>.</p><p>Looking for the code repository behind it? <a href='https://github.com/coxco96/mapbox-svelte-components'>Click here.</a></p><p><strong>Note:</strong> if you're on a mobile device, you can navigate page by clicking 'Sidebar' in the bottom left of the screen.</p>",
