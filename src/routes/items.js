@@ -556,6 +556,18 @@ export const items = [{
         `,
         "includeImageOnFeaturePage": false,
     },
+
+    {
+        "title": "Education and Gender in Kenya Map",
+        "subtitle": "Made with d3",
+        "contentBlockThree": "<iframe src='https://coxco96.github.io/kenya-map/' title='Education and Gender in Kenya Map' height='800px' width=100%></iframe>",
+        "tags": ['Data Design', 'Interactive', 'Maps'],
+        "image": "kenya-map.png",
+        "includeImageOnFeaturePage": false,
+        "slug": "kenya-map",
+        "type": "Interactive Web Map",
+        "publication": "Made for Class"
+    },
     {
         "image": "miamihottest.png",
         "tags": ["Data Design", "Maps"],
