@@ -9,7 +9,7 @@ export const items = [{
         'type': 'About Me',
         'publication': 'Professional',
         'tags': ['About Me'],
-        'slug': 'slug',
+        'slug': 'about-me',
         'cardHeight': 'auto',
         'includeImageOnFeaturePage': false,
         'contentBlockOne': `
