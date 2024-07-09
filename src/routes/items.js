@@ -5,7 +5,7 @@
 export const items = [{
         'title': `Welcome!`,
         'subtitle': `
-        I'm Court, and I design data experiences. Click here to learn more about me.`,
+        I'm Court, and I design and develop data experiences. Click here to learn more about me.`,
         'type': 'About Me',
         'publication': 'Professional',
         'tags': ['About Me'],
@@ -233,12 +233,12 @@ export const items = [{
         "tags": ["Data Design", "Data Analysis"],
         "slug": "when-caitlin-clark-comes-to-town",
         "type": "Data Design",
-        "caitlinClark": true,
         "includeImageOnFeaturePage": false,
         "imageTwo": "caitlin-clark.webp",
         "publication": "New York Times",
         'contentBlockOne': `Check it out in the original story <a href='https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html' target='_blank'>here</a>.`
     },
+
     {
         "title": "Power Plants Map",
         "subtitle": "Interactive map with multiple layers of data, made with d3",
@@ -250,6 +250,16 @@ export const items = [{
         "slug": "power-plants-map",
         "includeImageOnFeaturePage": false
     },
+    {
+        "title": "The 100 Best Books of the 21st Century",
+        "subtitle": "I created a dataset of over 15,000 books which powered a behind-the-scenes submission form for this project.",
+        "image": "books.jpg",
+        "imageAlt": "Graphic says 'The 100 Best Books of the 21st Century' surrounded by various books including The Emperor of Maladies by Siddhartha Mukherjee, The Return by Hisham Matar, On Beauty by Zadie Smith, The Collected Stories of Lydia Davis, The Sympathizer by Viet Thank Nguyen, how to be both by Ali Smith, Pulphead Essays by John Jeremiah Sullivan and Men We Reaped by Jesmyn Ward, and Station Eleven by Emily St. John Mandel.",
+        "tags": ["Other"],
+        "slug": "100-best-books",
+        "type": "Dataset Creation",
+        "publication": "New York Times"   
+       },
 
     {
         "title": "Svelte + Mapbox GL JS Component Library",
