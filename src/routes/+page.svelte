@@ -25,8 +25,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Courtney Cox Portfolio" />
+	<title>Mapcourt Portfolio</title>
+	<meta name="description" content="Courtney Cox's Portfolio" />
 </svelte:head>
 
 
