@@ -49,41 +49,24 @@
 
     <main>
         <div class="gallery">
-            {#if filtered.length == 0}
-                {#each items as item, i}
-                    <div class="item">
-                        <Card
-                            title={item.title}
-                            publication={item.publication}
-                            type={item.type}
-                            link={item.link}
-                            src={item.image}
-                            slug={item.slug}
-                            subtitle={item.subtitle}
-                            cardHeight={cardHeight(item.cardHeight)}
-                            alt={item.imageAlt}
-                        />
-                    </div>
-                {/each}
-            {:else}
-                {#each filtered as item}
-                    <div class="item">
-                        <Card
-                            title={item.title}
-                            publication={item.publication}
-                            type={item.type}
-                            link={item.link}
-                            src={item.image}
-                            slug={item.slug}
-                            subtitle={item.subtitle}
-                            cardHeight={cardHeight(item.cardHeight)}
-                            alt={item.imageAlt}
-                        />
-                    </div>
-                {/each}
-            {/if}
+            {#each (filtered.length === 0 ? items : filtered) as item}
+                <div class="item">
+                    <Card
+                        title={item.title}
+                        publication={item.publication}
+                        type={item.type}
+                        link={item.link}
+                        src={item.image}
+                        slug={item.slug}
+                        subtitle={item.subtitle}
+                        cardHeight={cardHeight(item.cardHeight)}
+                        alt={item.imageAlt}
+                    />
+                </div>
+            {/each}
         </div>
     </main>
+
 </section>
 
 <style>

@@ -16,10 +16,15 @@
 - Add articles written for HDI.
 - Go page by page and add content descriptions if not already there.
 - Add breakpoints to avoid the first 4 cards splitting to 3 on one line.
+- Add a console.log error if an image doesn't have alt text.
+- Expand About Me section.
 
 ## Lower Priority
 - Make the map pin clickable but not entire nav bar section.
 - Proofread data design manifesto.
+- Go card by card to copy edit "publication" and "type" values.
+- Squoosh thumbnail images.
+- Refactor Svelte code for filtered vs. unfiltered cards in Gallery.svelte. (Right now, if you update anything that gets passed to Card, you have to do it in both places.)
 - See if long html blocks can be written as a separate var in items.js (or other file?) and used that way.
 - Copy edit all content descriptions.
 - Add Jersey map.
