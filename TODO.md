@@ -1,9 +1,8 @@
 # To Dos
 
 ## High Priority
-- Add alt text for all images. (Thumbnails are done. Need to do second/third images.)
+- Add alt text for all images. (Thumbnails are done. Need to check second/third images.)
 - Write description for TSwift page.
-- Change hyperlink color for more contrast with regular text.
 - Ensure all pages have link to original story (if applicable).
 
 ## Mid Priority
@@ -33,6 +32,7 @@
 - Add housing dashboard. (https://www.miamiherald.com/news/special-reports/affordability-dashboard/) (or actually maybe create an updated housing dashboard? for lex?)
 
 ## Done
+- ~~Change hyperlink color for more contrast with regular text.~~
 - ~~Add books project.~~
 - ~~Set the buttons to display alphabetically regardless of the order they show up within.~~
 
