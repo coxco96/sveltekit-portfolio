@@ -62,6 +62,7 @@
                             slug={item.slug}
                             subtitle={item.subtitle}
                             cardHeight={cardHeight(item.cardHeight)}
+                            alt={item.imageAlt}
                         />
                     </div>
                 {/each}
@@ -77,6 +78,7 @@
                             slug={item.slug}
                             subtitle={item.subtitle}
                             cardHeight={cardHeight(item.cardHeight)}
+                            alt={item.imageAlt}
                         />
                     </div>
                 {/each}

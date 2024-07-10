@@ -4,7 +4,7 @@
 
     let title = data.pageTitle ? data.pageTitle : data.title;
 
-    let alt = data.alt;
+    let alt = data.imageAlt;
     let src = data.image;
     let imageCaption = data.imageCaption;
     let includeImage;
@@ -29,10 +29,10 @@
     let imageInsteadAlt = data.imageInsteadAlt;
     let imageInsteadCaption = data.imageInsteadCaption;
     let imageTwo = data.imageTwo;
-    let imageAltTwo = data.imageAltTwo;
+    let imageAltTwo = data.imageTwoAlt;
     let imageCaptionTwo = data.imageCaptionTwo;
     let imageThree = data.imageThree;
-    let imageAltThree = data.imageAltThree;
+    let imageAltThree = data.imageThreeAlt;
     let imageCaptionThree = data.imageCaptionThree;
 
     // makes back link restore scroll position of gallery page

@@ -219,6 +219,8 @@ export const items = [{
         "tags": ["Data Analysis", "Data Design"],
         "slug": "how-big-is-taylor-swift",
         "image": "tswift.webp",
+        "imageAlt": "image 1",
+        "imageTwoAlt": "image 2",
         "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
         "publication": "New York Times",
         "contentBlockOne": "View the full analysis <a target='_blank' href='https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html'>here</a>.",
@@ -235,6 +237,7 @@ export const items = [{
         "type": "Data Design",
         "includeImageOnFeaturePage": false,
         "imageTwo": "caitlin-clark.webp",
+        "imageTwoAlt": "image 2 alt",
         "publication": "New York Times",
         'contentBlockOne': `Check it out in the original story <a href='https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html' target='_blank'>here</a>.`
     },
@@ -700,35 +703,6 @@ export const items = [{
         "tags": ["Maps"],
         "aboveImageText": ""
     },
-
-    // {
-    //     "image": "darts.png",
-    //     "tags": [],
-    //     "slug": 'darts1'
-    // },
-    // {
-    //     "image": "darts2.png",
-    //     "tags": [],
-    //     "slug": "darts2"
-    // },
-
-    // {
-    //     "image": "jersey-island.png",
-    //     "tags": [],
-    //     "slug": "jersey-island"
-    // },
-
-    // {
-    //     "image": "metro2.png",
-    //     "tags": [],
-    //     "slug": "metro2"
-    // },
-    // {
-    //     "image": "miami-election.png",
-    //     "tags": [],
-    //     "slug": "miami-election"
-    // },
-
     {
         "image": "pollshift.png",
         "title": "How Polls Have Changed Since the State of the Union Address",
@@ -739,7 +713,8 @@ export const items = [{
         "type": "Data Design",
         "includeImageOnFeaturePage": false,
         "contentBlockOne": "<a href='https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html' target='_blank'>Click here to view the original newsletter.</a>",
-        "imageTwo": "pollshift1.png"
+        "imageTwo": "pollshift1.png",
+        "imageTwoAlt": "image 2 alt"
     },
 
     {

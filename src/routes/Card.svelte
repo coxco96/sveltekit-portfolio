@@ -3,7 +3,7 @@
     export let publication;
     export let title = "title";
     export let src;
-    export let alt = "";
+    export let alt;
     export let slug;
     export let subtitle;
     export let cardHeight;
