@@ -271,10 +271,10 @@ export const items = [{
         "slug": "how-big-is-taylor-swift",
         "image": "tswift.webp",
         "imageAlt": "Thumbnail showing two charts labeled The Beatles and Taylor Swift, showing orange and black circles. The Beatles chart runs from 1963 to 1970, and the Taylor Swift chart from 2007 to 2024. The metric being shown is not labeled in this thumbnail version.",
-        "imageTwoAlt": "image 2",
+        "imageTwoAlt": "Bobblehead of Taylor Swift. Text reads: 'How Big is Taylor Swift? As big as the Beatles? Michael Jackson? Beyoncé? We crunched the numbers.'",
         "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
         "publication": "New York Times",
-        "contentBlockOne": "View the full analysis <a target='_blank' href='https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html'>here</a>.",
+        "contentBlockOne": "Full write up on this process coming soon! View the New York Times story <a target='_blank' href='https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html'>here</a>.",
         "includeImageOnFeaturePage": false,
         "imageInstead": "tswift2.jpg"
     },
