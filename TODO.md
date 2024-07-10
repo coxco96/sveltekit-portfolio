@@ -1,7 +1,7 @@
 # To Dos
 
 - Write description for TSwift page.
-- Add alt text for all images.
+- Add alt text for all images. (Thumbnails are done. Need to do second/third images.)
 - Add "mapcourt" label under SVG map pin.
 - Make the map pin clickable but not entire nav bar section.
 - Change color so color bar isn't weird on mobile.

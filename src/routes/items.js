@@ -21,6 +21,7 @@ export const items = [{
 
         `
     },
+    
     {
         "title": "My Data Design Manifesto",
         "subtitle": "The principles that guide my approach to designing data experiences",
@@ -211,22 +212,6 @@ export const items = [{
             <p>In my semester abroad at the University of Oxford, I completed a research seminar in British history and culture. My undergraduate research in British musicology, which won a "de Jager" award, required rigorous analysis of primary texts and the ability to synthesize information to draw a new, insightful conclusion. This experience underscores my intellectual curiosity, adaptability to new fields and a strong propensity for communication, particularly for translating complex, sophisticated ideas into clear, effective writing suitable for diverse audiences.</p>
             `
     },
-
-
-    {
-        "title": "How Big Is Taylor Swift?",
-        "type": "Data Design & Analysis",
-        "tags": ["Data Analysis", "Data Design"],
-        "slug": "how-big-is-taylor-swift",
-        "image": "tswift.webp",
-        "imageAlt": "Thumbnail showing two charts labeled The Beatles and Taylor Swift, showing orange and black circles. The Beatles chart runs from 1963 to 1970, and the Taylor Swift chart from 2007 to 2024. The metric being shown is not labeled in this thumbnail version.",
-        "imageTwoAlt": "image 2",
-        "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
-        "publication": "New York Times",
-        "contentBlockOne": "View the full analysis <a target='_blank' href='https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html'>here</a>.",
-        "includeImageOnFeaturePage": false,
-        "imageInstead": "tswift2.jpg"
-    },
     {
         "title": "When Caitlin Clark Comes to Town",
         "subtitle": "Giant graphic showing home attendance of Iowa's Opponents in 2023-24. Click to see full version.",
@@ -278,6 +263,20 @@ export const items = [{
         "slug": "svelte-mapbox-library",
         "tags": ["Interactive"],
         "type": "Sveltekit Library Development"
+    },
+    {
+        "title": "How Big Is Taylor Swift?",
+        "type": "Data Design & Analysis",
+        "tags": ["Data Analysis", "Data Design"],
+        "slug": "how-big-is-taylor-swift",
+        "image": "tswift.webp",
+        "imageAlt": "Thumbnail showing two charts labeled The Beatles and Taylor Swift, showing orange and black circles. The Beatles chart runs from 1963 to 1970, and the Taylor Swift chart from 2007 to 2024. The metric being shown is not labeled in this thumbnail version.",
+        "imageTwoAlt": "image 2",
+        "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
+        "publication": "New York Times",
+        "contentBlockOne": "View the full analysis <a target='_blank' href='https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html'>here</a>.",
+        "includeImageOnFeaturePage": false,
+        "imageInstead": "tswift2.jpg"
     },
     {
         "title": "Interactive Cluster Markers",

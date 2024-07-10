@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/hind": "^5.0.13"
+		"@fontsource/hind": "^5.0.13",
+		"vercel": "^34.3.1"
 	}
 }

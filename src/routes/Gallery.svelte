@@ -3,7 +3,7 @@
     export let items;
 
     // create list of unique tags
-    $: allTags = [...new Set(items.map((item) => item.tags).flat())];
+    $: allTags = [...new Set(items.map((item) => item.tags).flat())].sort();
     $: filters = [];
     $: filtered = items.filter((item) => {
         if (item.tags.some((x) => filters.includes(x))) {
@@ -29,7 +29,6 @@
 
 
 <section>
-    <!-- <div class='text-column'><h2 class='h2'>Portfolio of Courtney Cox</h2></div> -->
     <p class="filter-label">Filter by:</p>
     <div
         role="group"
