@@ -588,21 +588,24 @@ export const items = [{
         "publication": "Made for Class"
     },
     {
+        "title": "Where is Miami-Dade County Hottest?",
+        "subtitle": "Visualizing NASA Earth Data",
         "image": "miamihottest.png",
+        "imageAlt": "A map of Miami-Dade County showing various color shades on a gradient from light orange to dark purple. The northeast area is byfar the darkest region of the map.",
         "tags": ["Data Design", "Maps"],
         "type": "Geospatial Analysis + Raster Data for the Web",
         "contentBlockThree": "<iframe scrolling='no' frameborder='1' height='900px' width='100%' title='Map showing average land surface temperature across Miami-Dade County in summer 2021' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation' src='https://flo.uri.sh/visualisation/10682312/embed?auto=1'></iframe>",
         "publication": "Personal Project",
         "slug": "miami-hottest",
-        "includeImageOnFeaturePage": false,
-        "title": "Where is Miami-Dade County Hottest?",
-        "subtitle": "Visualizing NASA Earth Data"
+        "includeImageOnFeaturePage": false
+
     },
     {
         "title": "Historically Redlined Districts Bear the Brunt of the Heat",
-        "contentBlockOne": "View the interactive scroll experience below or in a separate tab by clicking <a href='https://coxco96.github.io/miami-redlines/' target='_blank'><strong>here</strong></a>.",
         "subtitle": "A scrollytelling map of historic HOLC grades and land surface temperature in Miami",
         "image": "redlines.png",
+        "imageAlt": "Thumbnail of a map showing a section of coast. Over the water is a textbox that says 'HOLC grade D' and the land regions shows areas outlined with a redline, filled with light blue, light red or dark red (mostly red).",
+        "contentBlockOne": "View the interactive scroll experience below or in a separate tab by clicking <a href='https://coxco96.github.io/miami-redlines/' target='_blank'><strong>here</strong></a>.",
         "contentBlockThree": "<iframe src='https://coxco96.github.io/miami-redlines/' title='Historically redlined neighborhoods are hotter in Miami' height='800px' width=100%></iframe>",
         "tags": ["Data Design", "Interactive"],
         "publication": "Personal project",
@@ -610,10 +613,10 @@ export const items = [{
         "type": "Interactive Map & Geospatial Analysis",
         "includeImageOnFeaturePage": false
     },
-
     {
         "title": "How to Read a Hearing Test",
         "image": "hearing2.png",
+        "imageAlt": "A chart showing regions of a hearing test that indicate normal, mild, moderate, moderately severe, severe or profound hearing loss. The x-axis shows frequency in hertz, and the y-axis shows decibels.",
         "tags": ["Data Design"],
         "type": "Data Design",
         "publication": "social media",
@@ -626,16 +629,13 @@ export const items = [{
         "tags": ["Data Analysis", "Data Design"],
         "publication": "New York Times",
         "image": "ai.png",
-        "imageAlt": "alt here"
+        "imageAlt": "A chart titled 'College Educated Workers are Most Exposed to A.I.' The subtitle reads 'Researchers at OpenAI estimated the share of tasks in each occupation that could be assisted by A.I. tools.' The charts shows that jobs that often require a high school diploma or less (like sewing machine operators, dry cleaners, fast-food workers) share 6% of job tasks potentially aided by A.I. Jobs that often require a high school diploma (such as manicurists and pedicurists, actors and security guards) share 17% of job tasks potentially aided by A.I. Vocation or 2-year degree jobs (such as electricians, paramedics and facilities managers) share 38% of job tasks; four-year degree jobs (such as nurses, nuclear engineers and human resources specialists) share 75% of job tasks and jobs that often require graduate school (such as pharmacists, psychiatrists and lawyers) share 64% of job tasks potentially aided by A.I. The percentage shown is the median percentage by education category. Data source is OpenAI (for ratings) and the Labor Department (for job categories). By The New York Times."
     },
-
-
-
     {
         "title": "Studying the Limits of Human Perfection, Through Darts",
         'contentBlockOne': `<a href='https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html' target='_blank'>Link to original story.</a>`,
         "image": "darts2.png",
-        "imageAlt": "",
+        "imageAlt": "Graphic titled 'Precision of a Champion' is zoomed in to the triple-20 region. Subtitle is 'In a world championship final this year, Michael Smith hit the triple-20 region 46 percent of the time he aimed at it. Dozens of throws are shown, and those in the triple-20 region are red, while others are gray. The following notes are listed at bottom of graphic. The data shown is from the 2023 F.D.C. World Championship. Only darts targeted at the triple-20 region shown. Data manually plotted from a television broadcast. By The New York Times.",
         "publication": "New York Times",
         "type": "Data Design",
         "slug": "precision-of-a-champion",
@@ -644,10 +644,11 @@ export const items = [{
     {
         "title": "Interactive Tour of Oxford University",
         "subtitle": "Using IIIF (International Image Interoperability, Framework) technology to explore a historic map",
+        "image": "oxford.png",
+        "imageAlt": "Zoomed in thumbnail from historic map of the city of Oxford, showing concentric Radcliffe Camera library and surrounding area.",
         "contentBlockOne": "<p>Please note that this project, as of 2024, no longer reflects my editorial and design sensibilities. The IIIF (International Image Interoperability Framework) technology, however, remains relevant to include in this portfolio. This project is not mobile responsive.</p><p>Check it out below or full screen in a different tab <a href='https://coxco96.github.io/oxford-tour' target='_blank'>here</a>.</p>",
         "includeImageOnFeaturePage": false,
         "contentBlockThree": "<iframe src='https://coxco96.github.io/oxford-tour/' width=100% height='800px'></iframe>",
-        "image": "oxford.png",
         "tags": ["Maps", "Interactive"],
         "type": "Interactive",
         "publication": "Made for class",
@@ -657,6 +658,7 @@ export const items = [{
         "title": "The Tilt",
         "subtitle": "Graphic for politics newsletter by Nate Cohn",
         "image": "tilt.png",
+        "imageAlt": "A chart titled 'When 2024 Republican Delegates Will Be Awarded.' Subtitle is: 'About two-thirds of the delegates to the Republican convention could be awarded during the election subversion trial in Washington, which is expected to begin March 4.Chart shows the following. Before trial: 10 percent of delegates; during trial: 65 to 71 percent of delegates; after trial: 19 to 25 percent of delegates. Not at bottom of chart: For a trial lasting four to six weeks starting March 4. Source: The Green Papers. Chart by Courtney Cox.",
         "type": "Data Design",
         "publication": "New York Times",
         "tags": ["Data Design"],
@@ -665,6 +667,8 @@ export const items = [{
     {
         "title": "Kentucky's Opioid Crisis",
         "subtitle": "Featuring an interactive map of pills dispensed by pharmacy per county resident",
+        "image": "sackler.png",
+        "imageAlt": "A map of Kentucky made up of red circle outlines of various sizes",
         "pageTitle": "What the Sackler Family Owes Me <br>(And My Fellow Kentuckians)",
         "type": "Interactive map in scrollytelling story",
         "tags": ["Data Design", "Interactive", "Maps", "Data Analysis"],
@@ -672,16 +676,16 @@ export const items = [{
         "contentBlockOne": "This project, from December 2021, was my first piece of \"data journalism.\" Since then, my skills in reporting, data storytelling, responsive design and accessibility engineering have skyrocketed. Nonetheless, you can view the full project here. Note that it is not mobile friendly.",
         "contentBlockTwo": "View the full project in the frame below or on its original site, full-screen <a href='https://coxco96.github.io/kentucky-sackler-story/' target='_blank'>here</a>.",
         "contentBlockThree": "<iframe class='iframe' width='100%' height='800px' src='https://coxco96.github.io/kentucky-sackler-story/' title='What the Sackler Family Owes Me (And My Fellow Kentuckians)'></iframe>",
-        "image": "sackler.png",
-        "alt": "A map of Kentucky made up of red circle outlines of various sizes",
+
         "imageCaption": "<span style='text-transform: uppercase; letter-spacing: 0.01em; font-size: 0.8125rem;'>Static image from interactive map.</span><br>Each circle represents a Kentucky pharmacy in 2006. They are sized by number of oxycontin or hydrocodone pills dispensed in 2006 relative to the pharmacy's county population. • Data: Washington Post's NARCOS database.",
         "includeImageOnFeaturePage": true,
         "publication": "Made for class"
     },
     {
-        "image": "metro.png",
         "title": "The Places Most Affected by Remote Workers' Moves Around the Country",
         "subtitle": "Graphic created together with Aatish Bhatia",
+        "image": "metro.png",
+        "imageAlt": "Chart titled 'New York Metro Area' with subtitle 'Net domestic migration of workers.' Prepandemic (2018-19) shows negative 147,000 in-person workers and negative 25,000 remote workers. Pandemic (2020-21) shows negative 172,000 in-person workers and 116,000 remote workers. Annotation says 'The N.Y.C. metro area lost many more remote workers during the pandemic.' Data source: Upshot analysis of American Community Survey data. Limited to metros of more than 250,000 residents.",
         "contentBlockOne": "Made with Svelte (and lots and lots of CSS!)<br>Read the story<a href='https://www.nytimes.com/interactive/2023/06/17/upshot/17migration-patterns-movers.html'>here</a>.",
         "tags": ["Data Design"],
         "slug": "metro1"
@@ -689,9 +693,9 @@ export const items = [{
     {
         "title": "Flashback",
         "subtitle": "A weekly history game",
-        "contentBlockOne": "From summer 2023 through May 2024, I was the primary fact checker for most editions of Flashback. Check out the quizzes <a href='https://www.nytimes.com/spotlight/flashback' target='_blank'>here</a>.",
         "image": "flashback.png",
         "imageAlt": "A 3x3 grid of historic images, with the New York Times Flashback logo as the center tile",
+        "contentBlockOne": "From summer 2023 through May 2024, I was the primary fact checker for most editions of Flashback. Check out the quizzes <a href='https://www.nytimes.com/spotlight/flashback' target='_blank'>here</a>.",
         "tags": ["Other"],
         "slug": "flashback",
         "publication": "New York Times",
@@ -710,9 +714,10 @@ export const items = [{
         "aboveImageText": ""
     },
     {
-        "image": "pollshift.png",
         "title": "How Polls Have Changed Since the State of the Union Address",
         "subtitle": "Table made for The Tilt, Nate Cohn's newsletter",
+        "image": "pollshift.png",
+        "imageAlt": "Thumbnail of a table listing 16 pollsters and the Trump/Biden margin before and after since State of the Union address. Also shows percent point change between before and after. Averages are Trump +2 for before, Trump + <1 for after, with a 1.4 point average increase for Democrats overall.",
         "tags": ["Data Design"],
         "publication": "New York Times",
         "slug": "pollshift",
@@ -726,13 +731,14 @@ export const items = [{
     {
         "title": "Visualizing Campaign Finance",
         "tags": ["Data Design", "Interactive"],
+        "image": "campaign-finance.png",
+        "imageAlt": "Thumbnail image titled 'Campaign Finance Received By Crist and DeSantis Each Day Since January 2021. Subtitle reads 'Bubbles are scaled to contribution size. Hover over each bubble for exact dollar amount. Chart shows significantly larger and more numerous bubbles for DeSantis than Crist.",
         "contentBlockTwo": "<p>Hover over the bubbles.</p>",
         "subtitle": "Interactive visualization showing funds received by Crist and Desantis each day from Jan. 2021 through Oct. 2022",
         "contentBlockOne": "<p><a href='https://www.miamiherald.com/news/politics-government/article266417946.html' target='_blank'>As seen in the Miami Herald</a></p><p>A chart showing campaign finance received by Crist and Desantis each day from Jan. 1, 2021 through Oct. 1, 2022</p><p>Made with Flourish.</p>",
         "publication": "Miami Herald",
         "type": "Data Wrangling and Design",
-        "contentBlockThree": "<div class='text-column'><script src='https://public.flourish.studio/resources/embed.js'></script><iframe scrolling='no' frameborder=0 title='Interactive of visual content' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation' style='width: 100%; height: 600px;' src='https://flo.uri.sh/visualisation/11227857/embed?auto=1'></iframe></div>",
-        "image": "campaign-finance.png",
+        "contentBlockThree": "<div class='text-column'><script src='https://public.flourish.studio/resources/embed.js'></script><iframe scrolling='no' frameborder=0 title='Interactive of visual content titled Campaign Finance Received By Crist and DeSantis Each Day Since January 2021' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation' style='width: 100%; height: 600px;' src='https://flo.uri.sh/visualisation/11227857/embed?auto=1'></iframe></div>",
         "slug": "campaign-finance-desantis-crist",
         "includeImageOnFeaturePage": false
     }
