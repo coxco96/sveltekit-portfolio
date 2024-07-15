@@ -35,7 +35,7 @@ export const items = [{
             with the following statements:</p>
         <ul>
             <li>
-                <p>Accessibility is non-negotiable and must be priotized at every step of the process.
+                <p>Accessibility is non-negotiable and must be prioritized at every step of the process.
                     It is
                     ineffective as an afterthought.</p>
             </li>
