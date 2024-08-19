@@ -213,6 +213,20 @@ export const items = [{
             `
     },
     {
+        "title": "Olympic Medals Map",
+        "subtitle": "Interative map and table filterable by year, sport and event. Developed with Sveltekit.",
+        "image": "olympics.png",
+        "imageAlt": "Screenshot of Olympic Medals Count page with a world map of various shades of purple according to medal counts.",
+        "tags": ["Data Design", "Interactive", "Maps"],
+        "type": "Interactive Map Design",
+        "includeImageOnFeaturePage": false,
+        "publication": "Personal Project",
+        "slug": "olympic-medals-map",
+        "contentBlockOne": "View the map on its original full page <a href='https://olympics-map.vercel.app' target='_blank'>here</a>, or check it out below.",
+        "contentBlockThree": `<iframe height='800px' width=100% src='https://olympics-map.vercel.app' title='Olympic Medals Map'></iframe>`,
+    },
+
+    {
         "title": "When Caitlin Clark Comes to Town",
         "subtitle": "Giant graphic showing home attendance of Iowa's Opponents in 2023-24. Click to see full version.",
         "image": "caitlin-clark.png",
