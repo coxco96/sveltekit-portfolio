@@ -253,6 +253,21 @@ export const items = [{
         "publication": "New York Times",
         'contentBlockOne': `Check it out in the original story <a href='https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html' target='_blank'>here</a>.`
     },
+    {
+        "title": "The Kentucky River",
+        "subtitle": "Artistic river mapping. Made in QGIS.",
+        "image": "weep-no-more.png",
+        "imageAlt": "Black background with white river networks with a marker for High Bridge Park and text 'weep no more my lady",
+        "contentBlockThree": `<iframe height='800px' width=100% src='https://coxco96.github.io/green-girl-kentucky-rivers/' title='Art Map Panels: Green Girl + The Kentucky River'></iframe>`,
+        "includeImageOnFeaturePage": true,
+        "contentBlockTwo": `<p><strong>Description</strong>: The universe is full of patterns: fractals contain fractals which contain fractals. This is why river networks look like red blood cells, which inspires this work.</p><p>This map, made from real geospatial data, is situated in Jessamine County, Kentucky, where I grew up playing in creeks and looking out at the Kentucky River from High Bridge Park. The words “weep no more my lady” are taken from Kentucky’s state song.</p><p><strong>Data Source</strong>: USGS</p><p><strong>Tools</strong>:Procreate (Green Girl); QGIS and Affinity Designer (maps)</p><p><strong>Note</strong>: These maps were inspired by tutorials written by <a href='https://dancoecarto.com/tutorials' target='_blank'>Dan Coe</a>.</p>`,
+        "tags": ['Maps'],
+        "publication": "Art Show",
+        "type": "Artistic Map",
+        "slug": "river-networks"
+    },
+
+
 
     {
         "title": "Power Plants Map",
