@@ -300,7 +300,8 @@ export const items = [{
         "includeImageOnFeaturePage": true,
         "imageAlt": "Map titled Yellow Cab Pickups. In September alone, 3.4 million yellow cab trips began in Manhattan. Hotspots, of course, include the Times Square and Central Park areas. Map shows taxi zones of Manhattan with different levels of shading to indicate taxi pickups.",
         "type": "Geospatial Analysis",
-        "tags": ['Data Analysis', 'Data Design','Maps']
+        "tags": ['Data Analysis', 'Data Design','Maps'],
+        "publication": "Personal Project"
        },
 
     {
@@ -315,6 +316,20 @@ export const items = [{
         "slug": "svelte-mapbox-library",
         "tags": ["Interactive"],
         "type": "Sveltekit Library Development"
+    },
+    {
+        "title": "Appalachian Foothills",
+        "subtitle": "Made in Blender + QGIS",
+        "slug": "appalachian-foothills",
+        "includeImageOnFeaturePage": true,
+        "image": "pink-blender.png",
+        "imageAlt": "bright pink 3d terrain showing a relatively flat area next to a hilly area",
+        "imageTwo": "flat-blender.png",
+        "imageTwoAlt": "light purple 3d terrain showing a relatively flat area next to a hilly area. same area as the light purple map but with more exaggerated terrain",
+        "type": "Blender 3D",
+        "tags": ['Maps'],
+        "publication": "Personal Project",
+        "contentBlockTwo": "<p><strong>Description</strong>: These maps were created from real geospatial data, showing a small area near the entrance of my favorite area to hike: The Pinnacles, in Berea, KY, a 40-minute drive from where I grew up. Both maps are the same area. The bright pink has exaggerated terrain — just part of my experimentation in Blender. </p> <p><strong>Data source</strong>: USGS</p>"
     },
     {
         "title": "How Big Is Taylor Swift?",
