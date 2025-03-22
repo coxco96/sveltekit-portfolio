@@ -298,7 +298,7 @@ export const items = [{
         "image": "final-ncbf.png",
         "includeImageOnFeaturePage": true,
         "imageAlt": "Map titled Yellow Cab Pickups. In September alone, 3.4 million yellow cab trips began in Manhattan. Hotspots, of course, include the Times Square and Central Park areas. Map shows taxi zones of Manhattan with different levels of shading to indicate taxi pickups.",
-        "type": "Geospatial Analysis",
+        "type": "Geospatial Data Analysis",
         "tags": ['Data Analysis', 'Data Design','Maps'],
         "publication": "Personal Project"
        },
