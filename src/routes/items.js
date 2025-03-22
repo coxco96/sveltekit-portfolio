@@ -775,7 +775,7 @@ export const items = [{
         "link": "https://coxco96.github.io/images/na_breweries_8000.png",
         "slug": "na-breweries",
         "tags": ["Maps"],
-        "aboveImageText": ""
+        "publication": "Made for Class"
     },
     {
         "title": "How Polls Have Changed Since the State of the Union Address",
