@@ -324,7 +324,7 @@ export const items = [{
         "imageAlt": "bright pink 3d terrain showing a relatively flat area next to a hilly area",
         "imageTwo": "flat-blender.png",
         "imageTwoAlt": "light purple 3d terrain showing a relatively flat area next to a hilly area. same area as the light purple map but with more exaggerated terrain",
-        "type": "Blender 3D",
+        "type": "Artistic Map (Blender 3D)",
         "tags": ['Maps'],
         "publication": "Personal Project",
         "contentBlockTwo": "<p><strong>Description</strong>: These maps were created from real geospatial data, showing a small area near the entrance of my favorite area to hike: The Pinnacles, in Berea, KY, a 40-minute drive from where I grew up. Both maps are the same area. The bright pink has exaggerated terrain — just part of my experimentation in Blender. </p> <p><strong>Data source</strong>: USGS</p>"
