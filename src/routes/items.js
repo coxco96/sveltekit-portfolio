@@ -227,13 +227,14 @@ export const items = [{
     },
     {
         "title": "On Earth We Bleed",
-        "subtitle": "An art piece I made from real geospatial data. Displayed at Alternative Expression art exhibition, Brooklyn, 2025.",
+        "subtitle": "Made in QGIS. Displayed at Alternative Expression art exhibition, Brooklyn, March 2025.",
         "image": "we-bleed-on-earth.png",
         "imageAlt": "Red world map with shading to show land elevation and ocean depths",
         "tags": ["Maps"],
         "slug": "on-earth-we-bleed",
         "type": "Artistic Map",
-        "includeImageOnFeaturePage": true,
+        "includeImageOnFeaturePage": false,
+        "contentBlockThree": `<iframe height='800px' width=100% src='https://coxco96.github.io/on-earth-we-bleed/' title='Art Map: On Earth We Bleed'></iframe>`,
         "publication": "Art Show",
         "contentBlockTwo": "<p><strong>Description</strong>: This map was created entirely from real geospatial data. The darker the red, the higher the elevation; the lighter the blue, the deeper the sea. You can see many fascinating details of Earth and its history: patterns of erosion, tiny fracture zones across ocean ridges, the outlines of tectonic plate, the curves mountain chains, and so on.</p><p>It is not physically possible to display our three-dimensional planet on a two-dimensional surface with complete accuracy. This map uses a projection called Winkel Triple, which minimizes distortion, though you will notice some near the map’s edges and polar regions.</p><p>I'm fascinated by natural fractal patterns, particularly how river networks resemble blood cells. The deep red land is inspired by this, as well as the idea that blood flows and behaves as we know it only on Earth.</p><p><strong>Data source</strong>: Natural Earth</p>"
     },
