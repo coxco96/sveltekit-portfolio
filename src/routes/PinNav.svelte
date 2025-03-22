@@ -4,11 +4,13 @@
 </script>
 
 <nav class="welcome">
-	<a href="{base}/">
+	<div><a href="{base}/">
 		<picture>
-			<img src={mapPin} alt="map pin" />
+			<img src={mapPin} alt="map pin, home link" />
 		</picture>
-	</a>
-
+	</a></div>
 </nav>
+<div><h1 class='item-title'>MapCourt</h1></div>
+
+
 
