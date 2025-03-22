@@ -212,19 +212,7 @@ export const items = [{
             <p>In my semester abroad at the University of Oxford, I completed a research seminar in British history and culture. My undergraduate research in British musicology, which won a "de Jager" award, required rigorous analysis of primary texts and the ability to synthesize information to draw a new, insightful conclusion. This experience underscores my intellectual curiosity, adaptability to new fields and a strong propensity for communication, particularly for translating complex, sophisticated ideas into clear, effective writing suitable for diverse audiences.</p>
             `
     },
-    {
-        "title": "Olympic Medals Map",
-        "subtitle": "Interative map and table filterable by year, sport and event. Developed with Sveltekit.",
-        "image": "olympics.png",
-        "imageAlt": "Screenshot of Olympic Medals Count page with a world map of various shades of purple according to medal counts.",
-        "tags": ["Data Design", "Interactive", "Maps"],
-        "type": "Interactive Map Design",
-        "includeImageOnFeaturePage": false,
-        "publication": "Personal Project",
-        "slug": "olympic-medals-map",
-        "contentBlockOne": "View the map on its original full page <a href='https://olympics-map.vercel.app' target='_blank'>here</a>, or check it out below.",
-        "contentBlockThree": `<iframe height='800px' width=100% src='https://olympics-map.vercel.app' title='Olympic Medals Map'></iframe>`,
-    },
+   
     {
         "title": "On Earth We Bleed",
         "subtitle": "Made in QGIS. Displayed at Alternative Expression art exhibition, Brooklyn, March 2025.",
@@ -237,6 +225,19 @@ export const items = [{
         "contentBlockThree": `<iframe height='800px' width=100% src='https://coxco96.github.io/on-earth-we-bleed/' title='Art Map: On Earth We Bleed'></iframe>`,
         "publication": "Art Show",
         "contentBlockTwo": "<p><strong>Description</strong>: This map was created entirely from real geospatial data. The darker the red, the higher the elevation; the lighter the blue, the deeper the sea. You can see many fascinating details of Earth and its history: patterns of erosion, tiny fracture zones across ocean ridges, the outlines of tectonic plate, the curves mountain chains, and so on.</p><p>It is not physically possible to display our three-dimensional planet on a two-dimensional surface with complete accuracy. This map uses a projection called Winkel Triple, which minimizes distortion, though you will notice some near the map’s edges and polar regions.</p><p>I'm fascinated by natural fractal patterns, particularly how river networks resemble blood cells. The deep red land is inspired by this, as well as the idea that blood flows and behaves as we know it only on Earth.</p><p><strong>Data source</strong>: Natural Earth</p>"
+    },
+    {
+        "title": "Olympic Medals Map",
+        "subtitle": "Interative map and table filterable by year, sport and event. Developed with Sveltekit.",
+        "image": "olympics.png",
+        "imageAlt": "Screenshot of Olympic Medals Count page with a world map of various shades of purple according to medal counts.",
+        "tags": ["Data Design", "Interactive", "Maps"],
+        "type": "Interactive Map Design",
+        "includeImageOnFeaturePage": false,
+        "publication": "Personal Project",
+        "slug": "olympic-medals-map",
+        "contentBlockOne": "View the map on its original full page <a href='https://olympics-map.vercel.app' target='_blank'>here</a>, or check it out below.",
+        "contentBlockThree": `<iframe height='800px' width=100% src='https://olympics-map.vercel.app' title='Olympic Medals Map'></iframe>`,
     },
 
     {
