@@ -292,6 +292,16 @@ export const items = [{
         "type": "Dataset Creation",
         "publication": "New York Times"   
        },
+       {
+        "title": "Yellow Cab Pickups",
+        "subtitle": "Data map. Analyzed with geopandas. Designed with Affinity Designer.",
+        "slug": "taxi-map",
+        "image": "final-ncbf.png",
+        "includeImageOnFeaturePage": true,
+        "imageAlt": "Map titled Yellow Cab Pickups. In September alone, 3.4 million yellow cab trips began in Manhattan. Hotspots, of course, include the Times Square and Central Park areas. Map shows taxi zones of Manhattan with different levels of shading to indicate taxi pickups.",
+        "type": "Geospatial Analysis",
+        "tags": ['Data Analysis', 'Data Design','Maps']
+       },
 
     {
         "title": "Svelte + Mapbox GL JS Component Library",
