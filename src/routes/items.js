@@ -266,9 +266,6 @@ export const items = [{
         "type": "Artistic Map",
         "slug": "river-networks"
     },
-
-
-
     {
         "title": "Power Plants Map",
         "subtitle": "Interactive map with multiple layers of data, made with d3",
@@ -281,6 +278,7 @@ export const items = [{
         "slug": "power-plants-map",
         "includeImageOnFeaturePage": false
     },
+
     {
         "title": "The 100 Best Books of the 21st Century",
         "subtitle": "I created a dataset of over 15,000 books which powered a behind-the-scenes submission form for this project.",
