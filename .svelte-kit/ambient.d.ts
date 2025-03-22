@@ -26,9 +26,10 @@
  * ```
  */
 declare module '$env/static/private' {
-	export const MANPATH: string;
+	export const GDAL_DRIVER_PATH: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
+	export const PROJ_DATA: string;
 	export const INIT_CWD: string;
 	export const TERM: string;
 	export const SHELL: string;
@@ -38,6 +39,7 @@ declare module '$env/static/private' {
 	export const CONDA_SHLVL: string;
 	export const CONDA_PROMPT_MODIFIER: string;
 	export const TERM_PROGRAM_VERSION: string;
+	export const GSETTINGS_SCHEMA_DIR_CONDA_BACKUP: string;
 	export const ZDOTDIR: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const MallocNanoZone: string;
@@ -50,10 +52,14 @@ declare module '$env/static/private' {
 	export const CONDA_EXE: string;
 	export const SSH_AUTH_SOCK: string;
 	export const BLOT: string;
+	export const VSCODE_PROFILE_INITIALIZED: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
 	export const _CE_CONDA: string;
+	export const CPL_ZIP_ENCODING: string;
 	export const PATH: string;
+	export const PROJ_NETWORK: string;
+	export const GSETTINGS_SCHEMA_DIR: string;
 	export const npm_package_json: string;
 	export const npm_config_engine_strict: string;
 	export const _: string;
@@ -72,6 +78,7 @@ declare module '$env/static/private' {
 	export const npm_config_npm_version: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const XPC_FLAGS: string;
+	export const GDAL_DATA: string;
 	export const npm_config_node_gyp: string;
 	export const npm_package_version: string;
 	export const _CE_M: string;
@@ -129,9 +136,10 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
-		MANPATH: string;
+		GDAL_DRIVER_PATH: string;
 		TERM_PROGRAM: string;
 		NODE: string;
+		PROJ_DATA: string;
 		INIT_CWD: string;
 		TERM: string;
 		SHELL: string;
@@ -141,6 +149,7 @@ declare module '$env/dynamic/private' {
 		CONDA_SHLVL: string;
 		CONDA_PROMPT_MODIFIER: string;
 		TERM_PROGRAM_VERSION: string;
+		GSETTINGS_SCHEMA_DIR_CONDA_BACKUP: string;
 		ZDOTDIR: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		MallocNanoZone: string;
@@ -153,10 +162,14 @@ declare module '$env/dynamic/private' {
 		CONDA_EXE: string;
 		SSH_AUTH_SOCK: string;
 		BLOT: string;
+		VSCODE_PROFILE_INITIALIZED: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
 		_CE_CONDA: string;
+		CPL_ZIP_ENCODING: string;
 		PATH: string;
+		PROJ_NETWORK: string;
+		GSETTINGS_SCHEMA_DIR: string;
 		npm_package_json: string;
 		npm_config_engine_strict: string;
 		_: string;
@@ -175,6 +188,7 @@ declare module '$env/dynamic/private' {
 		npm_config_npm_version: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		XPC_FLAGS: string;
+		GDAL_DATA: string;
 		npm_config_node_gyp: string;
 		npm_package_version: string;
 		_CE_M: string;
