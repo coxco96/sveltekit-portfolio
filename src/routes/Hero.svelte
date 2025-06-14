@@ -1,12 +1,10 @@
 <div class="hero-text">
     <span class="hero-text-span">
         <h1>Hi, I'm Court.</h1>
-        <p>I'm a data & graphics journalist.</p>
+        <p class=p1>Data journalist + cartographer.</p>
+        <p class="p2">View my portfolio. &#11107;</p>
     </span>
 </div>
-
-
-
 
 <style>
     .hero-text {
@@ -37,12 +35,22 @@
     }
 
     .hero-text p {
-        font-size: clamp(1.2rem, 3vw, 2rem);
+        /* font-size: clamp(1.2rem, 3vw, 2rem); */
+        /* font-size: 1.75rem; */
         font-weight: 300;
         line-height: 1.4;
         margin: 0.5rem 0 0;
         color: rgba(220, 220, 220, 0.85);
         text-shadow: 0 0 2px rgba(255, 255, 255, 0.08);
+    }
+
+    .p1 {
+        font-size: 1.75rem;
+        margin-top: 0.3rem;
+    }
+
+    .p2 {
+        font-size: 1.5rem;
     }
 
     @keyframes fadeInUp {

@@ -22,6 +22,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/hind": "^5.0.13",
+		"@sveltejs/svelte-scroller": "^2.0.7",
 		"vercel": "^32.3.0"
 	}
 }
