@@ -220,6 +220,8 @@ export const items = [{
         "imageAlt": "Red world map with shading to show land elevation and ocean depths",
         "tags": ["Maps"],
         "slug": "on-earth-we-bleed",
+        externalUrl: 'https://coxco96.github.io/on-earth-we-bleed/',
+        externalPage: true,
         "type": "Artistic Map",
         "includeImageOnFeaturePage": false,
         "contentBlockThree": `<iframe height='800px' width=100% src='https://coxco96.github.io/on-earth-we-bleed/' title='Art Map: On Earth We Bleed'></iframe>`,
@@ -235,9 +237,8 @@ export const items = [{
         "type": "Interactive Map Design",
         "includeImageOnFeaturePage": false,
         "publication": "Personal Project",
-        "slug": "olympic-medals-map",
-        "contentBlockOne": "View the map on its original full page <a href='https://olympics-map.vercel.app' target='_blank'>here</a>, or check it out below.",
-        "contentBlockThree": `<iframe height='800px' width=100% src='https://olympics-map.vercel.app' title='Olympic Medals Map'></iframe>`,
+        externalUrl: 'https://olympics-map.vercel.app/',
+        externalPage: true,       
     },
 
     {

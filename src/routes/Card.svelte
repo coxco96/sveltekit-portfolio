@@ -1,17 +1,41 @@
 <script>
-    export let type;
-    export let publication;
-    export let title = "title";
-    export let src;
-    export let alt;
-    export let slug;
-    export let subtitle;
-    export let cardHeight;
     import { base } from "$app/paths";
+    /**
+     * @typedef {Object} Props
+     * @property {any} type
+     * @property {any} publication
+     * @property {string} [title]
+     * @property {any} src
+     * @property {any} alt
+     * @property {any} slug
+     * @property {any} subtitle
+     * @property {any} cardHeight
+     * @property {any} externalPage
+     * @property {any} externalUrl
+     */
+
+    /** @type {Props} */
+    let {
+        type,
+        publication,
+        title = "title",
+        src,
+        alt,
+        slug,
+        subtitle,
+        cardHeight,
+        externalPage,
+        externalUrl,
+    } = $props();
+    
+    let href = externalPage ? externalUrl : `${base}/${slug}`
+    let target = externalPage ? "_blank" : null
+
 </script>
 
 
-<a href="{base}/{slug}" class="a">
+
+<a {href} {target} class="a">
     <div class='item-container hvr-glow' style='--card-height: {cardHeight}'>
         {#if type}
             <div class="type">{type}</div>
@@ -39,7 +63,6 @@
         </div>
     </div>
 </a>
-
 
 <style>
     .a:hover {

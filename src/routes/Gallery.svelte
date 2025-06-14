@@ -1,15 +1,15 @@
 <script>
     import Card from "./Card.svelte";
-    export let items;
+   let { items } = $props();
 
     // create list of unique tags
-    $: allTags = [...new Set(items.map((item) => item.tags).flat())].sort();
-    $: filters = [];
-    $: filtered = items.filter((item) => {
+    let allTags = $derived([...new Set(items.map((item) => item.tags).flat())].sort());
+    let filters = $derived([]);
+    let filtered = $derived(items.filter((item) => {
         if (item.tags.some((x) => filters.includes(x))) {
             return true; // returns true if filters list includes any of item's tags
         }
-    });
+    }));
 
     function filterClick(tag) {
         // if filters array does not already include clicked tag, add it
@@ -38,7 +38,7 @@
         {#each allTags as tag}
             <button
                 class="tag {filters.includes(tag) ? 'active-filter' : ''}"
-                on:click={() => filterClick(tag)}
+                onclick={() => filterClick(tag)}
                 aria-label="Filter by {tag}"
                 aria-pressed={filters.includes(tag)}
             >
@@ -61,6 +61,8 @@
                         subtitle={item.subtitle}
                         cardHeight={cardHeight(item.cardHeight)}
                         alt={item.imageAlt}
+                        externalUrl={item.externalUrl}
+                        externalPage={item.externalPage}
                     />
                 </div>
             {/each}

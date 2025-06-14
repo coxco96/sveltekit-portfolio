@@ -1,13 +1,13 @@
 <script>
-    export let data;
     import { base } from "$app/paths";
+    let { data } = $props();
 
     let title = data.pageTitle ? data.pageTitle : data.title;
 
     let alt = data.imageAlt;
     let src = data.image;
     let imageCaption = data.imageCaption;
-    let includeImage;
+    let includeImage = $state();
     // include the first image unless specifically set to false
     if (typeof data.includeImageOnFeaturePage !== 'undefined') {
         includeImage = data.includeImageOnFeaturePage;
@@ -49,7 +49,7 @@
     >&#x2190; <a
         href="{base}"
         aria-label="Go back"
-        on:click={handleBackClick}
+        onclick={handleBackClick}
         >Back</a
     ></span
 >

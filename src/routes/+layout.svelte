@@ -1,6 +1,13 @@
 <script>
 	import PinNav from "./PinNav.svelte";
 	import "./styles.css";
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('svelte').Snippet} [children]
+	 */
+
+	/** @type {Props} */
+	let { children } = $props();
 	// import github from '$lib/images/github.svg'
 </script>
 
@@ -8,7 +15,7 @@
 	<PinNav />
 
 	<main>
-		<slot />
+		{@render children?.()}
 	</main>
 
 </div>

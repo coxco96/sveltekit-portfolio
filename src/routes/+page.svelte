@@ -1,7 +1,7 @@
 <script>
 	import Gallery from "./Gallery.svelte";
 	import Card from './Card.svelte';
-	export let data;
+    let { data } = $props();
 	let items = data.items;
 
 	let introCard =  {
