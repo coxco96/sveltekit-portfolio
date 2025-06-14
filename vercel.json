@@ -3,6 +3,10 @@
     {
       "source": "/on-earth-we-bleed(/.*)?",
       "destination": "https://coxco96.github.io/on-earth-we-bleed$1"
+    },
+    {
+        "source": "/olympics-map(/.*)?",
+        "destination": "https://olympics-map.vercel.app/"
     }
   ]
 }
