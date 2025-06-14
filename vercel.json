@@ -6,7 +6,8 @@
     },
     {
         "source": "/olympics-map(/.*)?",
-        "destination": "https://olympics-map.vercel.app/"
+        "destination": "https://olympics-map.vercel.app/",
+        "permanent": false
     }
   ]
 }
