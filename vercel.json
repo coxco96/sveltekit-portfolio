@@ -7,7 +7,7 @@
     {
         "source": "/olympics-map(/.*)?",
         "destination": "https://olympics-map.vercel.app/",
-        "permanent": false
+        "statusCode": 302
     }
   ]
 }
