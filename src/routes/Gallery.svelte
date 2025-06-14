@@ -1,15 +1,20 @@
 <script>
     import Card from "./Card.svelte";
-   let { items } = $props();
+    let { items } = $props();
+    // import Macy from 'macy';
 
     // create list of unique tags
-    let allTags = $derived([...new Set(items.map((item) => item.tags).flat())].sort());
+    let allTags = $derived(
+        [...new Set(items.map((item) => item.tags).flat())].sort(),
+    );
     let filters = $derived([]);
-    let filtered = $derived(items.filter((item) => {
-        if (item.tags.some((x) => filters.includes(x))) {
-            return true; // returns true if filters list includes any of item's tags
-        }
-    }));
+    let filtered = $derived(
+        items.filter((item) => {
+            if (item.tags.some((x) => filters.includes(x))) {
+                return true; // returns true if filters list includes any of item's tags
+            }
+        }),
+    );
 
     function filterClick(tag) {
         // if filters array does not already include clicked tag, add it
@@ -21,12 +26,7 @@
         }
     }
 
-    // make cards 400px unless otherwise specified
-    function cardHeight(h) {
-       return h !== "undefined" ? h : "400px";
-    }
 </script>
-
 
 <section>
     <p class="filter-label">Filter by:</p>
@@ -49,7 +49,7 @@
 
     <main>
         <div class="gallery">
-            {#each (filtered.length === 0 ? items : filtered) as item}
+            {#each filtered.length === 0 ? items : filtered as item}
                 <div class="item">
                     <Card
                         title={item.title}
@@ -59,21 +59,17 @@
                         src={item.image}
                         slug={item.slug}
                         subtitle={item.subtitle}
-                        cardHeight={cardHeight(item.cardHeight)}
                         alt={item.imageAlt}
                         externalUrl={item.externalUrl}
-                        externalPage={item.externalPage}
                     />
                 </div>
             {/each}
         </div>
     </main>
-
 </section>
 
 <style>
-   
-   .gallery {
+    /* .gallery {
         margin-top: 2rem;
         display: flex;
         flex-direction: row;
@@ -81,10 +77,31 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 1.5rem;
+    } */
+
+    .gallery {
+        column-count: 4;
+        column-gap: 1.5rem;
+        margin-top: 2rem;
+        /* width: 100%; */
     }
 
+    @media (max-width: 1024px) {
+        .gallery {
+            column-count: 2;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .gallery {
+            column-count: 1;
+        }
+    }
 
     .item {
+        /* width: 100%; */
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
         box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.7);
     }
 

@@ -1,5 +1,27 @@
 # To Dos
 
+NEW (June 2025)
+
+# Add option to open to project link directly in new tab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OLD 
+
 ## High Priority
 - Add alt text for all images. (Thumbnails are done. Need to check second/third images.)
 - Write description for TSwift page.

@@ -10,7 +10,6 @@
      * @property {any} slug
      * @property {any} subtitle
      * @property {any} cardHeight
-     * @property {any} externalPage
      * @property {any} externalUrl
      */
 
@@ -24,19 +23,17 @@
         slug,
         subtitle,
         cardHeight,
-        externalPage,
         externalUrl,
     } = $props();
-    
-    let href = externalPage ? externalUrl : `${base}/${slug}`
-    let target = externalPage ? "_blank" : null
 
+    let href = externalUrl ? externalUrl : `${base}/${slug}`;
+    let target = externalUrl ? "_blank" : null;
+
+    // let color = $state("#fff");
 </script>
 
-
-
 <a {href} {target} class="a">
-    <div class='item-container hvr-glow' style='--card-height: {cardHeight}'>
+    <div class="item-container hvr-glow" style="--card-height: {cardHeight}">
         {#if type}
             <div class="type">{type}</div>
         {/if}
@@ -50,10 +47,10 @@
             {/if}
         </div>
 
-        {#if typeof src != 'undefined'}
-        <div class="img-container">
-            <img class="img" src="../../images/{src}" {alt} />
-        </div>
+        {#if typeof src != "undefined"}
+            <div class="img-container">
+                <img class="img" src="../../images/{src}" {alt} />
+            </div>
         {/if}
 
         <div class="publication">
@@ -69,13 +66,34 @@
         text-decoration: none;
     }
     .item-container {
-        background-color: #ebe6e0;
+        /* background: radial-gradient(
+            ellipse at center,
+            rgba(93, 113, 136, 0.1) 100%
+        ); */
+
+        background: rgba(93, 113, 136, 0.1);
+        /* background: rgba(247, 247, 247, 0.642);  */
+
+        /* radial-gradient(ellipse at center top, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%); */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.075);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
         display: flex;
         flex-direction: column;
         height: var(--card-height);
         max-width: 400px;
-        padding: 5px 5px 0 8px;
+        padding: 16px;
         position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+
+
+    .item-container:hover {
+        transform: translateY(-2px);
     }
 
     /* @media only screen and (max-width: 795px) {
@@ -85,26 +103,28 @@
     } */
 
     .item-title {
-        font-size: 1.7rem;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #121212;
+        font-size: 1.5rem;
+        /* font-family: Helvetica, sans-serif; */
+        color: #dac0c0;
+        letter-spacing: 0.0125rem;
         line-height: 1.75rem;
         font-weight: 600;
+        
     }
 
     .subtitle {
         font-size: 1.15rem;
         line-height: 1.375rem;
         margin: 5px 0;
-        color: #343434;
-        font-family: "Hind", Helvetica, Arial, sans-serif;
+        color: #121212;
+        letter-spacing: -0.0125rem;
     }
 
     .publication,
     .type {
         font-size: 0.8rem;
         line-height: 1.25rem;
-        color: #727272;
+        color: #2b2a2a;
         text-transform: uppercase;
     }
 
@@ -118,7 +138,7 @@
     }
 
     .type {
-        color: #363333;
+        color: #2b2a2a;
         margin-bottom: 2px;
     }
 
@@ -130,6 +150,7 @@
         justify-content: center;
         overflow: hidden;
         flex-grow: 1;
+        border-radius: 5px;
     }
 
     .img {
@@ -155,5 +176,13 @@
     .hvr-glow:focus,
     .hvr-glow:active {
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .item-title,
+    .subtitle,
+    .publication,
+    .type {
+        color: rgba(228, 226, 226, 0.636);
+        /* text-shadow: 0 1px 2px rgba(23, 23, 23, 0.4); */
     }
 </style>

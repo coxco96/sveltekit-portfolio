@@ -221,7 +221,6 @@ export const items = [{
         "tags": ["Maps"],
         // "slug": "on-earth-we-bleed",
         externalUrl: '/on-earth-we-bleed/',
-        externalPage: true,
         "type": "Artistic Map",
         "includeImageOnFeaturePage": false,
         "publication": "Art Show",
@@ -236,23 +235,19 @@ export const items = [{
         "type": "Interactive Map Design",
         "includeImageOnFeaturePage": false,
         "publication": "Personal Project",
-        externalUrl: '/olympics-map',
-        externalPage: true, 
+        externalUrl: '/olympics-map', // this is rerouted via vercel.json
     },
 
     {
         "title": "When Caitlin Clark Comes to Town",
-        "subtitle": "Giant graphic showing home attendance of Iowa's Opponents in 2023-24. Click to see full version.",
-        "image": "caitlin-clark.png",
-        "imageAlt": "Thumbnail screenshot showing two charts labeled Iowa State and Wisconsin. Both charts show gray bars for each home game for the respective school with a yellow bar highlighted to show the spike in attendance when Iowa is the visiting team.",
+        "subtitle": "Giant news graphic, developed with Svelte",
+        "image": "caitlin-clark.webp",
+        "imageAlt": "Chart titled 'Home Attendance of Iowa’s Opponents in 2023–24.' For each opponent, gray bars show regular home game attendance; a yellow bar highlights the Iowa game. Iowa’s visit drew significantly higher crowds at every school, ranging from 1.5× to 3.6× the average. Notable spikes include 18,680 at Ohio State, 17,950 at Maryland, and 14,876 at Purdue. The chart emphasizes how Iowa games attracted much larger audiences than usual.",
+        "externalUrl": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",         
         "tags": ["Data Design", "Data Analysis"],
-        "slug": "when-caitlin-clark-comes-to-town",
         "type": "Data Design",
         "includeImageOnFeaturePage": false,
-        "imageTwo": "caitlin-clark.webp",
-        "imageTwoAlt": "image 2 alt",
         "publication": "New York Times",
-        'contentBlockOne': `Check it out in the original story <a href='https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html' target='_blank'>here</a>.`
     },
     {
         "title": "The Kentucky River",
