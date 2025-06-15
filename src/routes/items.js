@@ -275,8 +275,9 @@ export const items = [{
     {
         "title": "Orbital: 3D Modeling + Animation (Learning Blender)",
         "image": "planets.mp4",
+        "imageAlt": "",
+        "tags": ["Other"],
         "slug": "blender-planet",
-        "tags": ["Other"]
 
     },
 
@@ -757,7 +758,7 @@ export const items = [{
     },
     {
         "title": "Bedroom Model + Cloth Simulation (Learning Blender)",
-        "image": "bedroom-blues.MP4",
+        "image": "bedroom-blues.mp4",
         "tags": ["Other"],
         "slug": "bedroom-model-and-cloth-simulation"
 
@@ -989,7 +990,9 @@ export const items = [{
     {
         "title": "University of Kentucky Human Development Institute: Who are we?",
         "externalUrl": "https://www.youtube.com/watch?v=NddDoX2trsY",
-        "tags": ['Other']
+        "tags": ['Other'],
+        "image": "hdi-youtube.png",
+        "imageAlt": "Screenshot from Youtube video which says 'The University of Kentucky Human Development Institute believes in the inclusion of all people with disabilities in all aspects of life.'"
     },
     {
         "title": "Python for Genomic Data Science Final",

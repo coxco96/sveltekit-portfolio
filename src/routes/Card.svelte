@@ -3,18 +3,13 @@
   import { base } from '$app/paths';
 
   /** Props **/
-  export let title;
-  export let src;
-  export let alt;
-  export let slug;
-  export let externalUrl;
-  export let cardHeight;
+  const { title, src, alt, slug, externalUrl, cardHeight } = $props();
 
   // compute final href
-  const href = externalUrl ?? `${base}/${slug}`;
+  let href = $state(externalUrl ?? `${base}/${slug}`);
 
   // detect if the media is a video (mp4)
-  const isVideo = src && src.toLowerCase().endsWith('.mp4');
+  let isVideo = $state(src && src.toLowerCase().endsWith('.mp4'));
 
   function handleClick() {
     if (externalUrl) {
@@ -38,8 +33,7 @@
   role="link"
   tabindex="0"
   aria-label={title}
-  on:click={handleClick}
-  on:keydown={handleKeydown}
+
 >
   <div class="item-title">
     {@html title}
