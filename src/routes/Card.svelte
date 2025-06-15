@@ -28,23 +28,15 @@
 
     let href = externalUrl ? externalUrl : `${base}/${slug}`;
     let target = externalUrl ? "_blank" : null;
-
-    // let color = $state("#fff");
 </script>
 
 <a {href} {target} class="a">
     <div class="item-container hvr-glow" style="--card-height: {cardHeight}">
-        {#if type}
+        <!-- {#if type}
             <div class="type">{type}</div>
-        {/if}
+        {/if} -->
         <div class="item-title">
             {@html title}
-        </div>
-
-        <div class="subtitle">
-            {#if subtitle}
-                {@html subtitle}
-            {/if}
         </div>
 
         {#if typeof src != "undefined"}
@@ -53,11 +45,11 @@
             </div>
         {/if}
 
-        <div class="publication">
+        <!-- <div class="publication">
             {#if publication}
                 {@html publication}
             {/if}
-        </div>
+        </div> -->
     </div>
 </a>
 
@@ -66,15 +58,7 @@
         text-decoration: none;
     }
     .item-container {
-        /* background: radial-gradient(
-            ellipse at center,
-            rgba(93, 113, 136, 0.1) 100%
-        ); */
-
         background: rgba(93, 113, 136, 0.1);
-        /* background: rgba(247, 247, 247, 0.642);  */
-
-        /* radial-gradient(ellipse at center top, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%); */
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border-radius: 20px;
@@ -84,47 +68,39 @@
         flex-direction: column;
         height: var(--card-height);
         max-width: 400px;
-        padding: 16px;
+        padding: 16px 16px 4px;
         position: relative;
         overflow: hidden;
         transition: transform 0.3s ease;
     }
 
-
-
     .item-container:hover {
         transform: translateY(-2px);
     }
 
-    /* @media only screen and (max-width: 795px) {
-        .item-container {
-            height: var(--card-height);
-        }
-    } */
-
     .item-title {
         font-size: 1.5rem;
-        /* font-family: Helvetica, sans-serif; */
-        color: #dac0c0;
         letter-spacing: 0.0125rem;
-        line-height: 1.75rem;
         font-weight: 600;
-        
+        margin-bottom: 12px;
+        font-weight: 300;
+        line-height: 1.4;
+        margin: 0.25rem 0;
+        color: rgba(220, 220, 220, 0.85);
     }
-
+    /* 
     .subtitle {
         font-size: 1.15rem;
         line-height: 1.375rem;
         margin: 5px 0;
         color: #121212;
         letter-spacing: -0.0125rem;
-    }
+    } */
 
     .publication,
     .type {
         font-size: 0.8rem;
         line-height: 1.25rem;
-        color: #2b2a2a;
         text-transform: uppercase;
     }
 
@@ -138,7 +114,6 @@
     }
 
     .type {
-        color: #2b2a2a;
         margin-bottom: 2px;
     }
 
@@ -151,6 +126,7 @@
         overflow: hidden;
         flex-grow: 1;
         border-radius: 5px;
+        margin-bottom: 12px;
     }
 
     .img {
@@ -183,6 +159,8 @@
     .publication,
     .type {
         color: rgba(228, 226, 226, 0.636);
+        color: rgba(240, 240, 240, 0.75);
+
         /* text-shadow: 0 1px 2px rgba(23, 23, 23, 0.4); */
     }
 </style>

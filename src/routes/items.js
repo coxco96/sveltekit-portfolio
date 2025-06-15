@@ -21,7 +21,7 @@ export const items = [{
 
         `
     },
-    
+
     {
         "title": "My Data Design Manifesto",
         "subtitle": "The principles that guide my approach to designing data experiences",
@@ -212,20 +212,14 @@ export const items = [{
             <p>In my semester abroad at the University of Oxford, I completed a research seminar in British history and culture. My undergraduate research in British musicology, which won a "de Jager" award, required rigorous analysis of primary texts and the ability to synthesize information to draw a new, insightful conclusion. This experience underscores my intellectual curiosity, adaptability to new fields and a strong propensity for communication, particularly for translating complex, sophisticated ideas into clear, effective writing suitable for diverse audiences.</p>
             `
     },
-   
     {
-        "title": "On Earth We Bleed",
-        "subtitle": "Made in QGIS.",
-        "image": "we-bleed-on-earth.png",
-        "imageAlt": "Red world map with shading to show land elevation and ocean depths. Land is blood red.",
-        "tags": ["Maps"],
-        // "slug": "on-earth-we-bleed",
-        externalUrl: '/on-earth-we-bleed/',
-        "type": "Artistic Map",
-        "includeImageOnFeaturePage": false,
-        "publication": "Art Show",
-        "contentBlockTwo": "<p><strong>Description</strong>: This map was created entirely from real geospatial data. The darker the red, the higher the elevation; the lighter the blue, the deeper the sea. You can see many fascinating details of Earth and its history: patterns of erosion, tiny fracture zones across ocean ridges, the outlines of tectonic plate, the curves mountain chains, and so on.</p><p>It is not physically possible to display our three-dimensional planet on a two-dimensional surface with complete accuracy. This map uses a projection called Winkel Triple, which minimizes distortion, though you will notice some near the map’s edges and polar regions.</p><p>I'm fascinated by natural fractal patterns, particularly how river networks resemble blood cells. The deep red land is inspired by this, as well as the idea that blood flows and behaves as we know it only on Earth.</p><p><strong>Data source</strong>: Natural Earth</p>"
+        "title": "From Fringe to Federal: Kennedy’s Financial Ties Complicate Public Trust",
+        "image": "from-fringe-to-federal.png",
+        "imageAlt": "This is a line chart showing the search popularity from January 2022 through April 2025. The chart shows fluctuating but relatively low search interest until late 2024, when there is a sharp increase. The following five annotations point out peaks in search interest. Each peak is higher than the last, with the final peak reaching peak search interest.",
+        "externalUrl": "https://from-fringe-to-federal.vercel.app/",
+        "tags": ["Data Design", "Writing"]
     },
+
     {
         "title": "Olympic Medals Map",
         "subtitle": "Interative map and table filterable by year, sport and event. Developed with Sveltekit.",
@@ -239,18 +233,8 @@ export const items = [{
     },
 
     {
-        "title": "When Caitlin Clark Comes to Town",
-        "subtitle": "Giant news graphic, developed with Svelte",
-        "image": "caitlin-clark.webp",
-        "imageAlt": "Chart titled 'Home Attendance of Iowa’s Opponents in 2023–24.' For each opponent, gray bars show regular home game attendance; a yellow bar highlights the Iowa game. Iowa’s visit drew significantly higher crowds at every school, ranging from 1.5× to 3.6× the average. Notable spikes include 18,680 at Ohio State, 17,950 at Maryland, and 14,876 at Purdue. The chart emphasizes how Iowa games attracted much larger audiences than usual.",
-        "externalUrl": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",         
-        "tags": ["Data Design", "Data Analysis"],
-        "type": "Data Design",
-        "includeImageOnFeaturePage": false,
-        "publication": "New York Times",
-    },
-    {
         "title": "The Kentucky River",
+        "externalUrl": "https://coxco96.github.io/green-girl-kentucky-rivers/",
         "subtitle": "Artistic river mapping. Made in QGIS.",
         "image": "weep-no-more.png",
         "imageAlt": "Black background with white river networks with a marker for High Bridge Park and text 'weep no more my lady",
@@ -264,15 +248,16 @@ export const items = [{
     },
     {
         "title": "Power Plants Map",
+        "externalUrl": "https://coxco96.github.io/power-plants-d3/",
         "subtitle": "Interactive map with multiple layers of data, made with d3",
         "image": 'power-plants.png',
         "imageAlt": "Thumbnail showing a map of the United States, covers in circles of various sizes and colors (mostly pink). States themselves are colored on a scale of white to light green to dark green, depending on millions of metric tons of waste.",
-        "tags": ['Data Design', 'Interactive', 'Maps'],
+        "tags": ['Data Analysis','Data Design', 'Interactive', 'Maps'],
         "type": "Interactive Map Design",
-        "publication": "Made for Class",
-        "contentBlockThree": `<iframe height='800px' width=100% src='https://coxco96.github.io/power-plants-d3/' title='Svelte + Mapbox GL JS Component Library via Storybook'></iframe>`,
-        "slug": "power-plants-map",
-        "includeImageOnFeaturePage": false
+        // "publication": "Made for Class",
+        // "contentBlockThree": `<iframe height='800px' width=100% src='https://coxco96.github.io/power-plants-d3/' title='Svelte + Mapbox GL JS Component Library via Storybook'></iframe>`,
+        // "slug": "power-plants-map",
+        // "includeImageOnFeaturePage": false
     },
 
     {
@@ -282,11 +267,12 @@ export const items = [{
         "imageAlt": "Graphic says 'The 100 Best Books of the 21st Century' surrounded by various books including The Emperor of Maladies by Siddhartha Mukherjee, The Return by Hisham Matar, On Beauty by Zadie Smith, The Collected Stories of Lydia Davis, The Sympathizer by Viet Thank Nguyen, how to be both by Ali Smith, Pulphead Essays by John Jeremiah Sullivan and Men We Reaped by Jesmyn Ward, and Station Eleven by Emily St. John Mandel.",
         "contentBlockOne": "I created a dataset of over 15,000 books which powered a behind-the-scenes submission form for these stories: <ul><li><a href='https://www.nytimes.com/interactive/2024/books/best-books-21st-century.html'>The 100 Best Books of the 21st Century</a></li><li><a href='https://www.nytimes.com/interactive/2024/books/authors-top-books-21st-century.html'>Stephen King, Sarah Jessica Parker and More Share Their Top Books of the 21st Century</a></li></ul>",
         "tags": ["Other"],
-        "slug": "100-best-books",
+        "externalUrl": "https://www.nytimes.com/interactive/2024/books/best-books-21st-century.html",
         "type": "Dataset Creation",
-        "publication": "New York Times"   
-       },
-       {
+        "publication": "New York Times"
+    },
+
+    {
         "title": "Yellow Cab Pickups",
         "subtitle": "Data map. Analyzed with geopandas. Designed with Affinity Designer.",
         "slug": "taxi-map",
@@ -294,12 +280,63 @@ export const items = [{
         "includeImageOnFeaturePage": true,
         "imageAlt": "Map titled Yellow Cab Pickups. In September alone, 3.4 million yellow cab trips began in Manhattan. Hotspots, of course, include the Times Square and Central Park areas. Map shows taxi zones of Manhattan with different levels of shading to indicate taxi pickups.",
         "type": "Geospatial Data Analysis",
-        "tags": ['Data Analysis', 'Data Design','Maps'],
+        "tags": ['Data Analysis', 'Data Design', 'Maps'],
         "publication": "Personal Project"
-       },
-
+    },
+    {
+        "title": "Crist and DeSantis: Origin of Funds",
+        "externalUrl": "https://www.miamiherald.com/news/politics-government/article266418081.html",
+        "tags": ["Data Analysis", "Data Design"],
+        "image": "crist-desantis-pac.png",
+        "imageAlt": "A chart with title that reads 'Since January 2021, DeSantis has raised $180.6 million in campaign finance. Crist has raised $26.1 million.' Chart shows visual difference in amounts and how much came from Political Action Committees vs. campaign fundraising."
+    },
+    {
+        "title": "Miami Housing Affordability Dashboard",
+        "externalUrl": "https://www.miamiherald.com/news/special-reports/affordability-dashboard/",
+        "tags": ["Data Analysis", "Data Design"]
+    },
+    {
+        "title": "Miami Herald Coverage of Hurricane Ian",
+        "externalUrl": "https://www.miamiherald.com/news/weather/hurricane/article266621691.html",
+        "tags": ["Data Design", "Interactive", "Maps"],
+        "image": "hurricane-ian.png",
+        "imageAlt": "Map showing path of Hurricane Ian, with dots showing where Miami Herald stories relate to"
+    },
+    {
+        "title": "Deadly Street in Tacoma",
+        "externalUrl": "https://www.thenewstribune.com/news/local/crime/article264204616.html",
+        "tags": ["Data Design", "Interactive", "Maps"],
+        "image": "deadly-street.png",
+        "imageAlt": "A map of a neighborhood showing the location of five homicides, all on the same street."
+    },
+    {
+        "title": "Common Offenses",
+        "externalUrl": "https://www.thenewstribune.com/news/local/crime/article264204616.html",
+        "tags": ["Data Design"],
+        "image": "common-offenses.png",
+        "imageAlt": "A table showing the most often reported crimes of Hosmer Street from 2014 to 2021. Theft from motor vehicles lead."
+    },
+    {
+        "title": "Hosmer Street",
+        "externalUrl": "https://www.thenewstribune.com/news/local/crime/article264204616.html",
+        "tags": ["Data Design"],
+        "image": "hosmer-street-problems.png",
+        "imageAlt": "A chart showing the number of phone calls to police from hotels in Tacoma, from 2018–2021. Three hotels stand out as having far more calls than any others."
+    },
+    {
+        "title": "When Caitlin Clark Comes to Town",
+        "subtitle": "Giant news graphic, developed with Svelte",
+        "image": "caitlin-clark.webp",
+        "imageAlt": "Chart titled 'Home Attendance of Iowa’s Opponents in 2023–24.' For each opponent, gray bars show regular home game attendance; a yellow bar highlights the Iowa game. Iowa’s visit drew significantly higher crowds at every school, ranging from 1.5× to 3.6× the average. Notable spikes include 18,680 at Ohio State, 17,950 at Maryland, and 14,876 at Purdue. The chart emphasizes how Iowa games attracted much larger audiences than usual.",
+        "externalUrl": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
+        "tags": ["Data Design", "Data Analysis"],
+        "type": "Data Design",
+        "includeImageOnFeaturePage": false,
+        "publication": "New York Times",
+    },
     {
         "title": "Svelte + Mapbox GL JS Component Library",
+        "externalUrl": "https://bit.ly/mapcourt",
         "subtitle": "Presented via Storybook",
         "contentBlockOne": "<p>This project was created in fulfillment of my Master of Science degree in Digital Mapping. You can check it out in the frame below or view full screen in a new tab by <a href='https://bit.ly/mapcourt' target='_blank'>clicking here</a>.</p><p>Looking for the code repository behind it? <a href='https://github.com/coxco96/mapbox-svelte-components'>Click here.</a></p><p><strong>Note:</strong> if you're on a mobile device, you can navigate page by clicking 'Sidebar' in the bottom left of the screen.</p>",
         "publication": "Thesis Project",
@@ -325,23 +362,11 @@ export const items = [{
         "publication": "Personal Project",
         "contentBlockTwo": "<p><strong>Description</strong>: These maps were created from real geospatial data, showing a small area near the entrance of my favorite area to hike: The Pinnacles, in Berea, KY, a 40-minute drive from where I grew up. Both maps are the same area. The bright pink has exaggerated terrain — just part of my experimentation in Blender. </p> <p><strong>Data source</strong>: USGS</p>"
     },
-    {
-        "title": "How Big Is Taylor Swift?",
-        "type": "Data Design & Analysis",
-        "tags": ["Data Analysis", "Data Design"],
-        "slug": "how-big-is-taylor-swift",
-        "image": "tswift.webp",
-        "imageAlt": "Thumbnail showing two charts labeled The Beatles and Taylor Swift, showing orange and black circles. The Beatles chart runs from 1963 to 1970, and the Taylor Swift chart from 2007 to 2024. The metric being shown is not labeled in this thumbnail version.",
-        "imageTwoAlt": "Bobblehead of Taylor Swift. Text reads: 'How Big is Taylor Swift? As big as the Beatles? Michael Jackson? Beyoncé? We crunched the numbers.'",
-        "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
-        "publication": "New York Times",
-        "contentBlockOne": "Full write up on this process coming soon! View the New York Times story <a target='_blank' href='https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html'>here</a>.",
-        "includeImageOnFeaturePage": false,
-        "imageInstead": "tswift2.jpg"
-    },
+
     {
         "title": "Interactive Cluster Markers",
         "subtitle": "Traffic signals in Austin, TX",
+        "externalUrl": "https://coxco96.github.io/cluster-group-demo/",
         "contentBlockOne": "Interact with the map below, or view it full screen <a href='https://coxco96.github.io/cluster-group-demo/' target='_blank'>here</a>.",
         "image": "austin.png",
         "imageAlt": "A map of the number of traffic signals in Austin City districts, with numbers in circles representing clusters of data",
@@ -349,13 +374,22 @@ export const items = [{
         "includeImageOnFeaturePage": false,
         "publication": "Made for class",
         "type": "Interactive Map",
-        "slug": "austin-traffic-lights",
+        // "slug": "austin-traffic-lights",
         "featureLabel": "Development",
-        "tags": ["Maps", "Interactive"]
+        "tags": ["Data Analysis", "Data Design", "Maps", "Interactive"]
     },
     {
+        "title": "UK HDI Staff Lead the Conversation on the Meaning of Disability Pride",
+        "externalUrl": "https://uknow.uky.edu/campus-news/uk-hdi-staff-lead-conversation-meaning-disability-pride",
+        "image": "disability-pride-flag.png",
+        "imageAlt": "Disability pride flag.",
+        "tags": ["Writing"]
+    },
+
+    {
         "title": "Women's World Cup 2023",
-        "slug": "womens-world-cup",
+        "externalUrl": "https://www.nytimes.com/interactive/2023/upshot/united-states-womens-world-cup-scores-standings.html",
+        // "slug": "womens-world-cup",
         "subtitle": "How Teams Can Advance to the Round of 16",
         "type": "Interactive data design",
         "publication": "New York Times",
@@ -365,12 +399,12 @@ export const items = [{
         "contentBlockOne": "I led the design and development team that worked on the interactive, live-updating pages showing how Women's World Cup teams could advance to the round of 16. View the main page <a href='https://www.nytimes.com/interactive/2023/upshot/united-states-womens-world-cup-scores-standings.html' target='_blank'>here</a>."
     },
     {
-        "title": "A Journalist's Guide to Styling geoTIFFs for the Web",
+        "title": "How to Style geoTIFFs for the Web",
         "slug": "geotiffs-for-journalists",
         "image": "rasterconversion.png",
         "imageAlt": "Screenshot from tutorial showing a top bar navigation selection in GIS software.",
         "subtitle": "How I made the Miami flood map from raster data",
-        "tags": ["Maps", "Data Design", "Other"],
+        "tags": ["Maps", "Data Design", "Other", "Writing"],
         "type": "Documentation, Tutorial Guide",
         "publication": "Miami Herald",
         "contentBlockOne": `<h2 id="table-of-contents" class='h2-guide'>Table of Contents</h2>
@@ -647,6 +681,7 @@ export const items = [{
         "type": "Interactive Web Map",
         "publication": "Made for Class"
     },
+
     {
         "title": "Where is Miami-Dade County Hottest?",
         "subtitle": "Visualizing NASA Earth Data",
@@ -660,6 +695,7 @@ export const items = [{
         "includeImageOnFeaturePage": false
 
     },
+
     {
         "title": "Historically Redlined Districts Bear the Brunt of the Heat",
         "subtitle": "A scrollytelling map of historic HOLC grades and land surface temperature in Miami",
@@ -701,6 +737,7 @@ export const items = [{
         "slug": "precision-of-a-champion",
         "tags": ["Data Design"],
     },
+
     {
         "title": "Interactive Tour of Oxford University",
         "subtitle": "Using IIIF (International Image Interoperability, Framework) technology to explore a historic map",
@@ -715,6 +752,17 @@ export const items = [{
         "slug": "oxford-tour"
     },
     {
+        "title": "How Big Is Taylor Swift?",
+        "type": "Data Design & Analysis",
+        "tags": ["Data Analysis", "Data Design"],
+        "image": "tswift2.jpg",
+        "imageAlt": "Bobblehead of Taylor Swift. Text reads: 'How Big is Taylor Swift? As big as the Beatles? Michael Jackson? Beyoncé? We crunched the numbers.'",
+        "externalUrl": "https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html",
+        "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
+        "publication": "New York Times",
+        "includeImageOnFeaturePage": false,
+    },
+    {
         "title": "The Tilt",
         "subtitle": "Graphic for politics newsletter by Nate Cohn",
         "image": "tilt.png",
@@ -723,6 +771,11 @@ export const items = [{
         "publication": "New York Times",
         "tags": ["Data Design"],
         "slug": "tilt-delegates-graphic"
+    },
+    {
+        "title": "HDI to Host Prenatal Disability Education Summit",
+        "externalUrl": "https://uknow.uky.edu/research/hdi-host-prenatal-disability-education-summit",
+        "tags": ["Writing"]
     },
     {
         "title": "Kentucky's Opioid Crisis",
@@ -762,35 +815,48 @@ export const items = [{
         "type": "Fact Checking",
     },
     {
+        "title": "UK HDI researchers study air travel accessibility for people who use wheelchairs",
+        "externalUrl": "https://uknow.uky.edu/research/uk-hdi-researchers-study-air-travel-accessibility-people-who-use-wheelchairs",
+        "tags": ["Writing"]
+    },
+    {
         "title": "North American Breweries",
+        "externalUrl": "https://coxco96.github.io/images/na_breweries_8000.png",
         "description": "Description2",
         "image": "breweries.png",
         "imageAlt": "A map of breweries in North America and Hawaii, showing darker colors where there are lots of breweries within 50 square kilometers, and lighter colors with fewer. The darkest color shows areas where there are 50 or more breweries. Darker areas are noticeable in California, the northeast and the Chicago area.",
         "isFeature": 2,
         "type": "Map",
-        "link": "https://coxco96.github.io/images/na_breweries_8000.png",
-        "slug": "na-breweries",
-        "tags": ["Maps"],
+        // "link": "https://coxco96.github.io/images/na_breweries_8000.png",
+        // "slug": "na-breweries",
+        "tags": ["Data Design","Maps"],
         "publication": "Made for Class"
     },
     {
         "title": "How Polls Have Changed Since the State of the Union Address",
+        "externalUrl": "https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html",
         "subtitle": "Table made for The Tilt, Nate Cohn's newsletter",
         "image": "pollshift.png",
         "imageAlt": "Thumbnail of a table listing 16 pollsters and the Trump/Biden margin before and after since State of the Union address. Also shows percent point change between before and after. Averages are Trump +2 for before, Trump + <1 for after, with a 1.4 point average increase for Democrats overall.",
         "tags": ["Data Design"],
         "publication": "New York Times",
-        "slug": "pollshift",
+        // "slug": "pollshift",
         "type": "Data Design",
         "includeImageOnFeaturePage": false,
         "contentBlockOne": "<a href='https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html' target='_blank'>Click here to view the original newsletter.</a>",
         "imageTwo": "pollshift1.png",
         "imageTwoAlt": "image 2 alt"
     },
+    {
+        "title": "UK HDI Resources for Families of Infants With Down Syndrome Formally Recommended by AAP",
+        "externalUrl": "https://uknow.uky.edu/research/uk-hdi-resources-families-infants-down-syndrome-formally-recommended-aap",
+        "tags": ["Writing"]
+    },
 
     {
         "title": "Visualizing Campaign Finance",
-        "tags": ["Data Design", "Interactive"],
+        "externalUrl": "https://www.miamiherald.com/news/politics-government/article266417946.html",
+        "tags": ["Data Analysis", "Data Design", "Interactive"],
         "image": "campaign-finance.png",
         "imageAlt": "Thumbnail image titled 'Campaign Finance Received By Crist and DeSantis Each Day Since January 2021. Subtitle reads 'Bubbles are scaled to contribution size. Hover over each bubble for exact dollar amount. Chart shows significantly larger and more numerous bubbles for DeSantis than Crist.",
         "contentBlockTwo": "<p>Hover over the bubbles.</p>",
@@ -799,9 +865,96 @@ export const items = [{
         "publication": "Miami Herald",
         "type": "Data Wrangling and Design",
         "contentBlockThree": "<div class='text-column'><script src='https://public.flourish.studio/resources/embed.js'></script><iframe scrolling='no' frameborder=0 title='Interactive of visual content titled Campaign Finance Received By Crist and DeSantis Each Day Since January 2021' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation' style='width: 100%; height: 600px;' src='https://flo.uri.sh/visualisation/11227857/embed?auto=1'></iframe></div>",
-        "slug": "campaign-finance-desantis-crist",
+        // "slug": "campaign-finance-desantis-crist",
         "includeImageOnFeaturePage": false
+    },
+    {
+        "title": "",
+        "subtitle": "Made in QGIS.",
+        "image": "we-bleed-on-earth.png",
+        "imageAlt": "Red world map with shading to show land elevation and ocean depths. Land is blood red.",
+        "tags": ["Maps"],
+        // "slug": "on-earth-we-bleed",
+        externalUrl: '/on-earth-we-bleed/',
+        "type": "Artistic Map",
+        "includeImageOnFeaturePage": false,
+        "publication": "Art Show",
+        "contentBlockTwo": "<p><strong>Description</strong>: This map was created entirely from real geospatial data. The darker the red, the higher the elevation; the lighter the blue, the deeper the sea. You can see many fascinating details of Earth and its history: patterns of erosion, tiny fracture zones across ocean ridges, the outlines of tectonic plate, the curves mountain chains, and so on.</p><p>It is not physically possible to display our three-dimensional planet on a two-dimensional surface with complete accuracy. This map uses a projection called Winkel Triple, which minimizes distortion, though you will notice some near the map’s edges and polar regions.</p><p>I'm fascinated by natural fractal patterns, particularly how river networks resemble blood cells. The deep red land is inspired by this, as well as the idea that blood flows and behaves as we know it only on Earth.</p><p><strong>Data source</strong>: Natural Earth</p>"
+    },
+    {
+        "title": "Geospatial Processing: Hospital Lookup",
+        "tags": ["Data Analysis", "Other"],
+        "externalUrl": "https://github.com/coxco96/nearest-hospital-lookup?tab=readme-ov-file"
+    },
+    {
+        "title": "Island of Jersey keeps sordid secrets of the rich and powerful",
+        "externalUrl": "https://www.mcclatchydc.com/news/investigations/article262299427.html",
+        "tags": ["Maps"],
+        "image": "jersey-island.png",
+        "imageAlt": "Map showing location of Jersey island, off the coast of France"
+    },
+    {
+        "title": "Miami-Dade Election Results Map",
+        "externalUrl": "https://www.miamiherald.com/news/politics-government/election/article268498447.html",
+        "tags": ["Interactive", "Maps"]
+    },
+    {
+        "title": "Flood Risk in Miami-Dade County",
+        "externalUrl": "https://www.miamiherald.com/news/local/environment/article262390547.html",
+        "tags": ["Data Design", "Interactive", "Maps"]
+    },
+    {
+        "title": "How Did Your Representative Vote in the Respect for Marraige Act?",
+        "externalUrl": "https://www.sacbee.com/article263839407.html",
+        "tags": ["Data Analysis", "Data Design", "Interactive", "Maps"],
+        "image": "respect-for-marriage-act.png",
+        "imageAlt": "Map of United States indicating 'yea,' 'nay,' or 'no vote' by congressional district"
+    },
+
+    {
+        "title": "Florida Veteran Suicide Rates",
+        "externalUrl": "https://www.miamiherald.com/news/health-care/article261595317.html",
+        "tags": ["Data Analysis", "Data Design"],
+        "image": "veteran-suicide-rate.png",
+        "imageAlt": "Line chart comparing suicide rate of veterans to general population, with a much higher rate for veterans"
+    },
+    {
+        "title": "Florida Power Company Secretly Bankrolled News Site",
+        "externalUrl": "https://www.miamiherald.com/news/politics-government/state-politics/article263757423.html",
+        "tags": ["Data Analysis", "Other"]
+    },
+    {
+        "title": "Immigration Mandates",
+        "externalUrl": "https://www.miamiherald.com/news/politics-government/article265853596.html",
+        "tags": ["Data Design"],
+        "image": "immigration-mandates.png",
+        "imageAlt": "Map shows movement of immigrants from Florida, Texas and Arizona to the north"
+    },
+    {
+        "title": "How a ban on visitors impacted the smuggling of drugs into Florida prisons",
+        "externalUrl": "https://www.miamiherald.com/news/special-reports/florida-prisons/article264165166.html#storylink=cpy",
+        "tags": ["Data Analysis", "Data Design"],
+        "image": "florida-prisons-contraband.png",
+        "imageAlt": "Chart titled 'Rate of Contraband seized in Florida Prisons, 2018-2020.' There are four interactive options to choose from: drugs, narcotics, alcohol and weapons. Drugs is selected, and subtitle reads 'Rate of drugs seized (grams per 10,000 inmates).' There is a strong uptick in 2020, compared to 2018 and 2019."
+    },
+    {
+        "title": "KYPSO focused on post-school transition for Kentucky’s students with disabilities",
+        "externalUrl": "https://uknow.uky.edu/research/kypso-focused-post-school-transition-kentucky-s-students-disabilities",
+        "tags": ["Writing"]
+    },
+
+    {
+        "title": "Kentucky DeafBlind Project",
+        "externalUrl": "https://hdi.uky.edu/news/kentucky-deafblind-project-connects-youth-from-across-the-state-for-a-week-of-hands-on-education-and-fun/?doing_wp_cron=1666287008.0616950988769531250000",
+        "tags": ["Writing"]
+    },
+    {
+        "title": "University of Kentucky Human Development Institute: Who are we?",
+        "externalUrl": "https://www.youtube.com/watch?v=NddDoX2trsY",
+        "tags": ['Other']
     }
+
+
 
 
 ]

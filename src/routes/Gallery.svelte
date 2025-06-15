@@ -1,7 +1,6 @@
 <script>
     import Card from "./Card.svelte";
     let { items } = $props();
-    // import Macy from 'macy';
 
     // create list of unique tags
     let allTags = $derived(
@@ -25,7 +24,6 @@
             filters = filters.filter((x) => x != tag);
         }
     }
-
 </script>
 
 <section>
@@ -36,15 +34,25 @@
         class="filter-buttons"
     >
         {#each allTags as tag}
-            <button
-                class="tag {filters.includes(tag) ? 'active-filter' : ''}"
-                onclick={() => filterClick(tag)}
-                aria-label="Filter by {tag}"
-                aria-pressed={filters.includes(tag)}
-            >
-                {tag}
-            </button>
+            {#if tag != "Other"}
+                <button
+                    class="tag {filters.includes(tag) ? 'active-filter' : ''}"
+                    onclick={() => filterClick(tag)}
+                    aria-label="Filter by {tag}"
+                    aria-pressed={filters.includes(tag)}
+                >
+                    {tag}
+                </button>
+            {/if}
         {/each}
+        <button
+            class="tag {filters.includes('Other') ? 'active-filter' : ''}"
+            onclick={() => filterClick('Other')}
+            aria-label="Filter by {'Other'}"
+            aria-pressed={filters.includes('Other')}
+        >
+            {'Other'}
+        </button>
     </div>
 
     <main>
@@ -69,32 +77,27 @@
 </section>
 
 <style>
-    /* .gallery {
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    } */
-
     .gallery {
-        column-count: 4;
+        column-count: 1;
         column-gap: 1.5rem;
         margin-top: 2rem;
-        /* width: 100%; */
     }
 
-    @media (max-width: 1024px) {
+    @media (min-width: 640px) {
         .gallery {
             column-count: 2;
         }
     }
 
-    @media (max-width: 640px) {
+    @media (min-width: 768px) {
         .gallery {
-            column-count: 1;
+            column-count: 3;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .gallery {
+            column-count: 4;
         }
     }
 
@@ -102,10 +105,14 @@
         /* width: 100%; */
         break-inside: avoid;
         margin-bottom: 1.5rem;
-        box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.7);
+        /* box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.7); */
     }
 
     .filter-label {
+        letter-spacing: -0.03em;
+        margin: 0;
+        color: rgba(240, 240, 240, 0.92);
+        border-bottom: 1px rgba(240, 240, 240, 0.5) solid;
         display: block;
         text-align: center;
         font-size: 18px;
@@ -124,14 +131,29 @@
     }
 
     .tag {
-        font-size: 16px;
+        /* font-size: 16px;
         padding: 5px;
         background-color: lightgray;
         font-size: 18px;
         border-radius: 0.5rem;
         border: 1px solid transparent;
         box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-        box-sizing: border-box;
+        box-sizing: border-box; */
+        background: rgba(255, 255, 255, 0.09);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        color: #f0f0f0;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 999px;
+        padding: 0.4rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0.25rem;
+        cursor: pointer;
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     .tag:hover {

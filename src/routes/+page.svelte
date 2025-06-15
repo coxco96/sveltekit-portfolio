@@ -3,6 +3,7 @@
     import Hero from './Hero.svelte';
     let { data } = $props();
     let items = data.items;
+    
 </script>
 
 <svelte:head>
