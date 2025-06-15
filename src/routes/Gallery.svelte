@@ -24,6 +24,7 @@
             filters = filters.filter((x) => x != tag);
         }
     }
+
 </script>
 
 <section>
@@ -47,11 +48,11 @@
         {/each}
         <button
             class="tag {filters.includes('Other') ? 'active-filter' : ''}"
-            onclick={() => filterClick('Other')}
+            onclick={() => filterClick("Other")}
             aria-label="Filter by {'Other'}"
-            aria-pressed={filters.includes('Other')}
+            aria-pressed={filters.includes("Other")}
         >
-            {'Other'}
+            {"Other"}
         </button>
     </div>
 

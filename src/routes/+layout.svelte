@@ -1,5 +1,5 @@
 <script>
-	import PinNav from "./PinNav.svelte";
+	// import PinNav from "./PinNav.svelte";
 	import "./styles.css";
 	/**
 	 * @typedef {Object} Props

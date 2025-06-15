@@ -120,6 +120,10 @@
 </main>
 
 <style>
+main {
+    background: none;
+}
+
     .title {
         line-height: 2.875rem;
     }
@@ -145,11 +149,16 @@
         line-height: 1.875rem;
     }
 
+    h1 {
+        margin-bottom: 10px;
+    }
+
     .figure {
         margin-bottom: 20px;
         padding-bottom: 20px;
         font-size: 16px;
         max-width: 100%;
+        margin-top: 15px;
     }
 
     figcaption {
