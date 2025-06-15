@@ -78,23 +78,7 @@
                     <img class="media" src="../../images/{src}" {alt} />
                 </div>
             {/if}
-            <!-- 
-            <figure class="text-column figure">
-                <img src="../../../images/{src}" {alt} />
-                {#if imageCaption}
-                    <figcaption>{@html imageCaption}</figcaption>
-                {/if}
-            </figure>
-        {:else if imageInstead}
-            <figure class="text-column figure">
-                <img
-                    src="../../../images/{imageInstead}"
-                    alt={imageInsteadAlt}
-                />
-                {#if imageInsteadCaption}
-                    <figcaption>{@html imageInsteadCaption}</figcaption>
-                {/if}
-            </figure> -->
+
         {/if}
 
         {#if contentBlockTwo}

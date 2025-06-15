@@ -65,7 +65,7 @@
 
     <main>
         <div class="gallery">
-            {#each filtered.length === 0 ? items : filtered as item}
+            {#each (filtered.length === 0 ? items : filtered) as item (item.title)}
                 <button type="button" class="item-btn" onclick={() => handleClick(item)} aria-label={`View details for ${item.title}`}>
                     <div class="item">
                         <Card

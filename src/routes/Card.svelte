@@ -9,7 +9,7 @@
     let href = $state(externalUrl ?? `${base}/${slug}`);
 
     // detect if the media is a video (mp4)
-    let isVideo = src && src.toLowerCase().endsWith(".mp4");
+    let isVideo = $state(src && src.toLowerCase().endsWith(".mp4"));
 
     function handleClick() {
         if (externalUrl) {
@@ -45,7 +45,6 @@
                 <track
                     kind="captions"
                     label="No captions"
-                    
                     srclang="en"
                     default
                 />

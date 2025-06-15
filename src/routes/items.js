@@ -214,7 +214,7 @@ export const items = [{
             `
     },
     {
-        "title": "From Fringe to Federal: Kennedy’s Financial Ties Complicate Public Trust",
+        "title": "From Fringe to Federal: Kennedy’s Financial Ties Complicate Public Trust (article + d3 graphic)",
         "image": "from-fringe-to-federal.png",
         "imageAlt": "This is a line chart showing the search popularity from January 2022 through April 2025. The chart shows fluctuating but relatively low search interest until late 2024, when there is a sharp increase. The following five annotations point out peaks in search interest. Each peak is higher than the last, with the final peak reaching peak search interest.",
         "externalUrl": "https://from-fringe-to-federal.vercel.app/",
@@ -222,7 +222,7 @@ export const items = [{
     },
 
     {
-        "title": "Olympic Medals Map",
+        "title": "Olympic Medals Map (filterable by year, sport and event, 1896–2024)",
         "subtitle": "Interative map and table filterable by year, sport and event. Developed with Sveltekit.",
         "image": "olympics.png",
         "imageAlt": "Screenshot of Olympic Medals Count page with a world map of various shades of purple according to medal counts.",
@@ -234,7 +234,7 @@ export const items = [{
     },
 
     {
-        "title": "The Kentucky River",
+        "title": "The Kentucky River (art project, made in QGIS with USGS data)",
         "externalUrl": "https://coxco96.github.io/green-girl-kentucky-rivers/",
         "subtitle": "Artistic river mapping. Made in QGIS.",
         "image": "weep-no-more.png",
@@ -248,7 +248,7 @@ export const items = [{
         "slug": "river-networks"
     },
     {
-        "title": "Power Plants Map",
+        "title": "Power Plants Map (d3.js)",
         "externalUrl": "https://coxco96.github.io/power-plants-d3/",
         "subtitle": "Interactive map with multiple layers of data, made with d3",
         "image": 'power-plants.png',
@@ -358,7 +358,7 @@ export const items = [{
         "type": "Sveltekit Library Development"
     },
     {
-        "title": "Appalachian Foothills",
+        "title": "Appalachian Foothills (Blender)",
         "subtitle": "Made in Blender + QGIS",
         "slug": "appalachian-foothills",
         "includeImageOnFeaturePage": true,
@@ -741,14 +741,43 @@ export const items = [{
         "imageAlt": "A chart titled 'College Educated Workers are Most Exposed to A.I.' The subtitle reads 'Researchers at OpenAI estimated the share of tasks in each occupation that could be assisted by A.I. tools.' The charts shows that jobs that often require a high school diploma or less (like sewing machine operators, dry cleaners, fast-food workers) share 6% of job tasks potentially aided by A.I. Jobs that often require a high school diploma (such as manicurists and pedicurists, actors and security guards) share 17% of job tasks potentially aided by A.I. Vocation or 2-year degree jobs (such as electricians, paramedics and facilities managers) share 38% of job tasks; four-year degree jobs (such as nurses, nuclear engineers and human resources specialists) share 75% of job tasks and jobs that often require graduate school (such as pharmacists, psychiatrists and lawyers) share 64% of job tasks potentially aided by A.I. The percentage shown is the median percentage by education category. Data source is OpenAI (for ratings) and the Labor Department (for job categories). By The New York Times."
     },
     {
+        "title": "Can a Novice Beat a Professional Darts Player?",
+        "externalUrl": "https://www.nytimes.com/2023/08/10/upshot/darts-pros-vs-novices.html",
+        "image": "darts.png",
+        "imageAlt": "There are four dartboards with red dots indicating where throws landed. Two of the dartboards are by professional dart players, Michael Smith and Rob Cross, while the other two are by professional journalists, Emily Rhyne and Larry Buchanan. The professional dart players' boards are MUCH better than the journalists'.",
+        "tags": ["Data Design"]
+    },
+    {
         "title": "Studying the Limits of Human Perfection, Through Darts",
+        "externalUrl": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
         'contentBlockOne': `<a href='https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html' target='_blank'>Link to original story.</a>`,
         "image": "darts2.png",
         "imageAlt": "Graphic titled 'Precision of a Champion' is zoomed in to the triple-20 region. Subtitle is 'In a world championship final this year, Michael Smith hit the triple-20 region 46 percent of the time he aimed at it. Dozens of throws are shown, and those in the triple-20 region are red, while others are gray. The following notes are listed at bottom of graphic. The data shown is from the 2023 F.D.C. World Championship. Only darts targeted at the triple-20 region shown. Data manually plotted from a television broadcast. By The New York Times.",
         "publication": "New York Times",
         "type": "Data Design",
-        "slug": "precision-of-a-champion",
+        // "slug": "precision-of-a-champion",
         "tags": ["Data Design"],
+    },
+    {
+        "title": "Top Archers Average Scores",
+        "externalUrl": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
+        "image": "top-archers.png",
+        "imageAlt": "Chart showing top archers' average scores from 1957–2021, with scores increasing over time",
+        "tags": ["Data Design"]
+    },
+    {
+        "title": "Top Free-Throw Shooters",
+        "externalUrl": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
+        "image": "free-throws.png",
+        "imageAlt": "Chart showing top free-throw shooters' accuracy from 1950–2022, with percentage accuracy increasing over time. There is a separate line showing a similar trend for Women's NBA that begin in the late 1990s.",
+        "tags": ["Data Design"]
+    },
+    {
+        "title": "Top Bowlers' Average Scores",
+        "externalUrl": "https://www.nytimes.com/2023/08/05/upshot/darts-sports-perfection.html",
+        "image": "top-bowlers.png",
+        "imageAlt": "Chart showing top bowlers' average scores from 1968–2017, with scores rising over time",
+        "tags": ["Data Design"]
     },
     {
         "title": "3D Manhattan (Learning Blender)",
@@ -773,7 +802,7 @@ export const items = [{
 
 
     {
-        "title": "Interactive Tour of Oxford University",
+        "title": "Interactive Tour of Oxford University (IIIF Technology)",
         "subtitle": "Using IIIF (International Image Interoperability, Framework) technology to explore a historic map",
         "image": "oxford.png",
         "externalUrl": "https://coxco96.github.io/oxford-tour",
@@ -781,7 +810,7 @@ export const items = [{
         "contentBlockOne": "<p>Please note that this project, as of 2024, no longer reflects my editorial and design sensibilities. The IIIF (International Image Interoperability Framework) technology, however, remains relevant to include in this portfolio. This project is not mobile responsive.</p><p>Check it out below or full screen in a different tab <a href='https://coxco96.github.io/oxford-tour' target='_blank'>here</a>.</p>",
         "includeImageOnFeaturePage": false,
         "contentBlockThree": "<iframe src='https://coxco96.github.io/oxford-tour/' width=100% height='800px'></iframe>",
-        "tags": ["Maps", "Interactive", "Other"],
+        "tags": ["Maps", "Interactive"],
         "type": "Interactive",
         "publication": "Made for class",
         // "slug": "oxford-tour"
@@ -907,13 +936,13 @@ export const items = [{
         "includeImageOnFeaturePage": false
     },
     {
-        "title": "",
+        "title": "View the background of this site in high res/full screen. Made in QGIS.",
         "subtitle": "Made in QGIS.",
         "image": "we-bleed-on-earth.png",
         "imageAlt": "Red world map with shading to show land elevation and ocean depths. Land is blood red.",
         "tags": ["Maps"],
         // "slug": "on-earth-we-bleed",
-        externalUrl: '/on-earth-we-bleed/',
+        externalUrl: 'https://coxco96.github.io/on-earth-we-bleed',
         "type": "Artistic Map",
         "includeImageOnFeaturePage": false,
         "publication": "Art Show",
@@ -988,7 +1017,7 @@ export const items = [{
         "tags": ["Writing"]
     },
     {
-        "title": "University of Kentucky Human Development Institute: Who are we?",
+        "title": "Video Editing: University of Kentucky Human Development Institute",
         "externalUrl": "https://www.youtube.com/watch?v=NddDoX2trsY",
         "tags": ['Other'],
         "image": "hdi-youtube.png",
