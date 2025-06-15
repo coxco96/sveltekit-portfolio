@@ -9,12 +9,11 @@
     let imageCaption = data.imageCaption;
     let includeImage = $state();
     // include the first image unless specifically set to false
-    if (typeof data.includeImageOnFeaturePage !== 'undefined') {
+    if (typeof data.includeImageOnFeaturePage !== "undefined") {
         includeImage = data.includeImageOnFeaturePage;
     } else {
         includeImage = true;
     }
-
 
     // blocks for content, generally text, but
     // contentBlockThree is set up specifically for iframes
@@ -40,19 +39,14 @@
         e.preventDefault();
         history.back();
     }
-
-
 </script>
 
-<div class='text-column'>
-<span class="back"
-    >&#x2190; <a
-        href="{base}"
-        aria-label="Go back"
-        onclick={handleBackClick}
-        >Back</a
-    ></span
->
+<div class="text-column">
+    <span class="back"
+        >&#x2190; <a href={base} aria-label="Go back" onclick={handleBackClick}
+            >Back</a
+        ></span
+    >
 </div>
 <main>
     <div class="text-column">
@@ -62,21 +56,45 @@
                 {@html contentBlockOne}
             </div>
         {/if}
+
         {#if includeImage}
+            <!-- if video -->
+            {#if src && src.toLowerCase().endsWith(".mp4")}
+                <div class="text-column figure media-container">
+                    <video class="media" controls>
+                        <source src="../../images/{src}" type="video/mp4" />
+                        <track
+                            kind="captions"
+                            label="No captions"
+                            srclang="en"
+                            default
+                        />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- if photo -->
+            {:else if src}
+                <div class="media-container">
+                    <img class="media" src="../../images/{src}" {alt} />
+                </div>
+            {/if}
+            <!-- 
             <figure class="text-column figure">
                 <img src="../../../images/{src}" {alt} />
                 {#if imageCaption}
                     <figcaption>{@html imageCaption}</figcaption>
                 {/if}
             </figure>
-       
         {:else if imageInstead}
-        <figure class="text-column figure">
-            <img src="../../../images/{imageInstead}" alt={imageInsteadAlt} />
-            {#if imageInsteadCaption}
-                <figcaption>{@html imageInsteadCaption}</figcaption>
-            {/if}
-        </figure>
+            <figure class="text-column figure">
+                <img
+                    src="../../../images/{imageInstead}"
+                    alt={imageInsteadAlt}
+                />
+                {#if imageInsteadCaption}
+                    <figcaption>{@html imageInsteadCaption}</figcaption>
+                {/if}
+            </figure> -->
         {/if}
 
         {#if contentBlockTwo}
@@ -86,12 +104,12 @@
         {/if}
 
         {#if imageTwo}
-        <figure class="text-column figure">
-            <img src="../../../images/{imageTwo}" alt={imageAltTwo}/>
-            {#if imageCaptionTwo}
-                <figcaption>{@html imageCaptionTwo}</figcaption>
-            {/if}
-        </figure>
+            <figure class="text-column figure">
+                <img src="../../../images/{imageTwo}" alt={imageAltTwo} />
+                {#if imageCaptionTwo}
+                    <figcaption>{@html imageCaptionTwo}</figcaption>
+                {/if}
+            </figure>
         {/if}
     </div>
     <div class="content-block-three content">
@@ -100,15 +118,14 @@
         {/if}
     </div>
 
-    <div class='text-column'>
-
+    <div class="text-column">
         {#if imageThree}
-        <figure class="text-column figure">
-            <img src="../../../images/{imageThree}" alt={imageAltThree}/>
-            {#if imageCaptionThree}
-                <figcaption>{@html imageCaptionThree}</figcaption>
-            {/if}
-        </figure>
+            <figure class="text-column figure">
+                <img src="../../../images/{imageThree}" alt={imageAltThree} />
+                {#if imageCaptionThree}
+                    <figcaption>{@html imageCaptionThree}</figcaption>
+                {/if}
+            </figure>
         {/if}
     </div>
 
@@ -120,9 +137,9 @@
 </main>
 
 <style>
-main {
-    background: none;
-}
+    main {
+        background: none;
+    }
 
     .title {
         line-height: 2.875rem;
@@ -139,7 +156,6 @@ main {
         margin-bottom: 20px;
         padding-bottom: 20px;
     }
-    
 
     .content-block-two,
     .content-block-three,
@@ -168,6 +184,4 @@ main {
         color: #727272;
         margin-right: 7px;
     }
-
-
 </style>
