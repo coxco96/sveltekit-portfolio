@@ -243,6 +243,17 @@ export const items = [{
         // "includeImageOnFeaturePage": false,
         // "publication": "New York Times",
     },
+        {
+        "title": "How Big Is Taylor Swift? (A Very Extensive Data Analysis)",
+        "type": "Data Design & Analysis",
+        "tags": ["Data Analysis", "Data Design"],
+        "image": "tswift2.jpg",
+        "imageAlt": "Bobblehead of Taylor Swift. Text reads: 'How Big is Taylor Swift? As big as the Beatles? Michael Jackson? Beyoncé? We crunched the numbers.'",
+        "externalUrl": "https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html",
+        "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
+        "publication": "New York Times",
+        "includeImageOnFeaturePage": false,
+    },
 
     {
         "title": "The Kentucky River (art project, made in QGIS with USGS data)",
@@ -290,6 +301,28 @@ export const items = [{
         "tags": ["Other"],
         "slug": "blender-planet",
 
+    },
+        {
+        "title": "In Reversal Because of A.I., Office Jobs Are Now More at Risk",
+        "externalUrl": "https://www.nytimes.com/2023/08/24/upshot/artificial-intelligence-jobs.html",
+        "subtitle": "As seen on the front page of the New York Times print edition",
+        "slug": "ai-office-jobs",
+        "tags": ["Data Analysis", "Data Design"],
+        "publication": "New York Times",
+        "image": "ai.png",
+        "imageAlt": "A chart titled 'College Educated Workers are Most Exposed to A.I.' The subtitle reads 'Researchers at OpenAI estimated the share of tasks in each occupation that could be assisted by A.I. tools.' The charts shows that jobs that often require a high school diploma or less (like sewing machine operators, dry cleaners, fast-food workers) share 6% of job tasks potentially aided by A.I. Jobs that often require a high school diploma (such as manicurists and pedicurists, actors and security guards) share 17% of job tasks potentially aided by A.I. Vocation or 2-year degree jobs (such as electricians, paramedics and facilities managers) share 38% of job tasks; four-year degree jobs (such as nurses, nuclear engineers and human resources specialists) share 75% of job tasks and jobs that often require graduate school (such as pharmacists, psychiatrists and lawyers) share 64% of job tasks potentially aided by A.I. The percentage shown is the median percentage by education category. Data source is OpenAI (for ratings) and the Labor Department (for job categories). By The New York Times."
+    },
+        {
+        "title": "Flashback (Research & Fact Checking)",
+        "externalUrl": "https://www.nytimes.com/spotlight/flashback",
+        "subtitle": "A weekly history game",
+        "image": "flashback.png",
+        "imageAlt": "A 3x3 grid of historic images, with the New York Times Flashback logo as the center tile",
+        "contentBlockOne": "From summer 2023 through May 2024, I was the primary fact checker for most editions of Flashback. Check out the quizzes <a href='https://www.nytimes.com/spotlight/flashback' target='_blank'>here</a>.",
+        "tags": ["Other"],
+        "slug": "flashback",
+        "publication": "New York Times",
+        "type": "Fact Checking",
     },
 
     {
@@ -722,25 +755,7 @@ export const items = [{
         // "type": "Interactive Map & Geospatial Analysis",
         // "includeImageOnFeaturePage": false
     },
-    {
-        "title": "How to Read a Hearing Test",
-        "image": "hearing2.png",
-        "imageAlt": "A chart showing regions of a hearing test that indicate normal, mild, moderate, moderately severe, severe or profound hearing loss. The x-axis shows frequency in hertz, and the y-axis shows decibels.",
-        "tags": ["Data Design"],
-        "type": "Data Design",
-        "publication": "social media",
-        "slug": "how-to-read-a-hearing-test"
-    },
-    {
-        "title": "In Reversal Because of A.I., Office Jobs Are Now More at Risk",
-        "externalUrl": "https://www.nytimes.com/2023/08/24/upshot/artificial-intelligence-jobs.html",
-        "subtitle": "As seen on the front page of the New York Times print edition",
-        "slug": "ai-office-jobs",
-        "tags": ["Data Analysis", "Data Design"],
-        "publication": "New York Times",
-        "image": "ai.png",
-        "imageAlt": "A chart titled 'College Educated Workers are Most Exposed to A.I.' The subtitle reads 'Researchers at OpenAI estimated the share of tasks in each occupation that could be assisted by A.I. tools.' The charts shows that jobs that often require a high school diploma or less (like sewing machine operators, dry cleaners, fast-food workers) share 6% of job tasks potentially aided by A.I. Jobs that often require a high school diploma (such as manicurists and pedicurists, actors and security guards) share 17% of job tasks potentially aided by A.I. Vocation or 2-year degree jobs (such as electricians, paramedics and facilities managers) share 38% of job tasks; four-year degree jobs (such as nurses, nuclear engineers and human resources specialists) share 75% of job tasks and jobs that often require graduate school (such as pharmacists, psychiatrists and lawyers) share 64% of job tasks potentially aided by A.I. The percentage shown is the median percentage by education category. Data source is OpenAI (for ratings) and the Labor Department (for job categories). By The New York Times."
-    },
+
     {
         "title": "Can a Novice Beat a Professional Darts Player?",
         "externalUrl": "https://www.nytimes.com/2023/08/10/upshot/darts-pros-vs-novices.html",
@@ -817,18 +832,7 @@ export const items = [{
         // "slug": "oxford-tour"
     },
     {
-        "title": "How Big Is Taylor Swift?",
-        "type": "Data Design & Analysis",
-        "tags": ["Data Analysis", "Data Design"],
-        "image": "tswift2.jpg",
-        "imageAlt": "Bobblehead of Taylor Swift. Text reads: 'How Big is Taylor Swift? As big as the Beatles? Michael Jackson? Beyoncé? We crunched the numbers.'",
-        "externalUrl": "https://www.nytimes.com/interactive/2024/05/17/arts/music/taylor-swift-sales-tours-grammys.html",
-        "subtitle": "An in-depth analysis of a hard-to-quantify metric: fame.",
-        "publication": "New York Times",
-        "includeImageOnFeaturePage": false,
-    },
-    {
-        "title": "The Tilt",
+        "title": "The Tilt (graphic for Nate Cohn's newsletter)",
         "subtitle": "Graphic for politics newsletter by Nate Cohn",
         "image": "tilt.png",
         "imageAlt": "A chart titled 'When 2024 Republican Delegates Will Be Awarded.' Subtitle is: 'About two-thirds of the delegates to the Republican convention could be awarded during the election subversion trial in Washington, which is expected to begin March 4.Chart shows the following. Before trial: 10 percent of delegates; during trial: 65 to 71 percent of delegates; after trial: 19 to 25 percent of delegates. Not at bottom of chart: For a trial lasting four to six weeks starting March 4. Source: The Green Papers. Chart by Courtney Cox.",
@@ -870,18 +874,7 @@ export const items = [{
         "tags": ["Data Design"],
         // "slug": "metro1"
     },
-    {
-        "title": "Flashback (Research & Fact Checking)",
-        "externalUrl": "https://www.nytimes.com/spotlight/flashback",
-        "subtitle": "A weekly history game",
-        "image": "flashback.png",
-        "imageAlt": "A 3x3 grid of historic images, with the New York Times Flashback logo as the center tile",
-        "contentBlockOne": "From summer 2023 through May 2024, I was the primary fact checker for most editions of Flashback. Check out the quizzes <a href='https://www.nytimes.com/spotlight/flashback' target='_blank'>here</a>.",
-        "tags": ["Other"],
-        "slug": "flashback",
-        "publication": "New York Times",
-        "type": "Fact Checking",
-    },
+
     {
         "title": "UK HDI researchers study air travel accessibility for people who use wheelchairs",
         "externalUrl": "https://uknow.uky.edu/research/uk-hdi-researchers-study-air-travel-accessibility-people-who-use-wheelchairs",
@@ -900,21 +893,7 @@ export const items = [{
         "tags": ["Data Design", "Maps"],
         "publication": "Made for Class"
     },
-    {
-        "title": "How Polls Have Changed Since the State of the Union Address",
-        "externalUrl": "https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html",
-        "subtitle": "Table made for The Tilt, Nate Cohn's newsletter",
-        "image": "pollshift.png",
-        "imageAlt": "Thumbnail of a table listing 16 pollsters and the Trump/Biden margin before and after since State of the Union address. Also shows percent point change between before and after. Averages are Trump +2 for before, Trump + <1 for after, with a 1.4 point average increase for Democrats overall.",
-        "tags": ["Data Design"],
-        "publication": "New York Times",
-        // "slug": "pollshift",
-        "type": "Data Design",
-        "includeImageOnFeaturePage": false,
-        "contentBlockOne": "<a href='https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html' target='_blank'>Click here to view the original newsletter.</a>",
-        "imageTwo": "pollshift1.png",
-        "imageTwoAlt": "image 2 alt"
-    },
+
     {
         "title": "UK HDI Resources for Families of Infants With Down Syndrome Formally Recommended by AAP",
         "externalUrl": "https://uknow.uky.edu/research/uk-hdi-resources-families-infants-down-syndrome-formally-recommended-aap",
@@ -971,7 +950,21 @@ export const items = [{
         "externalUrl": "https://www.miamiherald.com/news/local/environment/article262390547.html",
         "tags": ["Data Design", "Interactive", "Maps"]
     },
-
+    {
+        "title": "How Polls Have Changed Since the State of the Union Address",
+        "externalUrl": "https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html",
+        "subtitle": "Table made for The Tilt, Nate Cohn's newsletter",
+        "image": "pollshift.png",
+        "imageAlt": "Thumbnail of a table listing 16 pollsters and the Trump/Biden margin before and after since State of the Union address. Also shows percent point change between before and after. Averages are Trump +2 for before, Trump + <1 for after, with a 1.4 point average increase for Democrats overall.",
+        "tags": ["Data Design"],
+        "publication": "New York Times",
+        // "slug": "pollshift",
+        "type": "Data Design",
+        "includeImageOnFeaturePage": false,
+        "contentBlockOne": "<a href='https://www.nytimes.com/2023/08/28/upshot/trump-trial-primary-calendar.html' target='_blank'>Click here to view the original newsletter.</a>",
+        "imageTwo": "pollshift1.png",
+        "imageTwoAlt": "image 2 alt"
+    },
     {
         "title": "How Did Your Representative Vote in the Respect for Marraige Act?",
         "externalUrl": "https://www.sacbee.com/article263839407.html",
@@ -1046,7 +1039,16 @@ export const items = [{
         "slug": "candle-chair",
         "tags": ["Other"],
         "image": "candle-chair.mp4"
-    }
+    },
+        {
+        "title": "How to Read a Hearing Test",
+        "image": "hearing2.png",
+        "imageAlt": "A chart showing regions of a hearing test that indicate normal, mild, moderate, moderately severe, severe or profound hearing loss. The x-axis shows frequency in hertz, and the y-axis shows decibels.",
+        "tags": ["Data Design"],
+        "type": "Data Design",
+        "publication": "social media",
+        "slug": "how-to-read-a-hearing-test"
+    },
 
 
 
