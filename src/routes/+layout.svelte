@@ -48,12 +48,11 @@
 		box-sizing: border-box;
 	}
 
-	/* kill the “zoom” on small viewports */
-	/* @media (max-width: 768px) {
+	@media (max-width: 640px) {
 		.page-background {
-			background-attachment: scroll;
+			background-size: 300% auto; 
 		}
-	} */
+	}
 
 	/* retina → 2× source */
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
