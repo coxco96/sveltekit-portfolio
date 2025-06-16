@@ -50,7 +50,7 @@
 
 	@media (max-width: 640px) {
 		.page-background {
-			background-size: 300% auto; 
+			background-image: url("/images/backgrounds/mobile-on-earth-we-bleed1.webp");
 		}
 	}
 
