@@ -17,15 +17,16 @@
 		as="image"
 		href="/images/backgrounds/on-earth-we-bleed1.webp"
 		type="image/webp"
+		media="(min-width: 641px)"
 	/>
 
-	<link
+	<!-- <link
 		rel="preload"
 		as="image"
 		href="/images/backgrounds/mobile-on-earth-we-bleed1.jpg"
 		type="image/jpeg"
 		media="(max-width: 640px)"
-	/>
+	/> -->
 </svelte:head>
 
 <div class="app page-background">
@@ -58,7 +59,7 @@
 
 	@media (max-width: 640px) {
 		.page-background {
-			background-image: url("/images/backgrounds/mobile-on-earth-we-bleed1.jpg");
+			background-image: none;
 			
 		}
 	}
