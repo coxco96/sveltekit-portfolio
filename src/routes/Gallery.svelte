@@ -65,8 +65,13 @@
 
     <main>
         <div class="gallery">
-            {#each (filtered.length === 0 ? items : filtered) as item (item.title)}
-                <button type="button" class="item-btn" onclick={() => handleClick(item)} aria-label={`View details for ${item.title}`}>
+            {#each filtered.length === 0 ? items : filtered as item (item.title)}
+                <button
+                    type="button"
+                    class="item-btn"
+                    onclick={() => handleClick(item)}
+                    aria-label={`View details for ${item.title}`}
+                >
                     <div class="item">
                         <Card
                             title={item.title}
@@ -104,6 +109,7 @@
         .gallery {
             column-count: 4;
         }
+    }
     .item-btn {
         background: none;
         border: none;
@@ -122,8 +128,6 @@
         break-inside: avoid;
         margin-bottom: 1.5rem;
         width: 100%;
-    }
-
     }
 
     .filter-label {
