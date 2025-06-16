@@ -12,11 +12,11 @@
 </script>
 
 <div class="app page-background">
-		<!-- <PinNav /> -->
+	<!-- <PinNav /> -->
 
-		<main>
-			{@render children?.()}
-		</main>
+	<main>
+		{@render children?.()}
+	</main>
 </div>
 
 <style>
@@ -27,6 +27,7 @@
 	}
 
 	.page-background {
+		background-color: rgb(1, 1, 27);
 		background-image: url("/images/backgrounds/on-earth-we-bleed1.webp");
 		background-size: cover;
 		background-position: center;
@@ -36,7 +37,6 @@
 		width: 100%;
 		padding: 2rem;
 		box-sizing: border-box;
-
 	}
 
 	main {
