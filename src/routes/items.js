@@ -232,6 +232,17 @@ export const items = [{
         "publication": "Personal Project",
         externalUrl: '/olympics-map', // this is rerouted via vercel.json
     },
+        {
+        "title": "When Caitlin Clark Comes to Town",
+        // "subtitle": "Giant news graphic, developed with Svelte",
+        "image": "caitlin-clark.webp",
+        "imageAlt": "Chart titled 'Home Attendance of Iowa’s Opponents in 2023–24.' For each opponent, gray bars show regular home game attendance; a yellow bar highlights the Iowa game. Iowa’s visit drew significantly higher crowds at every school, ranging from 1.5× to 3.6× the average. Notable spikes include 18,680 at Ohio State, 17,950 at Maryland, and 14,876 at Purdue. The chart emphasizes how Iowa games attracted much larger audiences than usual.",
+        "externalUrl": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
+        "tags": ["Data Design", "Data Analysis"],
+        // "type": "Data Design",
+        // "includeImageOnFeaturePage": false,
+        // "publication": "New York Times",
+    },
 
     {
         "title": "The Kentucky River (art project, made in QGIS with USGS data)",
@@ -332,17 +343,7 @@ export const items = [{
         "image": "hosmer-street-problems.png",
         "imageAlt": "A chart showing the number of phone calls to police from hotels in Tacoma, from 2018–2021. Three hotels stand out as having far more calls than any others."
     },
-    {
-        "title": "When Caitlin Clark Comes to Town",
-        "subtitle": "Giant news graphic, developed with Svelte",
-        "image": "caitlin-clark.webp",
-        "imageAlt": "Chart titled 'Home Attendance of Iowa’s Opponents in 2023–24.' For each opponent, gray bars show regular home game attendance; a yellow bar highlights the Iowa game. Iowa’s visit drew significantly higher crowds at every school, ranging from 1.5× to 3.6× the average. Notable spikes include 18,680 at Ohio State, 17,950 at Maryland, and 14,876 at Purdue. The chart emphasizes how Iowa games attracted much larger audiences than usual.",
-        "externalUrl": "https://www.nytimes.com/2024/03/06/upshot/caitlin-clark-popularity-attendance.html",
-        "tags": ["Data Design", "Data Analysis"],
-        "type": "Data Design",
-        "includeImageOnFeaturePage": false,
-        "publication": "New York Times",
-    },
+
     {
         "title": "Svelte + Mapbox GL JS Component Library",
         "externalUrl": "https://bit.ly/mapcourt",

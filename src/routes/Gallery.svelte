@@ -119,6 +119,7 @@
         text-align: inherit;
         cursor: pointer;
         display: block;
+        
     }
     .item-btn:focus {
         outline: 2px solid #fff;

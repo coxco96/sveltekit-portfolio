@@ -11,6 +11,15 @@
 	// import github from '$lib/images/github.svg'
 </script>
 
+<svelte:head>
+	<link
+		rel="preload"
+		as="image"
+		href="/images/backgrounds/on-earth-we-bleed1.webp"
+		type="image/webp"
+	/>
+</svelte:head>
+
 <div class="app page-background">
 	<!-- <PinNav /> -->
 
@@ -37,6 +46,20 @@
 		width: 100%;
 		padding: 2rem;
 		box-sizing: border-box;
+	}
+
+	/* kill the “zoom” on small viewports */
+	/* @media (max-width: 768px) {
+		.page-background {
+			background-attachment: scroll;
+		}
+	} */
+
+	/* retina → 2× source */
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		.page-background {
+			background-image: url("/images/backgrounds/on-earth-we-bleed1.webp");
+		}
 	}
 
 	main {
