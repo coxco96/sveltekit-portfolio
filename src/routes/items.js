@@ -3,7 +3,7 @@
 
 
 export const items = [{
-        'title': `Welcome!`,
+        'title': `About + Contact`,
         'subtitle': `
         I'm Court, and I design and develop data experiences. Click here to learn more about me.`,
         'type': 'About Me',
@@ -14,6 +14,7 @@ export const items = [{
         'includeImageOnFeaturePage': false,
         'contentBlockOne': `
         <p>My full-name is <strong>Courtney Cox</strong> (but nope, not <a href="https://en.wikipedia.org/wiki/Courteney_Cox">that one</a>).</p>
+        <p>You can <strong>contact me</strong> at courtneygcox96[at]gmail.com.</p>
         <p>Currently, I'm a data analyst at Penguin Random House.</p>
         <p>I'm also a volunteer researcher + developer with Bellingcat.</p>
         <p>I was a 2023-24 <a href="https://www.nytco.com/person/courtney-cox/">New York Times fellow</a> in the Upshot section.</p>
@@ -226,13 +227,13 @@ export const items = [{
         "subtitle": "Interative map and table filterable by year, sport and event. Developed with Sveltekit.",
         "image": "olympics.png",
         "imageAlt": "Screenshot of Olympic Medals Count page with a world map of various shades of purple according to medal counts.",
-        "tags": ["Data Design", "Interactive", "Maps"],
+        "tags": ['Data Analysis', "Data Design", "Interactive", "Maps"],
         "type": "Interactive Map Design",
         "includeImageOnFeaturePage": false,
         "publication": "Personal Project",
-        externalUrl: '/olympics-map', // this is rerouted via vercel.json
+        "externalUrl": 'https://olympics-map.vercel.app/', // this is rerouted via vercel.json
     },
-        {
+    {
         "title": "When Caitlin Clark Comes to Town",
         // "subtitle": "Giant news graphic, developed with Svelte",
         "image": "caitlin-clark.webp",
