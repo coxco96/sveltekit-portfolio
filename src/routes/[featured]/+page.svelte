@@ -78,7 +78,6 @@
                     <img class="media" src="../../images/{src}" {alt} />
                 </div>
             {/if}
-
         {/if}
 
         {#if contentBlockTwo}
@@ -167,5 +166,21 @@
         line-height: 1.25rem;
         color: #727272;
         margin-right: 7px;
+    }
+
+    .media-container,
+    figure {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .media-container img,
+    .media-container video,
+    figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 </style>
