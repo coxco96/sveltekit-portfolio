@@ -59,15 +59,17 @@
 	@media (max-width: 640px) {
 		.page-background {
 			background-image: url("/images/backgrounds/mobile-on-earth-we-bleed1.jpg");
+			
 		}
 	}
 
 	/* retina → 2× source */
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-		.page-background {
-			background-image: url("/images/backgrounds/on-earth-we-bleed1.webp");
-		}
-	}
+@media (min-width: 641px) and (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 641px) and (min-resolution: 192dpi) {
+  .page-background {
+    background-image: url("/images/backgrounds/on-earth-we-bleed1@2x.webp");
+  }
+}
 
 	main {
 		flex: 1;
