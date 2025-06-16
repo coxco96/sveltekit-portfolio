@@ -1,7 +1,7 @@
 <div class="hero-text">
     <span class="hero-text-span">
         <h1>Hi, I'm Court.</h1>
-        <p class=p1>Data journalist and cartographer.</p>
+        <p class='p1'>Data journalist and cartographer.</p>
         <p class="p2">This is my portfolio. &#11107;</p>
     </span>
 </div>
@@ -18,7 +18,7 @@
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-radius: 16px;
-        padding: 2rem 3rem;
+        padding: 2rem 1rem;
         display: inline-block;
         animation: fadeInUp 1s ease-out both;
     }
